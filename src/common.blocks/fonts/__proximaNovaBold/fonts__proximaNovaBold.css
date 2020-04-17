@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Proxima Nova Bold';
+    src: url('ProximaNova-Bold.eot');
+    src: url('ProximaNova-Bold.eot?#iefix') format('embedded-opentype'),
+    url('ProximaNova-Bold.woff') format('woff'),
+    url('ProximaNova-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.fonts__proximaNovaBold {
+    font-family: "Proxima Nova Bold", Arial, sans-serif;
+}
