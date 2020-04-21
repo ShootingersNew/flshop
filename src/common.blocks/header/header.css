@@ -1,0 +1,43 @@
+.header {
+    height: 88px;
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+}
+
+.header__catalogButton {
+    position: relative;
+    margin-left: 30px;
+}
+
+.header__telephoneContact a {
+    text-decoration: none;
+    color: inherit;
+    margin-right: 2px;
+}
+
+.header__telephoneContact {
+    margin-left: 76px;
+}
+
+.header__callPopupLink {
+    margin-left: 27px;
+}
+
+.header__search {
+    margin-left: 73px;
+    width: 151px;
+    border: none;
+    border-bottom: 1px solid #F5F5F5;
+    font-size: 16px;
+    outline: none;
+}
+
+.header__userNav {
+    position: absolute;
+    right: 0;
+}
