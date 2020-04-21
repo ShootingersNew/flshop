@@ -1,0 +1,29 @@
+.userNav__cart {
+    display: inline-block;
+}
+
+.userNav__userIco {
+    margin-right: 37px;
+    font-size: 20px;
+    position: relative;
+    bottom: -1px;
+}
+
+.userNav__itemCounter {
+    color: #8C8C8C;
+}
+
+.userNav__separator {
+    color: #E6E6E6;
+}
+
+.userNav__cartIco {
+    margin-right: 7px;
+    font-size: 20px;
+    position: relative;
+    bottom: -1px;
+}
+
+.slider__header {
+    width: 500px;
+}
