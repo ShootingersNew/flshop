@@ -18,21 +18,24 @@ class Main extends React.Component {
 
                 </Header>
 
-
-                <Slides slides={[
-                    {
-                        header: 'Новинка «Фруктовый десерт»',
-                        back: back1
-                    }, {
-                        header: 'Новинка «Фруктовый десерт»',
-                        back: back1
-                    }, {
-                        header: 'Новинка «Фруктовый десерт»',
-                        back: back1
-                    }, {
-                        header: 'Новинка «Фруктовый десерт»',
-                        back: back1
-                    },]}>
+                {/*dots - здесь бэкграунды*/}
+                <Slides
+                    slides={[
+                        {
+                            header: 'Новинка «Фруктовый десерт»',
+                            back: back1
+                        }, {
+                            header: 'Новинка «Фруктовый десерт»',
+                            back: back1
+                        }, {
+                            header: 'Новинка «Фруктовый десерт»',
+                            back: back1
+                        }, {
+                            header: 'Новинка «Фруктовый десерт»',
+                            back: back1
+                        },]}
+                    dots={['', '', '', '']}
+                >
 
                 </Slides>
             </div>
