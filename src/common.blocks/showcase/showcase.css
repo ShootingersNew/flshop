@@ -1,0 +1,19 @@
+.showcase__items {
+    display: flex;
+    justify-content: space-between;
+}
+
+.showcase__header {
+    font-size: 36px;
+    line-height: 62px;
+    margin-bottom: 3px;
+}
+
+.showcase__link {
+    font-size: 16px;
+    margin-left: 34px;
+}
+
+.showcase {
+    padding-top: 16px;
+}
