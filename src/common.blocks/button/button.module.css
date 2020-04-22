@@ -6,4 +6,6 @@
     height: 46px;
     background-color: #FD0000;
     color: white;
+    cursor: pointer;
+    text-decoration: none;
 }
