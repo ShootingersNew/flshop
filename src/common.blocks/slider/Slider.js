@@ -1,6 +1,6 @@
 import React, {useEffect, Fragment, useRef} from "react";
 import Slider from 'react-slick';
-import fontBold from './../fonts/__proximaNovaBold/fonts__proximaNovaBold.module.css'
+import '../fonts/__proximaNovaBold/fonts__proximaNovaBold.css'
 import button from './../button/button.module.css'
 import './../slick/slick.css';
 
@@ -25,15 +25,15 @@ export default function Slides(props) {
             <Slider ref={slider} {...settings}>
 
                 {props.slides.map((item, idx) => {
-                    {/* просто slick меняет аттрибут стайл у slider__item,поэтому добавили слайдер__бэкграунд*/
-                    }
+                    // просто slick меняет аттрибут стайл у
+                    // slider__item,поэтому добавили слайдер__бэкграунд
                     return (
                         <div key={idx} className={"slider__item"}>
                             <div className="slider__container container">
                                 <div className="slider__inner">
-                                    <div className={"slider__header " + fontBold.fonts__proximaNovaBold}>
+                                    <div className={"slider__header fonts__proximaNovaBold "}>
                                         {item.header}
-                                </div>
+                                    </div>
                                     <a className={'slider__link ' + button.button}>Заказать</a>
                                 </div>
                                 <div className="slider__background"

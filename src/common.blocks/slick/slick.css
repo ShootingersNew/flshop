@@ -153,6 +153,7 @@
     width: 151px;
     height: 80px;
     background-color: #C4C4C4;
+    cursor: pointer;
 }
 
 .slider__dots {
@@ -161,4 +162,8 @@
     justify-content: space-between;
     margin: 0 auto;
     padding: 30px 0 81px;
+}
+
+.slider__inner {
+    z-index: 10;
 }
