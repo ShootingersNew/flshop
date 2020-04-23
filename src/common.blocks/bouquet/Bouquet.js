@@ -11,11 +11,15 @@ export default function Bouquet(props) {
             <div className="bouquet__info">
                 <div className="bouquet__price-info">
                     <span className="bouquet__price fonts__proximaNovaBold">{props.item.price}</span>
-                    <div className="bouquet__sale">3 150р
-                        <div className={'bouquet__salePercent'}>
-                            <div className="bouquet__saleInner">-19%</div>
+                    {
+                        props.item.sale &&
+
+                        <div className="bouquet__sale">{props.item.salePrice}
+                            <div className={'bouquet__salePercent'}>
+                                <div className="bouquet__saleInner">{props.item.percents}</div>
+                            </div>
                         </div>
-                    </div>
+                    }
                 </div>
                 <header className={'bouquet__header'}>
                     {
