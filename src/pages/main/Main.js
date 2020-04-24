@@ -14,10 +14,6 @@ import './../../common.blocks/container/container.css'
 import back1 from './../../common.blocks/slider/img/Ellipse12.png'
 
 class Main extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         return (
             <div className={`page fonts__proximaNovaRegular`}>
