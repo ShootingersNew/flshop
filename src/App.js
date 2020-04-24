@@ -1,10 +1,13 @@
 import React from 'react';
+import Header from "./common.blocks/header/Header";
+import Footer from "./common.blocks/footer/Footer";
 
 function App(props) {
   return (
-    <React.Fragment>
-      {props.children}
-    </React.Fragment>
+      <div className={'page fonts__proximaNovaRegular'}>
+        {props.children}
+
+      </div>
   );
 }
 
