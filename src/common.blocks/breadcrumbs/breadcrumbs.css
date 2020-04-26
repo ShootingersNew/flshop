@@ -1,0 +1,13 @@
+.breadcrumbs__link {
+    color: #8C8C8C;
+    text-decoration: none;
+}
+
+.breadcrumbs__separator {
+    color: #E6E6E6;
+}
+
+.breadcrumbs__active {
+    color: #C8C8C8;
+    text-decoration: none;
+}
