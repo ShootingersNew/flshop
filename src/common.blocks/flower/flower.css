@@ -1,0 +1,157 @@
+.flower__image {
+    height: 555px;
+    width: 555px;
+    background-color: #C4C4C4;
+    margin-right: 60px;
+}
+
+.flower {
+    display: flex;
+}
+
+.flower__header {
+    width: 100%;
+    margin: 0 0 13px;
+    padding: 0;
+    font-weight: normal;
+    line-height: 45px;
+    font-size: 36px;
+}
+
+.flower__vendorCode {
+    margin-right: 31px;
+    line-height: 19px;
+    color: #C8C8C8;
+
+}
+
+.flower__vendorCode span {
+    margin-left: 12px;
+    color: #8C8C8C;
+
+}
+
+.flower__mark {
+    margin-right: 30px;
+    position: relative;
+    top: -1px;
+    width: 79px;
+    line-height: 19px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flower__reviewsLink {
+    line-height: 19px;
+}
+
+.flower__markRound {
+    width: 11px;
+    height: 11px;
+    display: inline-block;
+    border-radius: 10px;
+    background-color: #E6E6E6;
+}
+
+.flower__markRound_active {
+    background-color: #79BA38;
+}
+
+.flower__control {
+    width: 545px;
+}
+
+.flower__info {
+    width: 100%;
+    min-width: 359px;
+    margin-bottom: 65px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flower__price {
+    line-height: 35px;
+    margin-bottom: 18px;
+}
+
+.flower__actualPrice {
+    font-size: 24px;
+    margin-right: 30px;
+}
+
+.flower__salePrice {
+    color: #8C8C8C;
+    text-decoration: line-through;
+    margin-right: 14px;
+}
+
+.flower__salePercents {
+    display: inline-block;
+    width: 67px;
+    height: 35px;
+    text-align: center;
+    background-image: url("./img/sale.svg");
+}
+
+.flower__salePercents span {
+    position: relative;
+    right: -5px;
+}
+
+.flower__oneClickBuy {
+    color: #FD0000;
+    text-decoration: none;
+}
+
+.flower__inCart {
+    display: inline-block;
+    margin-right: 34px;
+}
+
+.flower__compositionHeader {
+    font-size: 24px;
+    margin-bottom: 2px;
+}
+
+.flower__compositionLink {
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+}
+
+.flower__compositionLink:after {
+    content: '';
+
+}
+
+.flower__compositionLink span {
+    color: #8C8C8C;
+}
+
+.flower__compositionList {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.flower__compositionLi {
+    width: 33.33%;
+    line-height: 48px;
+    display: block;
+
+}
+
+.flower__composition {
+    margin-top: 69px;
+}
+
+.flower__desc {
+    width: 668px;
+    height: 330px;
+    position: absolute;
+    top: 100%;
+    right: 0;
+}
