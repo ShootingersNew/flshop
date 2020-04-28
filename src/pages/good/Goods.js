@@ -27,18 +27,18 @@ class Goods extends React.Component {
 
         //данные просматриваемого товара
         const curItem = this.props.item.find(item => item.id == idx);
-        console.log(this.props.item, curItem)
+
         //массив текущих дополнительных товаров. Из-за отсутствия сервера приходится
         //перебирать все дополнительные товары на предмет наличия у них айдишников
         //указанных в данных об итеме
-        // const curAdditionals=this.props.allAdditionals.filter((additionalItem)=>(
-        //     curItem.additional.indexOf(additionalItem.id)!==-1
-        // ));
+        const curAdditionals = this.props.allAdditionals.filter((additionalItem) => (
+            curItem.additional.indexOf(additionalItem.id) !== -1
+        ));
         console.log(this.props.item)
         this.setState({
             //отправляем в стейт "полученные данные" с "сервера"
             item: curItem,
-            // additional:curAdditionals
+            additional: curAdditionals
         });
     }
 
