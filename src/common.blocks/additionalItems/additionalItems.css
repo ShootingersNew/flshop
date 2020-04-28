@@ -1,0 +1,13 @@
+.additionalItems {
+
+}
+
+.additionalItems__header {
+
+}
+
+.additionalItems__inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}

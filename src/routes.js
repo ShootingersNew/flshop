@@ -1,8 +1,9 @@
 import React from "react";
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import {Main} from "./pages/main/Main";
+import Goods from "./pages/good/Goods";
 import Header from "./common.blocks/header/Header";
 import Footer from "./common.blocks/footer/Footer";
-import {BrowserRouter as Router, Route} from "react-router-dom";
-import {Main} from "./pages/main/Main";
 import App from "./App";
 
 export default function Routes() {
@@ -11,11 +12,13 @@ export default function Routes() {
             <App>
                 {/*хедер и футер здесь для того, чтобы не рендерить их на определенных страницах при необходимости*/}
                 <Route component={Header}/>
-                <Route exact path={"/"}>
-                    <Main>
-
-                    </Main>
-                </Route>
+                <Switch>
+                    <Route exact path={"/"}>
+                        <Main/>
+                    </Route>
+                    <Route exact path={'/goods/:idx'} component={Goods}>
+                    </Route>
+                </Switch>
                 <Route>
                     <Footer navs={[
                         {

@@ -1,6 +1,7 @@
 .flower__image {
     height: 555px;
     width: 555px;
+    margin-top: 16px;
     background-color: #C4C4C4;
     margin-right: 60px;
 }

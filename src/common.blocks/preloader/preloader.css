@@ -5,6 +5,10 @@
     position: relative;
 }
 
+.preloader_fullpage {
+
+}
+
 .lds-roller {
     display: inline-block;
     position: absolute;

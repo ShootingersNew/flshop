@@ -29,8 +29,9 @@ export default function Bouquet(props) {
 
             </div>
             <footer className={'bouquet__footer'}>
-                <Link className={'link'} to={props.item.url}>Подробнее</Link>
-                <a data-id={props.item.id} className="bouquet__cartButton">
+                {console.log(props.item.id)}
+                <Link className={'link'} to={'goods/' + props.item.id}>Подробнее</Link>
+                <a href={props.id} className="bouquet__cartButton">
                     <span className="icon-svg__plus bouquet__plus"></span>
                     <span className="icon-svg__cartico bouquet__cart"></span>
                 </a>
