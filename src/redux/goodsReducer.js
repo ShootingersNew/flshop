@@ -304,9 +304,9 @@ const initialState = {
             id: 4,
             name: 'Шляпная коробка «Замок»',
             src: './images/bouquets/b4.png',
-            price: '3 670р',
+            price: 3670,
             sale: true,
-            salePrice: '5 180р',
+            salePrice: 5180,
             percents: '-32%',
             category: 'Тюльпаны',
             composition: [
