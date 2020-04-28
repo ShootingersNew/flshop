@@ -1,5 +1,8 @@
-import {Link} from "react-router-dom";
 import React from "react";
+import {Link} from "react-router-dom";
+
+import {regExpPrice} from "../../config/utils";
+
 import './../fonts/__proximaNovaBold/fonts__proximaNovaBold.css'
 import './../link/link.css'
 import './bouquet.css'
@@ -10,11 +13,11 @@ export default function Bouquet(props) {
             <img className={'bouquet__image'} src={props.item.src} alt={props.item.name}/>
             <div className="bouquet__info">
                 <div className="bouquet__price-info">
-                    <span className="bouquet__price fonts__proximaNovaBold">{props.item.price}</span>
+                    <span className="bouquet__price fonts__proximaNovaBold">{regExpPrice(props.item.price)}р</span>
                     {
                         props.item.sale &&
 
-                        <div className="bouquet__sale">{props.item.salePrice}
+                        <div className="bouquet__sale">{regExpPrice(props.item.salePrice)}р
                             <div className={'bouquet__salePercent'}>
                                 <div className="bouquet__saleInner">{props.item.percents}</div>
                             </div>
@@ -29,7 +32,7 @@ export default function Bouquet(props) {
 
             </div>
             <footer className={'bouquet__footer'}>
-                {console.log(props.item.id)}
+
                 <Link className={'link'} to={'goods/' + props.item.id}>Подробнее</Link>
                 <a href={props.id} className="bouquet__cartButton">
                     <span className="icon-svg__plus bouquet__plus"></span>
