@@ -1,13 +1,13 @@
 import React from "react";
 import {Link} from "react-router-dom";
-
+import withCartConnect from "../../hoc/withCartConnect";
 import {regExpPrice} from "../../config/utils";
 
 import './../fonts/__proximaNovaBold/fonts__proximaNovaBold.css'
 import './../link/link.css'
 import './bouquet.css'
 
-export default function Bouquet(props) {
+function Bouquet(props) {
     return (
         <article className={'bouquet'}>
             <img className={'bouquet__image'} src={props.item.src} alt={props.item.name}/>
@@ -32,13 +32,17 @@ export default function Bouquet(props) {
 
             </div>
             <footer className={'bouquet__footer'}>
+                <Link className={'link'} to={'/goods/' + props.item.type + '/' + props.item.id}>Подробнее</Link>
 
-                <Link className={'link'} to={'goods/' + props.item.id}>Подробнее</Link>
-                <a href={props.id} className="bouquet__cartButton">
+                <button onClick={() => {
+                    props.addInCart(props.item)
+                }} className="bouquet__cartButton">
                     <span className="icon-svg__plus bouquet__plus"></span>
                     <span className="icon-svg__cartico bouquet__cart"></span>
-                </a>
+                </button>
             </footer>
         </article>
     )
 }
+
+export default withCartConnect(Bouquet)
