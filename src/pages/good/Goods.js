@@ -34,7 +34,6 @@ class Goods extends React.Component {
         const curAdditionals = this.props.allAdditionals.filter((additionalItem) => (
             curItem.additional.indexOf(additionalItem.id) !== -1
         ));
-        console.log(this.props.item)
         this.setState({
             //отправляем в стейт "полученные данные" с "сервера"
             item: curItem,
@@ -73,11 +72,13 @@ class Goods extends React.Component {
 
 // здесь подсоединяемся к стору для имитации работы сервера, если был бы REST API,
 // то можно было бы и обойтись без стора
-const mapStateToProps = (state) => {
+const mapStateToProps = (state, props) => {
+    //определяем тип товара(букет или дополнительный) из строки адреса
+    const {type} = props.match.params;
     return {
-        //отправляем аж все товаы в пропсы, что избыточно, но т.к сервера нет,
+        //отправляем аж все товары данного типа в пропсы, что избыточно, но т.к сервера нет,
         //приходится вот так
-        item: state.goods.allItems,
+        item: state.goods[type],
         allAdditionals: state.goods.additionalItems
     }
 };

@@ -16,7 +16,7 @@ export default function Routes() {
                     <Route exact path={"/"}>
                         <Main/>
                     </Route>
-                    <Route exact path={'/goods/:idx'} component={Goods}>
+                    <Route exact path={'/goods/:type/:idx'} component={Goods}>
                     </Route>
                 </Switch>
                 <Route>
