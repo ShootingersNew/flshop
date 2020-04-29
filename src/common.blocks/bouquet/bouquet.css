@@ -77,3 +77,9 @@
 .bouquet__plus:before {
     color: #8C8C8C;
 }
+
+.bouquet__cartButton {
+    border: none;
+    background-color: transparent;
+    outline: none;
+}

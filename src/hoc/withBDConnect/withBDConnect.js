@@ -1,7 +1,8 @@
 import React from "react";
 import {compose} from "redux";
 import {connect} from 'react-redux'
-
+//hoc "соединяет" витрины и т.п компоненты с соответствующими товарами по idx, указанному
+// в пропсах
 function withBDConnect(WrappedComponent) {
     return class extends React.Component {
 

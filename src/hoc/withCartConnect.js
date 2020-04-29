@@ -16,8 +16,12 @@ function withCartConnect(Component) {
             const itemsSumPrice = itemsArr.reduce((sum, current) => (
                 sum + current.price
             ), 0);
-            return <Component addInCart={this.props.addItem} price={itemsSumPrice}
-                              length={itemsLength} {...this.props} />
+            return <Component
+                addInCart={this.props.addItem}
+                price={itemsSumPrice}
+                length={itemsLength}
+                {...this.props}
+            />
         }
     }
 }
