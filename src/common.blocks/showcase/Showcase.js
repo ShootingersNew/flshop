@@ -2,6 +2,7 @@ import React from "react";
 import Bouquet from "../bouquet/Bouquet";
 import withBDConnect from "../../hoc/withBDConnect/withBDConnect";
 import {Link} from "react-router-dom";
+import Container from "../container/Container";
 import './../link/link.css'
 import './showcase.css'
 
@@ -9,7 +10,7 @@ function Showcase(props) {
 
     return (
         <div className="showcase">
-            <div className="container">
+            <Container>
                 <div className="showcase__header">
                     Женственные подарки к 8 марта
                     <Link className={'showcase__link link'} to={'/'}>Смотреть все товары</Link>
@@ -23,7 +24,8 @@ function Showcase(props) {
                         : null
                     }
                 </div>
-            </div>
+            </Container>
+
         </div>
     )
 }
