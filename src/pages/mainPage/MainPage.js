@@ -6,14 +6,15 @@ import OrderControl from "../../common.blocks/orderControl/OrderControl";
 import Subscribe from "../../common.blocks/subscribe/Subscribe";
 import Seo from "../../common.blocks/seo/seo";
 import Partners from "../../common.blocks/partners/Partners";
+import Container from "../../common.blocks/container/Container";
+import Main from "../../common.blocks/main/Main";
 import './../../common.blocks/container/container.css'
 import back1 from './../../common.blocks/slider/img/Ellipse12.png'
 
-class Main extends React.Component {
+class MainPage extends React.Component {
     render() {
         return (
-            <main>
-
+            <Main>
                 {/*dots - здесь бэкграунды*/}
                 <Slides slides={[
                     {
@@ -45,13 +46,15 @@ class Main extends React.Component {
                     bg={'#'}
                 />
                 <Showcase idx={'showcase_2'}/>
-                <OrderControl/>
-                <Subscribe/>
-                <Seo/>
-                <Partners/>
-            </main>
+                <Container>
+                    <OrderControl/>
+                    <Subscribe/>
+                    <Seo/>
+                    <Partners/>
+                </Container>
+            </Main>
         )
     }
 }
 
-export {Main};
+export {MainPage};

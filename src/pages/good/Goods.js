@@ -4,6 +4,7 @@ import Preloader from "../../common.blocks/preloader/Preloader";
 import Breadcrumbs from "../../common.blocks/breadcrumbs/Breadcrumbs";
 import Flower from "../../common.blocks/flower/Flower";
 import AdditionalItems from "../../common.blocks/additionalItems/AdditionalItems";
+import Container from "../../common.blocks/container/Container";
 import './../../common.blocks/container/container.css'
 
 class Goods extends React.Component {
@@ -57,12 +58,12 @@ class Goods extends React.Component {
             <React.Fragment>
                 {
                     this.state.isLoaded && this.state.item ?
-                        <React.Fragment>
+                        <Container>
                             <Breadcrumbs/>
                             <Flower item={this.state.item}/>
                             <AdditionalItems addItems={this.state.additional}/>
 
-                        </React.Fragment>
+                        </Container>
                         : <Preloader className={'preloader_fullpage'}/>
                 }
             </React.Fragment>
