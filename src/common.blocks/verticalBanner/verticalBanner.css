@@ -1,0 +1,18 @@
+.verticalBanner {
+    width: 245px;
+    height: 304px;
+    position: relative;
+    color: white;
+    text-decoration: none;
+}
+
+.verticalBanner__header {
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    bottom: 49px;
+    width: 55%;
+    line-height: 20px;
+    font-size: 16px;
+}

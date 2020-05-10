@@ -1,0 +1,17 @@
+.asideBanners {
+    padding-top: 64px;
+    box-sizing: border-box;
+    float: right;
+    vertical-align: top;
+
+}
+
+.asideBanners__inner {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.asideBanners__banner {
+    margin-bottom: 30px;
+}
