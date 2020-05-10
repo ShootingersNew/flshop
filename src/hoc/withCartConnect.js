@@ -1,23 +1,34 @@
 import React from "react";
 import {compose} from "redux";
 import {connect} from 'react-redux'
-import {addItem} from "../redux/cartReducer/actions";
+import {addItem, changeQuantity, removeItem} from "../redux/cartReducer/actions";
 
 function withCartConnect(Component) {
-
     return class extends React.Component {
         constructor(props) {
             super(props);
         }
 
+        //метод, который проверяет, добавлен ли уже такой товар в корзину и возвращает
+        // булевое значение
+        checkInCart = (id) => {
+            return this.props.cart.itemsIn.some(item => {
+                return item.id === id
+            });
+        };
+
         render() {
             const itemsArr = this.props.cart.itemsIn;
             const itemsLength = itemsArr.length;
             const itemsSumPrice = itemsArr.reduce((sum, current) => (
-                sum + current.price
+                sum + current.sumPrice
             ), 0);
             return <Component
-                addInCart={this.props.addItem}
+                removeItem={this.removeItem}
+                changeQuantity={this.props.changeQuantity}
+                checkInCart={this.checkInCart}
+                addInCart={this.props.addItemInCart}
+                items={this.props.cart.itemsIn}
                 price={itemsSumPrice}
                 length={itemsLength}
                 {...this.props}
@@ -31,7 +42,11 @@ const mapStateToProps = (state) => {
         cart: state.cart
     }
 };
-const mapDispatchToProps = {
-    addItem
+const mapDispatchToProps = (dispatch) => {
+    return {
+        addItemInCart: (item) => dispatch(addItem(item)),
+        changeQuantity: (id, entity) => dispatch(changeQuantity(id, entity)),
+        removeItem: (id) => dispatch(removeItem(id))
+    }
 };
 export default compose(connect(mapStateToProps, mapDispatchToProps), withCartConnect)
