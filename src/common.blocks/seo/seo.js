@@ -30,7 +30,7 @@ export default function Seo() {
     ];
     return (
         <div className="seo">
-            <div className="seo__container container">
+            <div className="seo__container">
                 {
                     seoArr.map((item) => {
                         return (
