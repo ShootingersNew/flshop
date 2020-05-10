@@ -3,6 +3,11 @@
 
 }
 
+.bouquet__cartButton:disabled {
+    cursor: default;
+    opacity: 0.2;
+}
+
 .bouquet__image {
     width: 100%;
     height: 300px;
@@ -82,4 +87,98 @@
     border: none;
     background-color: transparent;
     outline: none;
+}
+
+.bouquet_type_cart {
+    height: 130px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.bouquet_type_cart .bouquet__image {
+    width: 130px;
+    height: 130px;
+    margin-right: 21px;
+}
+
+.bouquet_type_cart .bouquet__price {
+    font-size: 16px;
+}
+
+.bouquet_type_cart .bouquet__info {
+    padding-top: 23px;
+    box-sizing: border-box;
+}
+
+.bouquet_type_cart .bouquet__price {
+    margin-right: 20px;
+}
+
+.bouquet_type_cart .bouquet__price-info {
+    margin: 0;
+}
+
+.bouquet_type_cart .bouquet__main {
+    display: flex;
+}
+
+.bouquet__counter {
+    position: relative;
+    width: 78px;
+    margin-right: 80px;
+    text-align: center;
+    display: inline-block;
+}
+
+.bouquet__sumPrice {
+    display: inline-block;
+    font-size: 24px;
+    width: 118px;
+}
+
+.bouquet__counterButton {
+    font-size: 15px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    vertical-align: middle;
+}
+
+.bouquet__counterButton:before {
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.bouquet__counterButton_left {
+    left: 0;
+}
+
+.bouquet__counterButton_right {
+    right: 0;
+}
+
+.bouquet__controls {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 12px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+}
+
+.bouquet__delete {
+    font-size: 11px;
+    display: inline-block;
+    height: 11px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    cursor: pointer;
+
 }
