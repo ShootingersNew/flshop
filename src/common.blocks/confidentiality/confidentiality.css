@@ -1,0 +1,16 @@
+.confidentiality {
+    display: flex;
+    padding-left: 32px;
+    width: 420px;
+}
+
+.confidentiality__checkbox {
+    margin-right: 23px;
+    margin-top: 3px;
+}
+
+.confidentiality__text {
+    width: 330px;
+    font-size: 12px;
+    line-height: 2;
+}

@@ -1,0 +1,49 @@
+.cartPrice__table {
+    margin-left: auto;
+}
+
+.cartPrice__header {
+    text-align: right;
+    color: #8C8C8C;
+    padding: 11px 0;
+    padding-right: 51px;
+
+}
+
+.cartPrice__price {
+    width: 130px;
+    font-size: 24px;
+    color: #C8C8C8;
+    padding-bottom: 4px;
+    vertical-align: middle;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.cartPrice__header span {
+    color: #5866BB;
+}
+
+.cartPrice__tr {
+    overflow: hidden;
+    height: 14px;
+    white-space: nowrap;
+}
+
+.cartPrice__header .cartPrice__separator {
+    color: #E6E6E6;
+}
+
+.cartPrice__sum .cartPrice__price,
+.cartPrice__sum .cartPrice__header {
+    padding-top: 17px;
+}
+
+.cartPrice__sum .cartPrice__price {
+    color: #FD0000;
+    padding-bottom: 5px;
+}
+
+.cartPrice__sum .cartPrice__header {
+    padding-bottom: 0;
+}

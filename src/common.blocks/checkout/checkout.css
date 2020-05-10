@@ -1,0 +1,31 @@
+.checkout__header {
+    font-size: 36px;
+    font-weight: normal;
+    line-height: 0.82;
+    margin-bottom: 24px;
+}
+
+.checkout__label {
+    display: block;
+    text-align: right;
+    margin-bottom: 15px;
+    color: #8C8C8C;
+}
+
+.checkout__form {
+    width: 734px;
+}
+
+.checkout__input {
+    margin-left: 28px;
+}
+
+.checkout__button {
+    display: inline-block;
+    margin-left: 128px;
+    margin-right: 33px;
+}
+
+.checkout__footer {
+    display: flex;
+}

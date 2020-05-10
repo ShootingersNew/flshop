@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Proxima Nova Semibold';
+    src: url('ProximaNovaSemibold.eot');
+    src: local('☺'), url('ProximaNovaSemibold.woff') format('woff'), url('ProximaNovaSemibold.ttf') format('truetype'), url('ProximaNovaSemibold.svg') format('svg');
+    font-style: normal;
+}
+
+.fonts__proximaNovaSemibold {
+    font-family: "Proxima Nova Semibold", Arial, sans-serif;
+}

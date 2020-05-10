@@ -1,0 +1,22 @@
+.checkbox__true {
+    display: none;
+}
+
+.checkbox__box {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #79ba38;
+}
+
+.checkbox_checked_true .checkbox__box {
+    background: url("./arrow.svg") no-repeat center center;
+    background-size: 15px 15px;
+}
+
+.checkbox {
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    cursor: pointer;
+}
