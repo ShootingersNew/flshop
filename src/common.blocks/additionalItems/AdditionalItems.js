@@ -5,7 +5,6 @@ import Bouquet from "../bouquet/Bouquet";
 export default function AdditionalItems(props) {
     return (
         <div className="additionalItems">
-            <div className="container">
                 <div className="additionalItems__header">C этим товаром также приобретают</div>
                 <div className="additionalItems__inner">
                     {props.addItems &&
@@ -14,7 +13,6 @@ export default function AdditionalItems(props) {
                     })
                     }
                 </div>
-            </div>
         </div>
     )
 }

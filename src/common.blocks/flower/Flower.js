@@ -22,7 +22,7 @@ export default function Flower(props) {
     }
 
     return (
-        <div className="container">
+        <React.Fragment>
             {props.item ?
 
                 <article className={'flower'}>
@@ -74,6 +74,7 @@ export default function Flower(props) {
                 null
                 //    todo сделать страницу error
             }
-        </div>
+
+        </React.Fragment>
     )
 }

@@ -4,7 +4,6 @@ import './orderControl.css'
 export default function OrderControl() {
     return (
         <div className={'orderControl'}>
-            <div className="container">
                 <div className="orderControl__header">Контроль заказа перед доставкой</div>
                 <div className="orderControl__content">
                     <img src="#" alt="" className="orderControl__image"/>
@@ -22,8 +21,8 @@ export default function OrderControl() {
                             работы и отзыв. Получайте скидки за отзывы
                         </li>
                     </ul>
+
                 </div>
-            </div>
         </div>
     )
 }

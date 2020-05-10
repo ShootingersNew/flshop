@@ -5,7 +5,7 @@ import './partners.css'
 export default function Partners() {
     return (
         <div className="partners">
-            <div className="container partners__container">
+            <div className="partners__container">
                 <span className="icon-svg__compaqlogo"></span>
                 <span className="icon-svg__verizonlogo"></span>
                 <span className="icon-svg__citibanklogo"></span>

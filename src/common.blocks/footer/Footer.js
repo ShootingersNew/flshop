@@ -2,6 +2,7 @@ import React from "react";
 import {Link} from "react-router-dom";
 import './footer.css'
 import './../fonts/__proximaNovaBold/fonts__proximaNovaBold.css'
+import Container from "../container/Container";
 import paypal from './img/paypal.svg'
 import yandex from './img/yandex.svg'
 import webmoney from './img/webmoney.svg'
@@ -10,7 +11,7 @@ import visa from './img/visa.svg'
 export default function Footer(props) {
     return (
         <footer className={'footer'}>
-            <div className="footer__container container">
+            <Container classname={'footer__container'}>
                 <nav className="footer__nav">
                     {
                         props.navs.map((nav) => {
@@ -69,7 +70,7 @@ export default function Footer(props) {
                         ул. Цветочная, д. 5
                     </address>
                 </div>
-            </div>
+            </Container>
         </footer>
     )
 }
