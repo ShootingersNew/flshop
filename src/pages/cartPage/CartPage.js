@@ -67,10 +67,6 @@ class CartPage extends React.Component {
             return {
                 attributes: attributes
             }
-        }, () => {
-            this.setState({
-                checkoutPopupIsOpened: true
-            })
         })
     };
 
