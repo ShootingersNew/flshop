@@ -1,10 +1,11 @@
 import React, {useState, useEffect} from "react";
 import './checkout.css'
-import button from './../button/button.module.css'
+import Modal from "../modal/Modal";
 import InputMask from 'react-input-mask';
 import Input from "../input/Input";
 import Confidentiality from "../confidentiality/Confidentiality";
-import Checkbox from "../checkbox/Checkbox";
+import InfoModalView from "../modal/infoModalView/InfoModalView";
+
 
 export default function Checkout(props) {
 
@@ -45,7 +46,7 @@ export default function Checkout(props) {
     function onSubmit(e) {
         e.preventDefault();
         if (isFormValid) {
-            props.setCheckoutAttributes(attrs)
+            props.submitCheckout(attrs)
         }
     }
 
@@ -82,6 +83,7 @@ export default function Checkout(props) {
                         type="text"
                     />
                 </label>
+
                 <label className={'checkout__label'}>
                     Телефон*
                     <InputMask
@@ -94,6 +96,7 @@ export default function Checkout(props) {
                         }}
                     />
                 </label>
+
                 <label className={'checkout__label'}>
                     Комментарий
                     <Input
@@ -107,14 +110,24 @@ export default function Checkout(props) {
                         type="text"
                     />
                 </label>
+
+
                 <div className="checkout__footer">
-                    <button className={button.button + ' checkout__button'} disabled={!isFormValid}>Оформить</button>
+                    {/*Modal includes submit button*/}
+                    <Modal
+                        btnClassName={'checkout__button'}
+                        btnDisabled={!isFormValid}
+                        header={'Сообщение'}
+                        content={() => (<InfoModalView info={props.popupContent}/>)}
+                    />
+
                     <Confidentiality
                         className={'checkout__confidentiality'}
                         checked={isAgreementChecked}
                         onChange={setIsAgreementChecked}
                     />
                 </div>
+
             </form>
         </div>
     )
