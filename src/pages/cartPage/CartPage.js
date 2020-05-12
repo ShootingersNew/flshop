@@ -12,7 +12,7 @@ import {connect} from "react-redux";
 class CartPage extends React.Component {
     constructor(props) {
         super(props);
-        this.setCheckoutAttributes.bind(this);
+        this.submitCheckout.bind(this);
         this.state = {
             chosenDelivery: {
                 type: 'Доставка курьером',
@@ -24,7 +24,11 @@ class CartPage extends React.Component {
                 minPrice: 0,
                 salePercent: 0
             },
-            attributes: ''
+            attributes: {
+                name: '',
+                phone: '',
+                comment: '',
+            },
         }
     }
 
@@ -39,41 +43,67 @@ class CartPage extends React.Component {
     }
 
     setPrice = () => {
-
         this.setState(() => {
+            return {
+                //set discount
+                discount: this.props.cart.discount.reduce((item, cur) => (
+                    cur.minPrice < this.props.price && item.minPrice < cur.minPrice ?
+                        cur : item
+                )),
+            }
+        }, () => {
+            //set final price based on discount
+            this.setState(() => {
                 return {
                     finalPrice: this.props.price - this.state.discount.salePercent / 100 * this.props.price + this.state.chosenDelivery.price,
-                    discount: this.props.cart.discount.reduce((item, cur) => (
-                        cur.minPrice < this.props.price && item.minPrice < cur.minPrice ?
-                            cur : item
-                    ))
                 }
-            }
-        )
+            })
+        })
     };
-    setCheckoutAttributes = (attributes) => {
+
+    //set state.attributes and send information to bd
+    submitCheckout = (attributes) => {
         this.setState(() => {
             return {
                 attributes: attributes
             }
+        }, () => {
+            this.setState({
+                checkoutPopupIsOpened: true
+            })
         })
     };
 
+
     render() {
         const {items, length, price} = this.props;
-        const {discount, chosenDelivery, address, finalPrice} = this.state;
+        const {discount, chosenDelivery, address, finalPrice, attributes} = this.state;
         return (
             <React.Fragment>
                 <Container>
                     <Breadcrumbs/>
                     <Main className={'main_inlineBlock main_checkout'}>
+
                         <Cart items={items} length={length}/>
-                        <CartPrice price={price} finalPrice={finalPrice} discount={discount}
-                                   chosenDelivery={chosenDelivery} address={address}/>
-                        <Checkout setAttrs={this.setCheckoutAttributes}/>
+
+                        <CartPrice price={price}
+                                   finalPrice={finalPrice}
+                                   discount={discount}
+                                   chosenDelivery={chosenDelivery}
+                                   address={address}
+                        />
+                        <Checkout
+                            submitCheckout={this.submitCheckout}
+                            popupContent={{...attributes, length, items, address, finalPrice, discount}}
+                            setAttrs={this.submitCheckout}
+                        />
                     </Main>
 
-                    <AsideBanners id={'checkoutAside'} itemsIn={length}/>
+                    <AsideBanners
+                        id={'checkoutAside'}
+                        itemsIn={length}
+                    />
+
                 </Container>
             </React.Fragment>
         )
