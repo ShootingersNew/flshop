@@ -1,10 +1,11 @@
 import React from "react";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
-import {Main} from "./pages/main/Main";
+import {MainPage} from "./pages/mainPage/MainPage";
 import Goods from "./pages/good/Goods";
 import Header from "./common.blocks/header/Header";
 import Footer from "./common.blocks/footer/Footer";
 import App from "./App";
+import CartPage from "./pages/cartPage/CartPage";
 
 export default function Routes() {
     return (
@@ -14,10 +15,10 @@ export default function Routes() {
                 <Route component={Header}/>
                 <Switch>
                     <Route exact path={"/"}>
-                        <Main/>
+                        <MainPage/>
                     </Route>
-                    <Route exact path={'/goods/:type/:idx'} component={Goods}>
-                    </Route>
+                    <Route exact path={'/goods/:type/:idx'} component={Goods}/>
+                    <Route exact path={'/cart'} component={CartPage}/>
                 </Switch>
                 <Route>
                     <Footer navs={[
