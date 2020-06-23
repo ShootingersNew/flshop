@@ -1,13 +1,23 @@
-import React from "react";
-import {Link} from "react-router-dom";
-import withCartConnect from "../../hoc/withCartConnect";
-import {regExpPrice} from "../../config/utils";
-
+//libs
+import React from "react"
+import {Link} from "react-router-dom"
+import PropTypes from 'prop-types'
+//comps
+import withCartConnect from "../../hoc/withCartConnect"
+//utils
+import {regExpPrice} from "../../config/utils"
+//styles
 import './../fonts/__proximaNovaBold/fonts__proximaNovaBold.css'
 import './../svgfont/svgfont.css'
 import './../link/link.css'
 import './bouquet.css'
 
+Bouquet.propTypes = {
+    item: PropTypes.object.isRequired,
+    addInCart: PropTypes.func.isRequired,
+    classname: PropTypes.string,
+    mod: PropTypes.string,
+};
 function Bouquet(props) {
     function increaseQuantity() {
         const quantity = props.item.amount + 1;
@@ -72,8 +82,8 @@ function Bouquet(props) {
                     <button onClick={() => {
                         props.addInCart(props.item)
                     }} className="bouquet__cartButton" disabled={props.checkInCart(props.item.id)}>
-                        <span className="icon-svg__plus bouquet__plus"></span>
-                        <span className="icon-svg__cartico bouquet__cart"></span>
+                        <span className="icon-svg__plus bouquet__plus"/>
+                        <span className="icon-svg__cartico bouquet__cart"/>
                     </button>
                 </footer>
             }
