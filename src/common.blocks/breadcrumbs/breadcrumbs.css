@@ -3,9 +3,13 @@
     text-decoration: none;
 }
 
-.breadcrumbs__separator {
-    color: #E6E6E6;
+.breadcrumbs__link:after {
+    content: '/';
+    position: relative;
+    color: #F5F5F5;
+    margin: 0 5px;
 }
+
 
 .breadcrumbs__active {
     color: #C8C8C8;
