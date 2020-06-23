@@ -35,7 +35,7 @@ function AsideBanners(props) {
     return (
         <div className={className}>
             <div className="asideBanners__inner">
-                {mapBanners}
+                {props.banners ? mapBanners() : false}
             </div>
         </div>
     )
