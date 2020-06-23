@@ -1,10 +1,14 @@
-import React from "react";
+//libs
+import React from "react"
+import cn from 'classnames'
+//styles
+import './container.css'
 
 const Container = (props) => {
-    let classname = 'container';
-    if (props.classname) {
-        classname = classname + ' ' + props.classname
-    }
+    let classname = cn({
+        container: true,
+        [props.classname]: props.classname
+    });
     return (
         <div className={classname}>
             {props.children}
