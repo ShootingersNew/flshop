@@ -1,8 +1,19 @@
-import React from "react";
+//libs
+import React from "react"
+import PropTypes from 'prop-types'
+//utils
 import {regExpPrice} from "../../config/utils";
+//styles
 import './cartPrice.css'
 import '../fonts/__proximaNovaBold/fonts__proximaNovaBold.css'
 
+CartPrice.propTypes = {
+    price: PropTypes.number.isRequired,
+    discount: PropTypes.object.isRequired,
+    address: PropTypes.string.isRequired,
+    chosenDelivery: PropTypes.object.isRequired,
+    finalPrice: PropTypes.number.isRequired
+};
 export default function CartPrice(props) {
     return (
         <table className={'cartPrice__table'}>
