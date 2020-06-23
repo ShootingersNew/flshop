@@ -3,15 +3,30 @@ import connectBannersWithBD from "../../hoc/connectBannersWithBD/connectBannersW
 import VerticalBanner from "../verticalBanner/VerticalBanner";
 import './asideBanners.css'
 
+AsideBanners.propTypes = {
+    type: PropTypes.string,
+    banners: PropTypes.array.isRequired,
+    className: PropTypes.string
+};
+
 function AsideBanners(props) {
-
-    const mapBanners = props.banners.map((banner, idx) => {
-        //render banners dependent on the items in the cart
-        if (idx < props.itemsIn || props.itemsIn === undefined) {
-            return <VerticalBanner banner={banner} className={'asideBanners__banner'}/>
-        }
-
+    let className = cn({
+        'asideBanners': true,
+        [props.className]: props.className
     });
+    const mapBanners = () => {
+        return props.banners.map((banner, idx) => {
+            //render banners dependent on the items in the cart
+            if (idx < props.count || props.count === undefined) {
+                return <VerticalBanner
+                    type={props.type ? props.type : null}
+                    banner={banner}
+                    className={'asideBanners__banner'}
+                />
+            }
+
+        });
+    };
     return (
         <div className="asideBanners">
             <div className="asideBanners__inner">
