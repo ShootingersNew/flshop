@@ -1,8 +1,17 @@
-import React from "react";
+//libs
+import React from "react"
+import PropTypes from 'prop-types'
+//comps
+import Button from "../button/Button"
+//styles
 import './../container/container.css'
 import banner from './banner.module.css'
-import button from './../button/button.module.css';
 import '../fonts/__proximaNovaBold/fonts__proximaNovaBold.css'
+
+Banner.propTypes = {
+    bg: PropTypes.string.isRequired,
+    header: PropTypes.string.isRequired,
+};
 
 export default function Banner(props) {
     return (
@@ -12,8 +21,7 @@ export default function Banner(props) {
                     <header className={banner.banner__header + ' fonts__proximaNovaBold'}>
                         {props.header}
                     </header>
-                    {/*todo переделать на Link*/}
-                    <a className={'banner__link ' + button.button} href={props.linkUrl}>Заказать</a>
+                    <Button link={props.linkUrl} className={'banner__link'}>Заказать</Button>
                 </div>
             </div>
         </article>
