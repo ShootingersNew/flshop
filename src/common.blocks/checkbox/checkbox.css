@@ -4,12 +4,12 @@
 
 .checkbox__box {
     display: block;
-    width: 100%;
-    height: 100%;
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
     border: 1px solid #79ba38;
 }
 
-.checkbox_checked_true .checkbox__box {
+.checkbox__true:checked + .checkbox__box {
     background: url("./arrow.svg") no-repeat center center;
     background-size: 15px 15px;
 }
