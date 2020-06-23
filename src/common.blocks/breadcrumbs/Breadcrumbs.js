@@ -1,7 +1,15 @@
-import React from "react";
+//libs
+import React from "react"
+import PropTypes from 'prop-types'
+//comps
+import BreadcrumbsLink from "./BreadcrumbsLink"
+//styles
 import './breadcrumbs.css'
 
-export default function Breadcrumbs() {
+export default function Breadcrumbs({items}) {
+    Breadcrumbs.propTypes = {
+        items: PropTypes.array.isRequired
+    };
     return (
         <div className="container">
             <div className="breadcrumbs">
