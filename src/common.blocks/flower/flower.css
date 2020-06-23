@@ -4,6 +4,8 @@
     margin-top: 16px;
     background-color: #C4C4C4;
     margin-right: 60px;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .flower {
@@ -33,13 +35,9 @@
 }
 
 .flower__mark {
-    margin-right: 30px;
+    margin-right: 40px;
     position: relative;
-    top: -1px;
-    width: 79px;
     line-height: 19px;
-    display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
@@ -81,6 +79,10 @@
     margin-right: 30px;
 }
 
+.flower__sale {
+    display: inline-block;
+}
+
 .flower__salePrice {
     color: #8C8C8C;
     text-decoration: line-through;
@@ -110,49 +112,3 @@
     margin-right: 34px;
 }
 
-.flower__compositionHeader {
-    font-size: 24px;
-    margin-bottom: 2px;
-}
-
-.flower__compositionLink {
-    text-decoration: none;
-    color: inherit;
-    position: relative;
-}
-
-.flower__compositionLink:after {
-    content: '';
-
-}
-
-.flower__compositionLink span {
-    color: #8C8C8C;
-}
-
-.flower__compositionList {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.flower__compositionLi {
-    width: 33.33%;
-    line-height: 48px;
-    display: block;
-
-}
-
-.flower__composition {
-    margin-top: 69px;
-}
-
-.flower__desc {
-    width: 668px;
-    height: 330px;
-    position: absolute;
-    top: 100%;
-    right: 0;
-}
