@@ -1,6 +1,11 @@
-import React from "react";
-import connectBannersWithBD from "../../hoc/connectBannersWithBD/connectBannersWithBD";
-import VerticalBanner from "../verticalBanner/VerticalBanner";
+//libs
+import React from "react"
+import PropTypes from 'prop-types'
+import cn from "classnames"
+//comps
+import withBannersConnect from "../../hoc/withBannersConnect"
+import VerticalBanner from "../verticalBanner/VerticalBanner"
+//styles
 import './asideBanners.css'
 
 AsideBanners.propTypes = {
@@ -28,7 +33,7 @@ function AsideBanners(props) {
         });
     };
     return (
-        <div className="asideBanners">
+        <div className={className}>
             <div className="asideBanners__inner">
                 {mapBanners}
             </div>
