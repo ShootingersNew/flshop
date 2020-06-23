@@ -11,16 +11,12 @@ export default function Breadcrumbs({items}) {
         items: PropTypes.array.isRequired
     };
     return (
-        <div className="container">
-            <div className="breadcrumbs">
-                <a className={'breadcrumbs__link'} href="/">Главная</a><span
-                className={'breadcrumbs__separator'}> / </span>
-                <a className={'breadcrumbs__link'} href="#">Каталог</a><span
-                className={'breadcrumbs__separator'}> / </span>
-                <a className={'breadcrumbs__link'} href="#">Розы</a><span
-                className={'breadcrumbs__separator'}> / </span>
-                <a className={'breadcrumbs__active'} href="#">Музыка цветов</a>
-            </div>
+        <div className="breadcrumbs">
+            {items && items.map((item, i) => (
+                <BreadcrumbsLink active={i === items.length - 1} path={item.path}>{item.title}</BreadcrumbsLink>
+            ))
+            }
+
         </div>
     )
 }
