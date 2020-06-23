@@ -1,9 +1,10 @@
 .additionalItems {
-
+    padding-top: 39px;
 }
 
 .additionalItems__header {
-
+    font-size: 36px;
+    line-height: 1.25;
 }
 
 .additionalItems__inner {
