@@ -1,134 +1,93 @@
-import React, {useState, useEffect} from "react";
+//libs
+import React from "react"
+import InputMask from 'react-input-mask'
+import PropTypes from 'prop-types'
+//comps
+import Form from "../form/Form"
+import Modal from "../modal/Modal"
+import Input from "../input/Input"
+import Confidentiality from "../confidentiality/Confidentiality"
+import InfoModalView from "../modal/views/InfoModalView/InfoModalView"
+import Button from "../button/Button"
+// styles || config
 import './checkout.css'
-import Modal from "../modal/Modal";
-import InputMask from 'react-input-mask';
-import Input from "../input/Input";
-import Confidentiality from "../confidentiality/Confidentiality";
-import InfoModalView from "../modal/infoModalView/InfoModalView";
+import {mask} from './../../config/config'
 
-
+Checkout.propTypes = {
+    submitCheckout: PropTypes.func.isRequired,
+    popupContent: PropTypes.object.isRequired
+};
 export default function Checkout(props) {
-
-    const [attrs, setAttrs] = useState({
-        name: {val: '', isValid: false},
-        phone: {val: '', isValid: false},
-        comment: {val: '', isValid: true}
-    });
-    const [isFormValid, setIsFormValid] = useState(false);
-    const [isAgreementChecked, setIsAgreementChecked] = useState(true);
-    const mask = "+7 \999 999 99 99";
-
-    function changeAttrs(name, event) {
-        //get value of input ant input's name
-        let isValid = false;
-        const curValue = event.target.value;
-
-        switch (name) {
-            //validate depending on input's name
-            case 'phone':
-                const numbersInMask = mask.length - mask.replace(/\d/gm, '').length;
-                const numbersInVal = curValue.length - curValue.replace(/\d/gm, '').length;
-                isValid = numbersInMask === numbersInVal;
-                //set state
-                return setAttrs({...attrs, phone: {...attrs.phone, isValid: isValid, val: event.target.value}});
-            case 'name':
-                isValid = event.target.value.length > 1;
-                setAttrs({...attrs, name: {...attrs.name, isValid: isValid, val: event.target.value}});
-                break;
-            case 'comment':
-                return setAttrs({...attrs, comment: {...attrs.comment, isValid: true, val: event.target.value}});
-
-            default:
-                return
-        }
-    }
-
-    function onSubmit(e) {
-        e.preventDefault();
-        if (isFormValid) {
-            props.submitCheckout(attrs)
-        }
-    }
-
-    useEffect(() => {
-        //check that all fields in state 'attrs' have value 'isValid:true'
-        let valid = true;
-        for (let attrsKey in attrs) {
-            if (!attrs[attrsKey].isValid) {
-                valid = false;
-                break;
-            }
-        }
-        setIsFormValid(valid && isAgreementChecked)
-    }, [attrs, isAgreementChecked]);
-
     return (
         <div className="checkout">
             <h5 className="checkout__header">
                 Оформление заказа
             </h5>
-            <form onSubmit={(e) => {
-                onSubmit(e)
-            }} className="checkout__form">
-                <label className={'checkout__label'}>
-                    Имя*
-                    <Input
-                        name={'name'}
-                        value={attrs.name.val}
-                        isValid={attrs.name.isValid}
-                        required={true}
-                        className={'checkout__input'}
-                        onChange={changeAttrs}
-                        placeholder={'Введите свое имя'}
-                        type="text"
-                    />
-                </label>
+            <Form className={'checkout__form'}
+                  submitHandler={props.submitCheckout}
+                  render={
+                      ({register, formState, control, errors, getValues}, isValidInput, Controller) => (
+                          <React.Fragment>
+                              <label className={'checkout__label'}>
+                                  Имя*
+                                  <Input
+                                      name={'name'}
+                                      className={'checkout__input'}
+                                      placeholder={'Введите свое имя'}
+                                      type="text"
+                                      isValid={isValidInput('name')}
+                                      register={register({minLength: 2})}
+                                  />
 
-                <label className={'checkout__label'}>
-                    Телефон*
-                    <InputMask
-                        placeholder={'Введите номер телефона'}
-                        className={'input checkout__input input_required_true input_isValid_' + attrs.phone.isValid}
-                        value={attrs.phone.val}
-                        mask={mask} maskChar="_"
-                        onChange={(e) => {
-                            changeAttrs('phone', e)
-                        }}
-                    />
-                </label>
+                              </label>
+                              <label className={'checkout__label'}>
+                                  Телефон*
+                                  <Controller
+                                      as={InputMask}
+                                      control={control}
+                                      name={'phone'}
+                                      placeholder={'Введите номер телефона'}
+                                      className={'input checkout__input input_validation_true input_isValid_' + isValidInput('phone')}
+                                      mask={mask} maskChar="_"
+                                      defaultValue={''}
+                                      rules={{
+                                          validate: (value) => {
+                                              const numbersInMask = mask.length - mask.replace(/\d/gm, '').length;
+                                              const numbersInVal = value.length - value.replace(/\d/gm, '').length;
+                                              return numbersInMask === numbersInVal;
+                                          }
+                                      }}
+                                  />
+                              </label>
+                              <label className={'checkout__label'}>
+                                  Комментарий
+                                  <Input
+                                      name={'comment'}
+                                      className={'checkout__input'}
+                                      placeholder={'По желанию'}
+                                      type="text"
+                                      register={register}
+                                  />
+                              </label>
+                              <div className="checkout__footer">
+                                  {/*Modal includes submit button*/}
+                                  <Modal
+                                      trigger={
+                                          () => (<Button className={'checkout__button'} disabled={!formState.isValid}
+                                          > Оформить </Button>)}
+                                      header={'Сообщение'}
+                                      content={<InfoModalView info={props.popupContent}/>}
+                                  />
 
-                <label className={'checkout__label'}>
-                    Комментарий
-                    <Input
-                        name={'comment'}
-                        value={attrs.comment.val}
-                        isValid={attrs.name.isValid}
-                        required={false}
-                        className={'checkout__input'}
-                        onChange={changeAttrs}
-                        placeholder={'По желанию'}
-                        type="text"
-                    />
-                </label>
-
-
-                <div className="checkout__footer">
-                    {/*Modal includes submit button*/}
-                    <Modal
-                        btnClassName={'checkout__button'}
-                        btnDisabled={!isFormValid}
-                        header={'Сообщение'}
-                        content={() => (<InfoModalView info={props.popupContent}/>)}
-                    />
-
-                    <Confidentiality
-                        className={'checkout__confidentiality'}
-                        checked={isAgreementChecked}
-                        onChange={setIsAgreementChecked}
-                    />
-                </div>
-
-            </form>
+                                  <Confidentiality
+                                      className={'checkout__confidentiality'}
+                                      register={register({required: true})}
+                                      defaultChecked={true}
+                                  />
+                              </div>
+                          </React.Fragment>
+                      )}
+            />
         </div>
     )
 }
