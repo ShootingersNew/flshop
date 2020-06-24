@@ -1,12 +1,38 @@
 .showcase__items {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    margin: -10px -10px -21px;
+    /*margins are for gap between items*/
+}
+
+.showcase__items .bouquet {
+    margin: 10px 10px 21px;
+    /*margins are for gap between items*/
+}
+
+.showcase__filters {
+    display: inline-block;
+    margin-left: 80px;
+}
+
+.showcase__filter {
+    display: inline-block;
+    margin-right: 30px;
+    line-height: 19px;
+    border: 1px solid #F5F5F5;
+    color: #8C8C8C;
+    padding: 8px 36px 9px 13px;
+    font-size: 16px;
+}
+
+.showcase__filter span {
+    color: #C8C8C8;
 }
 
 .showcase__header {
     font-size: 36px;
     line-height: 62px;
-    margin-bottom: 3px;
+    margin-bottom: 6px;
 }
 
 .showcase__link {
@@ -16,4 +42,28 @@
 
 .showcase {
     padding-top: 16px;
+}
+
+.showcase_listing .showcase__items {
+    flex-wrap: wrap;
+}
+
+.showcase_listing .showcase__container {
+    max-width: unset;
+    width: 100%;
+}
+
+.showcase__counter {
+    font-size: 16px;
+    color: #C8C8C8;
+    position: relative;
+    top: -17px;
+    right: -4px;
+}
+
+.showcase__closeButton {
+    font-size: 10px;
+    position: relative;
+    right: -12px;
+    cursor: pointer;
 }
