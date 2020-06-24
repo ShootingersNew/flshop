@@ -1,0 +1,22 @@
+{
+  "cart": [
+    {
+      "bg": "./images/banners/1.png",
+      "link": "/"
+    },
+    {
+      "bg": "./images/banners/2.png",
+      "link": "/"
+    },
+    {
+      "bg": "./images/banners/3.png",
+      "link": "/"
+    }
+  ],
+  "listing": [
+    {
+      "bg": "./images/banners/4.png",
+      "link": "/"
+    }
+  ]
+}

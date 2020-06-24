@@ -1,0 +1,144 @@
+[
+  {
+    "id": 5,
+    "name": "Букет «Деревенское утро»",
+    "src": "./images/bouquets/b5.png",
+    "price": 3150,
+    "sale": true,
+    "salePrice": 3300,
+    "percents": "-9% ",
+    "category": "Ромашки",
+    "type": "allItems",
+    "composition": [
+      {
+        "name": "Ромашка",
+        "id": "romashka",
+        "amount": 10
+      },
+      {
+        "name": "Эустома сиреневая",
+        "id": "aystomasir",
+        "amount": 4
+      },
+      {
+        "name": "Альстромерия",
+        "id": "alstromeria",
+        "amount": 6
+      },
+      {
+        "name": "Хризантема кустовая",
+        "id": "hrizantema",
+        "amount": 4
+      }
+    ],
+    "additional": [
+      1002,
+      1008,
+      1007,
+      1006,
+      1003,
+      1005,
+      1001,
+      1004
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Букет «Шик»",
+    "src": "./images/bouquets/b6.png",
+    "price": 5500,
+    "sale": true,
+    "salePrice": 9300,
+    "percents": "-44%",
+    "category": "Орхидеи",
+    "type": "allItems",
+    "composition": [
+      {
+        "name": "Орхидея",
+        "id": "orhideya",
+        "amount": 15
+      },
+      {
+        "name": "Эустома сиреневая",
+        "id": "aystomasir",
+        "amount": 4
+      },
+      {
+        "name": "Альстромерия",
+        "id": "alstromeria",
+        "amount": 6
+      },
+      {
+        "name": "Хризантема кустовая",
+        "id": "hrizantema",
+        "amount": 4
+      }
+    ],
+    "additional": [
+      1002,
+      1008,
+      1007,
+      1006,
+      1003,
+      1005,
+      1001,
+      1004
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Корзина «Ромашки»",
+    "src": "./images/bouquets/b7.png",
+    "price": 8990,
+    "sale": true,
+    "salePrice": 9999,
+    "percents": "-20% ",
+    "category": "Ромашки",
+    "type": "allItems",
+    "composition": [
+      {
+        "name": "Ромашка",
+        "id": "romashka",
+        "amount": 200
+      }
+    ],
+    "additional": [
+      1003,
+      1002,
+      1007,
+      1005,
+      1001,
+      1004,
+      1006,
+      1008
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Букет «Малиновый щербет»",
+    "src": "./images/bouquets/b8.png",
+    "price": 6000,
+    "sale": true,
+    "salePrice": 9000,
+    "percents": "-28%",
+    "category": "Ромашки",
+    "type": "allItems",
+    "composition": [
+      {
+        "name": "Малина",
+        "id": "malina",
+        "amount": 20
+      }
+    ],
+    "additional": [
+      1003,
+      1002,
+      1007,
+      1005,
+      1001,
+      1004,
+      1006,
+      1008
+    ]
+  }
+]

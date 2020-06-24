@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1001,
+    "name": "Воздушный шар Круглый",
+    "src": "/images/additional/1.png",
+    "price": 350,
+    "vendorCode": "19234237",
+    "mark": 3,
+    "sale": false,
+    "salePrice": false,
+    "percents": false,
+    "type": "additionalItems"
+  },
+  {
+    "id": 1002,
+    "name": "Корзина Доброе утро",
+    "src": "/images/additional/2.png",
+    "price": 6600,
+    "vendorCode": "19234227",
+    "mark": 5,
+    "sale": false,
+    "salePrice": false,
+    "percents": false,
+    "type": "additionalItems"
+  },
+  {
+    "id": 1003,
+    "name": "Медведь плюшевый",
+    "src": "/images/additional/3.png",
+    "price": 1600,
+    "vendorCode": "11234227",
+    "mark": 5,
+    "sale": true,
+    "salePrice": 2300,
+    "percents": "36%",
+    "type": "additionalItems"
+  },
+  {
+    "id": 1004,
+    "name": "Корзина Уютный вечер",
+    "src": "/images/additional/4.png",
+    "price": 7780,
+    "vendorCode": "13234227",
+    "mark": 4,
+    "sale": true,
+    "salePrice": 9300,
+    "percents": "35%",
+    "type": "additionalItems"
+  },
+  {
+    "id": 1005,
+    "name": "Корзина Сладость",
+    "src": "/images/additional/4.png",
+    "price": 6390,
+    "vendorCode": "13234227",
+    "mark": 3,
+    "sale": true,
+    "salePrice": 7000,
+    "percents": "18%",
+    "type": "additionalItems"
+  },
+  {
+    "id": 1006,
+    "name": "Воздушный шар Звезда",
+    "src": "/images/additional/6.png",
+    "price": 350,
+    "vendorCode": "13034227",
+    "mark": 5,
+    "sale": false,
+    "salePrice": false,
+    "percents": false,
+    "type": "additionalItems"
+  },
+  {
+    "id": 1007,
+    "name": "Мыльные розы Страсть",
+    "src": "/images/additional/7.png",
+    "price": 2200,
+    "vendorCode": "13834337",
+    "mark": 5,
+    "sale": false,
+    "salePrice": false,
+    "percents": false,
+    "type": "additionalItems"
+  },
+  {
+    "id": 1008,
+    "name": "Открытка ручной работы",
+    "src": "/images/additional/8.png",
+    "price": 400,
+    "vendorCode": "13839937",
+    "mark": 3,
+    "sale": false,
+    "salePrice": false,
+    "percents": false,
+    "type": "additionalItems"
+  }
+]
