@@ -1,3 +1,8 @@
+.userNav {
+    text-decoration: none;
+    color: inherit;
+}
+
 .userNav__cart {
     display: inline-block;
 }
