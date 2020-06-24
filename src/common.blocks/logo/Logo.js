@@ -4,10 +4,8 @@ import logo from './Logo.svg'
 
 export default function Logo() {
     return (
-        <Link to={'/'}>
-            <object data={logo} type="image/svg+xml">
-
-            </object>
+        <Link className={'logo'} to={'/'}>
+            <img src={logo} alt={'logo'}/>
         </Link>
     )
 }
