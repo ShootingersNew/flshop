@@ -1,0 +1,25 @@
+.button {
+    display: block;
+    text-align: center;
+    line-height: 46px;
+    width: 138px;
+    height: 46px;
+    background-color: #FD0000;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    border: none;
+    font-size: 16px;
+    outline: none;
+}
+
+.button_filter {
+    width: 212px;
+    line-height: unset;
+}
+
+.button_transparent {
+    background-color: transparent;
+    color: black;
+    border: 1px solid #FD0000;
+}
