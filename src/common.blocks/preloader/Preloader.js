@@ -1,18 +1,23 @@
-import React, {useEffect} from "react";
+import React from "react"
+import cn from 'classnames'
 import './preloader.css'
 
 export default function Preloader(props) {
+    let className = cn({
+        preloader: true,
+        [props.className]: props.className
+    });
     return (
-        <div className={"preloader " + props.className}>
+        <div className={className}>
             <div className={"lds-roller "}>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
+                <div/>
+                <div/>
+                <div/>
+                <div/>
+                <div/>
+                <div/>
+                <div/>
+                <div/>
             </div>
         </div>
     )
