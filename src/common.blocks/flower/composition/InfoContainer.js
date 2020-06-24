@@ -8,7 +8,6 @@ export default class InfoContainer extends React.Component {
     render() {
         return (
             <React.Fragment>
-                {console.log(this.props)}
                 {this.props.render(this.props.name)}
             </React.Fragment>
         )
