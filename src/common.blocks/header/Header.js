@@ -1,31 +1,44 @@
-import React from "react";
-import UserNav from "../userNav/UserNav";
-import Logo from "../logo/Logo";
-import './../../common.blocks/svgfont/svgfont.css'
-import './../../common.blocks/catalog/catalog.css'
+//libs
+import React from "react"
+import {Link} from "react-router-dom"
+import UserNav from "../userNav/UserNav"
+//comps
+import Logo from "../logo/Logo"
+import Modal from "../modal/Modal"
+import CallModalView from "../modal/views/CallModalView/CallModalView"
+import Search from "../search/Search"
+//styles
+import '../link/link.css'
+import '../svgfont/svgfont.css'
+import '../catalog/catalog.css'
 import '../fonts/__proximaNovaBold/fonts__proximaNovaBold.css'
 import '../fonts/__proximaNovaRegular/fonts__proximaNovaRegular.css'
+import 'simplebar/dist/simplebar.min.css'
 import './header.css'
 
 export default function Header() {
+
     return (
         <header>
             <div className="header ">
                 <div className={'header__container container'}>
                     <Logo/>
-                    <div className="header__catalogButton catalog__button">
-                        <span className={'icon-svg__bar catalog__icon'}></span>
+                    <Link to={'./catalog'} className="header__catalogButton catalog__button link link_color_inherit ">
+                        <span className={'icon-svg__bar catalog__icon'}/>
                         Каталог
-                    </div>
+                    </Link>
                     <div className="header__telephoneContact">
                         <a href="tel:+79673110351" className={'fonts__proximaNovaBold'}>8 967 311 03 51 </a>
-                        <span>c 8 до 20 ежедневно</span>
-                        <a href="#callme" className="header__callPopupLink">Обратный звонок</a>
+                        <span className={'header__work-schedule'}>c 8 до 20 ежедневно</span>
+                        <Modal
+                            trigger={<span className="header__callPopupLink">Обратный звонок</span>}
+                            header={'Сообщение'}
+                            content={<CallModalView/>}
+                        />
                     </div>
+                    <Search class={'header__search'}/>
                     {/*линк для того, чтобы по href найти и отобразить блок(компонент) с соответвующим айди*/}
-                    <input className={`header__search fonts__proximaNovaBold`}
-                           placeholder={'Поиск по товарам'} type="text"/>
-                    <UserNav class={'header__userNav'} itemsIn={3} itemsPrice={'5 608р'}/>
+                    <UserNav class={'header__userNav'}/>
                 </div>
 
             </div>
