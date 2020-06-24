@@ -2,3 +2,7 @@
     color: #5887BB;
     text-decoration: none;
 }
+
+.link_color_inherit {
+    color: inherit;
+}
