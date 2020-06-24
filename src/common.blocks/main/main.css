@@ -1,11 +1,12 @@
 .main {
-
+    padding-bottom: 33px;
 }
 
 .main_inlineBlock {
     display: inline-block;
 }
 
-.main_checkout {
-    padding-bottom: 94px;
+.main_listing {
+    width: 918px;
+    vertical-align: top;
 }
