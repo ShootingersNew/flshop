@@ -1,25 +1,26 @@
-import React from "react";
-import Popup from "reactjs-popup";
-import button from '../button/button.module.css'
+//libs
+import React from "react"
+import Popup from "reactjs-popup"
+import PropTypes from 'prop-types'
+//styles
 import './modal.css'
 
+Modal.propTypes = {
+    trigger: PropTypes.element,
+    submitHandler: PropTypes.func,
+    content: PropTypes.element,
+    open: PropTypes.bool
+};
 export default function Modal(props) {
     return (
         <Popup
             lockScroll={true}
             modal={true}
-            onOpen={() => {
-                console.log('effects')
-            }}
-            trigger={() => (
-                <button className={button.button + ' ' + props.btnClassName}
-                        disabled={props.btnDisabled}>Оформить</button>
-            )}
-            closeOnDocumentClick
+            {...props}
         >
             <span>
                 <div className="popup__header">{props.header}</div>
-                {props.content()}
+                {props.content}
             </span>
         </Popup>
     )
