@@ -1,0 +1,97 @@
+
+.search__layout {
+    position: absolute;
+    top: -33px;
+    left: -131px;
+    padding: 74px 25px 30px 54px;
+    box-sizing: border-box;
+    z-index: 11;
+    width: 362px;
+    height: 301px;
+    background-color: white;
+}
+
+.search__input {
+    position: relative;
+    border: none;
+    border-bottom: 1px solid #F5F5F5;
+    font-size: 16px;
+    outline: none;
+    z-index: 12;
+    color: #8C8C8F;
+}
+
+.search__img {
+    height: 51px;
+    width: 51px;
+}
+
+.search__li {
+    height: 51px;
+    display: flex;
+}
+
+.search__li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.search__result-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-height: 273px;
+    overflow-y: hidden
+}
+
+.search__info {
+    width: 175px;
+    line-height: 20px;
+    padding-top: 5px;
+    padding-left: 26px;
+}
+
+.simplebar-scrollbar {
+    background-color: #E6E6E6;
+    border-radius: 0;
+    height: 43px;
+    width: 2px;
+    cursor: pointer;
+    right: 0;
+}
+
+.simplebar-track.simplebar-vertical {
+    width: 2px;
+}
+
+.simplebar-scrollbar::before {
+    display: none;
+}
+
+.simplebar-content:after {
+    display: none;
+}
+
+.search__header {
+    margin: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.search__composition {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #C8C8CA;
+}
+
+.search__composition span {
+    display: inline-block;
+}
+
+.search__link {
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    color: inherit;
+}

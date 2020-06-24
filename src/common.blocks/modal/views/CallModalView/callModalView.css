@@ -1,0 +1,18 @@
+.callModalView__input {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.callModalView__btn {
+    width: 198px;
+    margin-bottom: 15px;
+}
+
+.callModalView__confidentiality {
+    padding-left: 0;
+    width: unset;
+}
+
+.callModalView__confidentiality .confidentiality__text {
+    width: 230px;
+}
