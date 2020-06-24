@@ -14,7 +14,7 @@
     margin-left: 30px;
 }
 
-.header__telephoneContact a {
+.header__telephoneContact > a {
     text-decoration: none;
     color: inherit;
     margin-right: 2px;
@@ -26,18 +26,21 @@
 
 .header__callPopupLink {
     margin-left: 27px;
-}
-
-.header__search {
-    margin-left: 73px;
-    width: 151px;
-    border: none;
-    border-bottom: 1px solid #F5F5F5;
-    font-size: 16px;
-    outline: none;
+    cursor: pointer;
+    color: #5887BB;
 }
 
 .header__userNav {
     position: absolute;
     right: 0;
+}
+
+.header__search {
+    position: absolute;
+    right: 236px;
+    width: 151px;
+}
+
+.header__work-schedule {
+    color: #8C8C8C;
 }
