@@ -1,9 +1,20 @@
-import React, {useEffect, Fragment, useRef} from "react";
-import Slider from 'react-slick';
+//libs
+import React, {useRef} from "react"
+import Slider from 'react-slick'
+import PropTypes from 'prop-types'
+//comps
+import Button from "../button/Button"
+//styles
 import '../fonts/__proximaNovaBold/fonts__proximaNovaBold.css'
-import button from './../button/button.module.css'
-import './../slick/slick.css';
+import './../slick/slick.css'
 
+Slides.propTypes = {
+    slides: PropTypes.shape({
+        item: PropTypes.string.isRequired,
+        back: PropTypes.string.isRequired
+    }),
+    dots: PropTypes.array.isRequired
+};
 export default function Slides(props) {
     const slider = useRef(null);
     const settings = {
@@ -25,8 +36,6 @@ export default function Slides(props) {
             <Slider ref={slider} {...settings}>
 
                 {props.slides.map((item, idx) => {
-                    // просто slick меняет аттрибут стайл у
-                    // slider__item,поэтому добавили слайдер__бэкграунд
                     return (
                         <div key={idx} className={"slider__item"}>
                             <div className="slider__container container">
@@ -34,10 +43,10 @@ export default function Slides(props) {
                                     <div className={"slider__header fonts__proximaNovaBold "}>
                                         {item.header}
                                     </div>
-                                    <a className={'slider__link ' + button.button}>Заказать</a>
+                                    <Button link={'#'} className={'slider__link'}>Заказать</Button>
                                 </div>
                                 <div className="slider__background"
-                                     style={{backgroundImage: 'url(' + item.back + ')'}}></div>
+                                     style={{backgroundImage: 'url(' + item.back + ')'}}/>
 
                             </div>
                         </div>
@@ -48,9 +57,14 @@ export default function Slides(props) {
             <div className="slider__dots">
                 {props.dots.map((item, idx) => {
                     return (
-                        <div data-slick={idx} className={'slider__dot'} onClick={(e) => {
-                            goTo(e)
-                        }} style={{backgroundImage: 'url(' + item + ')'}}></div>
+                        <div
+                            data-slick={idx}
+                            className={'slider__dot'}
+                            onClick={(e) => {
+                                goTo(e)
+                            }}
+                            style={{backgroundImage: 'url(' + item + ')'}}
+                        />
                     )
                 })}
             </div>
