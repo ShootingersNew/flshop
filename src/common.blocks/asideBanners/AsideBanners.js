@@ -41,4 +41,4 @@ function AsideBanners(props) {
     )
 }
 
-export default connectBannersWithBD(AsideBanners)
+export default withBannersConnect(AsideBanners)

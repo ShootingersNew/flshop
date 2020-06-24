@@ -1,4 +1,4 @@
-import {ADD_ITEM, CHANGE_QUANTITY, REMOVE_ITEM} from "./actions";
+import {ADD_ITEM, CHANGE_QUANTITY, REMOVE_ITEM} from "./actions"
 
 const initialState = {
     itemsIn: [

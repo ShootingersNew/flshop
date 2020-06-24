@@ -1,11 +1,14 @@
+//libs
 import React from "react";
-import {connect} from "react-redux";
+//comps
 import Preloader from "../../common.blocks/preloader/Preloader";
 import Breadcrumbs from "../../common.blocks/breadcrumbs/Breadcrumbs";
 import Flower from "../../common.blocks/flower/Flower";
 import AdditionalItems from "../../common.blocks/additionalItems/AdditionalItems";
 import Container from "../../common.blocks/container/Container";
-import './../../common.blocks/container/container.css'
+import Main from "../../common.blocks/main/Main";
+//styles
+import '../../common.blocks/container/container.css'
 
 class Goods extends React.Component {
     constructor(props) {
@@ -23,18 +26,26 @@ class Goods extends React.Component {
 
         //    здесь бы делался запрос к серверу
         const {idx} = this.props.match.params;
-        //пропсы вообще не рекомендуется отправлять стейт, но если был бы сервер, то
-        //это были бы не пропсы
 
+        const itemsArr = require('../../config/json/allItems');
         //данные просматриваемого товара
-        const curItem = this.props.item.find(item => item.id == idx);
+        const curItem = itemsArr.find(item => item.id == idx);
 
         //массив текущих дополнительных товаров. Из-за отсутствия сервера приходится
         //перебирать все дополнительные товары на предмет наличия у них айдишников
         //указанных в данных об итеме
-        const curAdditionals = this.props.allAdditionals.filter((additionalItem) => (
-            curItem.additional.indexOf(additionalItem.id) !== -1
-        ));
+        const additionals = require('../../config/json/additionalItems');
+
+        const curAdditionals = curItem.additional.reduce((sum, cur) => {
+            let currentItem = '';
+            additionals.forEach((item) => {
+                if (item.id == cur) {
+                    currentItem = item
+                }
+            });
+            return [...sum, currentItem]
+        }, []);
+
         this.setState({
             //отправляем в стейт "полученные данные" с "сервера"
             item: curItem,
@@ -59,10 +70,19 @@ class Goods extends React.Component {
                 {
                     this.state.isLoaded && this.state.item ?
                         <Container>
-                            <Breadcrumbs/>
-                            <Flower item={this.state.item}/>
-                            <AdditionalItems addItems={this.state.additional}/>
-
+                            <Main>
+                                <Breadcrumbs
+                                    items={
+                                        [
+                                            {title: 'Главная', path: '/'},
+                                            {title: 'Каталог', path: '/catalog'},
+                                            {title: [this.state.item.name]},
+                                        ]
+                                    }
+                                />
+                                <Flower item={this.state.item}/>
+                                <AdditionalItems addItems={this.state.additional}/>
+                            </Main>
                         </Container>
                         : <Preloader className={'preloader_fullpage'}/>
                 }
@@ -71,17 +91,4 @@ class Goods extends React.Component {
     }
 }
 
-// здесь подсоединяемся к стору для имитации работы сервера, если был бы REST API,
-// то можно было бы и обойтись без стора
-const mapStateToProps = (state, props) => {
-    //определяем тип товара(букет или дополнительный) из строки адреса
-    const {type} = props.match.params;
-    return {
-        //отправляем аж все товары данного типа в пропсы, что избыточно, но т.к сервера нет,
-        //приходится вот так
-        item: state.goods[type],
-        allAdditionals: state.goods.additionalItems
-    }
-};
-
-export default connect(mapStateToProps)(Goods)
+export default Goods

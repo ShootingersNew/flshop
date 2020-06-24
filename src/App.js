@@ -1,11 +1,11 @@
 import React from 'react';
-
+import Page from "./common.blocks/page/Page";
 function App(props) {
-  return (
-      <div className={'page fonts__proximaNovaRegular'}>
-        {props.children}
-      </div>
-  );
+    return (
+        <Page>
+            {props.children}
+        </Page>
+    );
 }
 
 export default App;

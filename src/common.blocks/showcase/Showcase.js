@@ -73,4 +73,4 @@ function Showcase(props) {
     )
 }
 
-export default withBDConnect(Showcase)
+export default withBDItemsConnect(Showcase)

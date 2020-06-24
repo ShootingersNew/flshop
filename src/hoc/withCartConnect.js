@@ -1,13 +1,12 @@
+//libs
 import React from "react";
 import {compose} from "redux";
 import {connect} from 'react-redux'
-import {addItem, changeQuantity, removeItem} from "../redux/cartReducer/actions";
+//redux
+import {addItem, changeQuantity, removeItem} from "../redux/cartReducer/actions"
 
 function withCartConnect(Component) {
-    return class extends React.Component {
-        constructor(props) {
-            super(props);
-        }
+    class WithCartConnect extends React.Component {
 
         //метод, который проверяет, добавлен ли уже такой товар в корзину и возвращает
         // булевое значение
@@ -34,9 +33,16 @@ function withCartConnect(Component) {
                 {...this.props}
             />
         }
+
     }
+
+    WithCartConnect.displayName = `WithCartConnect(${getDisplayName(Component)})`;
+    return WithCartConnect
 }
 
+function getDisplayName(WrappedComponent) {
+    return WrappedComponent.displayName || WrappedComponent.name || 'Component';
+}
 const mapStateToProps = (state) => {
     return {
         cart: state.cart

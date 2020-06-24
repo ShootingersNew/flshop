@@ -1,9 +1,695 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="25e137b3-2318-423b-89a6-368a7c35aa66" name="Default Changelist" comment="remove">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/banners/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/banners/1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/banners/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/banners/2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/banners/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/banners/3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common.blocks/asideBanners/AsideBanners.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common.blocks/asideBanners/AsideBanners.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common.blocks/showcase/Showcase.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common.blocks/showcase/Showcase.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hoc/withBDConnect/withBDConnect.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hoc/withCartConnect.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hoc/withCartConnect.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/cartPage/CartPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/cartPage/CartPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/good/Goods.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/good/Goods.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/mainPage/MainPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/mainPage/MainPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/cartReducer/cartReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/cartReducer/cartReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/goodsReducer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/rootReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/rootReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="MIXED" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/ShootingersNew/flshop.git" />
+      </set>
+    </option>
+  </component>
   <component name="ProjectId" id="1af8XN7q2Or3rUNYmounzsytPx0" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/images/banners" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="node" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2019.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\PhpstormProjects\flshop\src\hoc" />
+      <recent name="C:\Users\User\PhpstormProjects\flshop\src\common.blocks\flower\composition" />
+      <recent name="C:\Users\User\PhpstormProjects\flshop\src\common.blocks\modal\views" />
+      <recent name="C:\Users\User\PhpstormProjects\flshop\src\common.blocks\modal\views\InfoModalView\CallModalView" />
+      <recent name="C:\Users\User\PhpstormProjects\flshop\src\common.blocks\priceFilter" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\PhpstormProjects\flshop\public\images\banners" />
+      <recent name="C:\Users\User\PhpstormProjects\flshop\src\common.blocks\flower\img" />
+      <recent name="C:\Users\User\PhpstormProjects\flshop\public\images\composition" />
+      <recent name="C:\Users\User\PhpstormProjects\flshop\src\common.blocks\fonts\__proximaNovaSemibold" />
+      <recent name="C:\Users\User\PhpstormProjects\flshop\src\common.blocks\fonts" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.npm start">
+    <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
+      <method v="2" />
+    </configuration>
+    <configuration name="npm start" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="25e137b3-2318-423b-89a6-368a7c35aa66" name="Default Changelist" comment="" />
+      <created>1587115326421</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587115326421</updated>
+      <workItem from="1587115329261" duration="10953000" />
+      <workItem from="1587128610029" duration="6400000" />
+      <workItem from="1587372543225" duration="8617000" />
+      <workItem from="1587381723700" duration="930000" />
+      <workItem from="1587452908001" duration="32693000" />
+      <workItem from="1587487522187" duration="1238000" />
+      <workItem from="1587488917764" duration="2917000" />
+      <workItem from="1587492042653" duration="1169000" />
+      <workItem from="1587493250969" duration="19000" />
+      <workItem from="1587493437164" duration="143000" />
+      <workItem from="1587534406634" duration="28694000" />
+      <workItem from="1587629909573" duration="21936000" />
+      <workItem from="1587714203340" duration="10091000" />
+      <workItem from="1587725283193" duration="16722000" />
+      <workItem from="1587802467517" duration="11460000" />
+      <workItem from="1587888592677" duration="28690000" />
+      <workItem from="1587976728282" duration="25749000" />
+      <workItem from="1588062111830" duration="26587000" />
+      <workItem from="1588138256954" duration="32780000" />
+      <workItem from="1588237793512" duration="17188000" />
+      <workItem from="1588264075251" duration="2674000" />
+      <workItem from="1588494122289" duration="3092000" />
+      <workItem from="1588583776977" duration="15865000" />
+      <workItem from="1588600106934" duration="5161000" />
+      <workItem from="1588605624744" duration="594000" />
+      <workItem from="1588670401038" duration="20451000" />
+      <workItem from="1588706356276" duration="271000" />
+      <workItem from="1588842216003" duration="22290000" />
+      <workItem from="1588869329229" duration="238000" />
+      <workItem from="1588928372484" duration="25100000" />
+      <workItem from="1589016913553" duration="22632000" />
+      <workItem from="1589043380082" duration="68000" />
+      <workItem from="1589043657694" duration="1991000" />
+      <workItem from="1589088775816" duration="30027000" />
+      <workItem from="1589274284787" duration="21142000" />
+      <workItem from="1589355921539" duration="7413000" />
+      <workItem from="1589441419918" duration="24926000" />
+      <workItem from="1589620276854" duration="15480000" />
+      <workItem from="1589705903138" duration="23716000" />
+      <workItem from="1589880146857" duration="17700000" />
+      <workItem from="1589900508042" duration="4312000" />
+      <workItem from="1589905009130" duration="172000" />
+      <workItem from="1589906419906" duration="56000" />
+      <workItem from="1590049491014" duration="13915000" />
+      <workItem from="1590064658155" duration="3762000" />
+      <workItem from="1590135946580" duration="20385000" />
+      <workItem from="1590223165731" duration="26276000" />
+      <workItem from="1590293767352" duration="22806000" />
+      <workItem from="1590397984984" duration="974000" />
+      <workItem from="1590482348406" duration="814000" />
+      <workItem from="1590567140095" duration="17711000" />
+      <workItem from="1590587103892" duration="568000" />
+      <workItem from="1590739017026" duration="19147000" />
+      <workItem from="1590827667677" duration="17422000" />
+      <workItem from="1590997004246" duration="10453000" />
+      <workItem from="1591010995902" duration="1507000" />
+      <workItem from="1591086783583" duration="23788000" />
+      <workItem from="1591174584126" duration="15704000" />
+      <workItem from="1591196113493" duration="4045000" />
+      <workItem from="1591350409134" duration="15009000" />
+      <workItem from="1591420774585" duration="5499000" />
+      <workItem from="1591436088122" duration="248000" />
+      <workItem from="1591520990479" duration="22186000" />
+      <workItem from="1591567371283" duration="24465000" />
+      <workItem from="1591641808937" duration="2328000" />
+      <workItem from="1591694676377" duration="24393000" />
+      <workItem from="1591720991886" duration="3361000" />
+      <workItem from="1591772037854" duration="10794000" />
+      <workItem from="1591783561202" duration="1703000" />
+      <workItem from="1591786074788" duration="243000" />
+      <workItem from="1591786419219" duration="555000" />
+      <workItem from="1591792958727" duration="1929000" />
+      <workItem from="1591954182122" duration="35000" />
+      <workItem from="1592037766545" duration="3539000" />
+      <workItem from="1592041359346" duration="17633000" />
+      <workItem from="1592111607460" duration="20695000" />
+      <workItem from="1592211030424" duration="21247000" />
+      <workItem from="1592296648926" duration="7255000" />
+      <workItem from="1592307537310" duration="767000" />
+      <workItem from="1592382083174" duration="23762000" />
+      <workItem from="1592544376874" duration="5397000" />
+      <workItem from="1592563209772" duration="2345000" />
+      <workItem from="1592627554306" duration="29271000" />
+      <workItem from="1592665022360" duration="1565000" />
+      <workItem from="1592815819924" duration="14338000" />
+      <workItem from="1592901137561" duration="6174000" />
+      <workItem from="1592912140212" duration="5390000" />
+      <workItem from="1592989392636" duration="5748000" />
+    </task>
+    <task id="LOCAL-00078" summary="created comp Input">
+      <created>1592906174797</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1592906174797</updated>
+    </task>
+    <task id="LOCAL-00079" summary="added subscribe comp">
+      <created>1592906216098</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1592906216098</updated>
+    </task>
+    <task id="LOCAL-00080" summary="added checkout comp with form">
+      <created>1592906298501</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1592906298502</updated>
+    </task>
+    <task id="LOCAL-00081" summary="added partners comp">
+      <created>1592906376941</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1592906376942</updated>
+    </task>
+    <task id="LOCAL-00082" summary="preloader fixed">
+      <created>1592906403290</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1592906403290</updated>
+    </task>
+    <task id="LOCAL-00083" summary="added styles(padding top, headers font,line height)">
+      <created>1592913062743</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1592913062745</updated>
+    </task>
+    <task id="LOCAL-00084" summary="added proptypes &amp;&amp; classname library">
+      <created>1592913159618</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1592913159618</updated>
+    </task>
+    <task id="LOCAL-00085" summary="added proptypes and classnames library&#10;refactored imports with comments">
+      <created>1592913422811</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1592913422811</updated>
+    </task>
+    <task id="LOCAL-00086" summary="changed - the float property was passed to the modifier">
+      <created>1592913557551</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1592913557551</updated>
+    </task>
+    <task id="LOCAL-00087" summary="changed - conditional rendering of banners">
+      <created>1592913623604</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1592913623604</updated>
+    </task>
+    <task id="LOCAL-00088" summary="changed -&#10;1)optimized imports&#10;2)added proptypes&#10;3)changed link to button">
+      <created>1592913715566</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1592913715566</updated>
+    </task>
+    <task id="LOCAL-00089" summary="changes:&#10;1)added proptypes&#10;2)optimized imports">
+      <created>1592913771800</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1592913771800</updated>
+    </task>
+    <task id="LOCAL-00090" summary="changes:&#10;1)opimized imports&#10;2)added proptypes">
+      <created>1592913856055</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1592913856055</updated>
+    </task>
+    <task id="LOCAL-00091" summary="added full functionality of breadcrumbs">
+      <created>1592913967025</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1592913967025</updated>
+    </task>
+    <task id="LOCAL-00092" summary="changed - separator was made as pseudo-element">
+      <created>1592914024880</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1592914024880</updated>
+    </task>
+    <task id="LOCAL-00093" summary="refactor of code and imports">
+      <created>1592914070565</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1592914070565</updated>
+    </task>
+    <task id="LOCAL-00094" summary="1)refactor of  imports&#10;2)added proptypes">
+      <created>1592914112966</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1592914112966</updated>
+    </task>
+    <task id="LOCAL-00095" summary="changed 1) added proptypes 2) refactored imports 3) added conditional rendering ( depends of props.controlled )">
+      <created>1592914508357</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1592914508357</updated>
+    </task>
+    <task id="LOCAL-00096" summary="fixed width">
+      <created>1592914546013</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1592914546013</updated>
+    </task>
+    <task id="LOCAL-00097" summary="changes 1) refactored imports 2) added proptypes 3) validation was done using Form component">
+      <created>1592914698290</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1592914698290</updated>
+    </task>
+    <task id="LOCAL-00098" summary="changed styles 1)added padding bottom form .checkout 2).checkout__input's width was set">
+      <created>1592914890812</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1592914890813</updated>
+    </task>
+    <task id="LOCAL-00099" summary="added classnames">
+      <created>1592914993479</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1592914993479</updated>
+    </task>
+    <task id="LOCAL-00100" summary="1) removed rendering rounds of rating, instead of this rating displaying now as mark (4.3 etc)&#10;2) link 'add to card' changed to Button &#10;3) added proptypes&#10;4) refactored imports">
+      <created>1592916500489</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1592916500489</updated>
+    </task>
+    <task id="LOCAL-00101" summary="changed styles 1)flower__image background no-repeat 2)flower__mark some styles were deleted 3)composition styles were deleted">
+      <created>1592917209807</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1592917209807</updated>
+    </task>
+    <task id="LOCAL-00102" summary="remove Flower__compositionLi.js">
+      <created>1592989592594</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1592989592595</updated>
+    </task>
+    <task id="LOCAL-00103" summary="refactored imports, proptypes added">
+      <created>1592989927930</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1592989927930</updated>
+    </task>
+    <task id="LOCAL-00104" summary="imports refactored, catalog button replaced by Link, added Modal">
+      <created>1592990031276</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1592990031276</updated>
+    </task>
+    <task id="LOCAL-00105" summary="proptypes refactored, added classnames library, added support of ref and name attributes">
+      <created>1592990124617</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1592990124617</updated>
+    </task>
+    <task id="LOCAL-00106" summary="fixed styles - removed input's width">
+      <created>1592990178183</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1592990178183</updated>
+    </task>
+    <task id="LOCAL-00107" summary="fixed styles">
+      <created>1592990224934</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1592990224934</updated>
+    </task>
+    <task id="LOCAL-00108" summary="added link with color inherit">
+      <created>1592990287179</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1592990287179</updated>
+    </task>
+    <task id="LOCAL-00109" summary="added Link">
+      <created>1592990706774</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1592990706774</updated>
+    </task>
+    <task id="LOCAL-00110" summary="added padding bottom &amp;&amp; main_listing">
+      <created>1592990765237</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1592990765237</updated>
+    </task>
+    <task id="LOCAL-00111" summary="proptypes added, styles refactored, added ...props">
+      <created>1592990891980</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1592990891980</updated>
+    </task>
+    <task id="LOCAL-00112" summary="removed in another library">
+      <created>1592990966038</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1592990966038</updated>
+    </task>
+    <task id="LOCAL-00113" summary="refactored tags">
+      <created>1592990996980</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1592990996981</updated>
+    </task>
+    <task id="LOCAL-00114" summary="refactored imports, added classnames,refactored empty tags">
+      <created>1592991042624</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1592991042624</updated>
+    </task>
+    <task id="LOCAL-00115" summary="imports refactored, added classnames library, added register &amp;&amp; default checked props, removed Onchange and checked props">
+      <created>1592991271671</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1592991271671</updated>
+    </task>
+    <task id="LOCAL-00116" summary="rename button.module.css">
+      <created>1592991306770</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1592991306770</updated>
+    </task>
+    <task id="LOCAL-00117" summary="refactored empty tags">
+      <created>1592991345459</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1592991345459</updated>
+    </task>
+    <task id="LOCAL-00118" summary="added proptypes, classnames library, tags on 'listing'type">
+      <created>1592995261854</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1592995261854</updated>
+    </task>
+    <task id="LOCAL-00119" summary="added filters styles">
+      <created>1592995401532</created>
+      <option name="number" value="00119" />
+      <option name="presentableId" value="LOCAL-00119" />
+      <option name="project" value="LOCAL" />
+      <updated>1592995401532</updated>
+    </task>
+    <task id="LOCAL-00120" summary="refactored jsx, tag a replaced by Link">
+      <created>1592996402848</created>
+      <option name="number" value="00120" />
+      <option name="presentableId" value="LOCAL-00120" />
+      <option name="project" value="LOCAL" />
+      <updated>1592996402848</updated>
+    </task>
+    <task id="LOCAL-00121" summary="tag form replaced by component Form, refactored imports">
+      <created>1592996665111</created>
+      <option name="number" value="00121" />
+      <option name="presentableId" value="LOCAL-00121" />
+      <option name="project" value="LOCAL" />
+      <updated>1592996665111</updated>
+    </task>
+    <task id="LOCAL-00122" summary="styles of wrapper">
+      <created>1592996971721</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1592996971721</updated>
+    </task>
+    <task id="LOCAL-00123" summary="added user nav color styles and refactored imports + added classnames imports">
+      <created>1592997063122</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1592997063122</updated>
+    </task>
+    <task id="LOCAL-00124" summary="refactored imports, added proptypes, classnames library, deleted h2 header">
+      <created>1592997511439</created>
+      <option name="number" value="00124" />
+      <option name="presentableId" value="LOCAL-00124" />
+      <option name="project" value="LOCAL" />
+      <updated>1592997511439</updated>
+    </task>
+    <task id="LOCAL-00125" summary="added configs of masked inputs,filter of items,email regexp">
+      <created>1592997567917</created>
+      <option name="number" value="00125" />
+      <option name="presentableId" value="LOCAL-00125" />
+      <option name="project" value="LOCAL" />
+      <updated>1592997567917</updated>
+    </task>
+    <task id="LOCAL-00126" summary="renamed">
+      <created>1592998039227</created>
+      <option name="number" value="00126" />
+      <option name="presentableId" value="LOCAL-00126" />
+      <option name="project" value="LOCAL" />
+      <updated>1592998039227</updated>
+    </task>
+    <option name="localTasksCounter" value="127" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="refactored imports, added proptypes" />
+    <MESSAGE value="refactored imports, proptypes added" />
+    <MESSAGE value="imports refactored, catalog button replaced by Link, added Modal" />
+    <MESSAGE value="proptypes refactored, added classnames library, added support of ref and name attributes" />
+    <MESSAGE value="fixed styles - removed input's width" />
+    <MESSAGE value="fixed styles" />
+    <MESSAGE value="added link with color inherit" />
+    <MESSAGE value="added Link" />
+    <MESSAGE value="added padding bottom &amp;&amp; main_listing" />
+    <MESSAGE value="proptypes added, styles refactored, added ...props" />
+    <MESSAGE value="removed in another library" />
+    <MESSAGE value="refactored tags" />
+    <MESSAGE value="refactored imports, added classnames,refactored empty tags" />
+    <MESSAGE value="imports refactored, added classnames library, added register &amp;&amp; default checked props, removed Onchange and checked props" />
+    <MESSAGE value="rename button.module.css" />
+    <MESSAGE value="refactored empty tags" />
+    <MESSAGE value="added proptypes, classnames library, tags on 'listing'type" />
+    <MESSAGE value="added filters styles" />
+    <MESSAGE value="refactored jsx, tag a replaced by Link" />
+    <MESSAGE value="tag form replaced by component Form, refactored imports" />
+    <MESSAGE value="styles of wrapper" />
+    <MESSAGE value="added user nav color styles and refactored imports + added classnames imports" />
+    <MESSAGE value="refactored imports, added proptypes, classnames library, deleted h2 header" />
+    <MESSAGE value="added configs of masked inputs,filter of items,email regexp" />
+    <MESSAGE value="renamed" />
+    <option name="LAST_COMMIT_MESSAGE" value="renamed" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="707" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1589041782352">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="707" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.0.1366.728@0.0.1920.1040" timestamp="1589041782352" />
+    <state x="707" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1588142954132" />
+    <state x="765" y="235" key="#com.intellij.ide.util.MemberChooser" timestamp="1588066470645">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="235" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1366.728@0.0.1920.1040" timestamp="1588066470645" />
+    <state x="585" y="113" key="CommitChangelistDialog2" timestamp="1592998057479">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="585" y="113" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1366.728@0.0.1920.1040" timestamp="1590236004587" />
+    <state x="585" y="113" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1592998057479" />
+    <state x="184" y="85" key="DiffContextDialog" timestamp="1592998048852">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="184" y="85" key="DiffContextDialog/0.0.1920.1040/1920.0.1366.728@0.0.1920.1040" timestamp="1589293911828" />
+    <state x="184" y="85" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592998048852" />
+    <state width="1860" height="279" key="GridCell.Tab.0.bottom" timestamp="1587120558818">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1860" height="279" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1366.728@0.0.1920.1040" timestamp="1587120558818" />
+    <state width="1860" height="279" key="GridCell.Tab.0.center" timestamp="1587120558818">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1860" height="279" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1366.728@0.0.1920.1040" timestamp="1587120558818" />
+    <state width="1860" height="279" key="GridCell.Tab.0.left" timestamp="1587120558818">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1860" height="279" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1366.728@0.0.1920.1040" timestamp="1587120558818" />
+    <state width="1860" height="279" key="GridCell.Tab.0.right" timestamp="1587120558818">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1860" height="279" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1366.728@0.0.1920.1040" timestamp="1587120558818" />
+    <state x="777" y="230" key="RollbackChangesDialog" timestamp="1589637062654">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="777" y="230" key="RollbackChangesDialog/0.0.1920.1040/1920.0.1366.728@0.0.1920.1040" timestamp="1589637062654" />
+    <state x="461" y="161" key="SettingsEditor" timestamp="1587129390208">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="161" key="SettingsEditor/0.0.1920.1040/1920.0.1366.728@0.0.1920.1040" timestamp="1587129390208" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1587492570417">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/0.0.1920.1040/1920.0.1366.728@0.0.1920.1040" timestamp="1587492570417" />
+    <state x="552" y="252" width="1126" height="536" key="Vcs.Push.Dialog.v2" timestamp="1592907047037">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1366.728@0.0.1920.1040" timestamp="1590235989180" />
+    <state x="552" y="252" width="1126" height="536" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1592907047037" />
+    <state x="100" y="100" width="1720" height="840" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1592120527693">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="100" y="100" width="1720" height="840" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040/1920.0.1366.728@0.0.1920.1040" timestamp="1590577247685" />
+    <state x="100" y="100" width="1720" height="840" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592120527693" />
+    <state x="656" y="342" key="com.intellij.ide.util.TipDialog" timestamp="1592989557960">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="656" y="342" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1366.728@0.0.1920.1040" timestamp="1592563358576" />
+    <state x="656" y="342" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592989557960" />
+    <state x="720" y="351" key="git4idea.ui.GitUnstashDialog" timestamp="1592907192599">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="720" y="351" key="git4idea.ui.GitUnstashDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592907192599" />
+    <state x="648" y="365" width="707" height="309" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1592143694932">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="648" y="365" width="707" height="309" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592143694932" />
+    <state x="701" y="150" key="refactoring.ChangeSignatureDialog" timestamp="1592402355011">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="701" y="150" key="refactoring.ChangeSignatureDialog/0.0.1920.1040/1920.0.1366.728@0.0.1920.1040" timestamp="1592402355011" />
+    <state x="616" y="242" key="run.anything.popup" timestamp="1592223152942">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="242" key="run.anything.popup/0.0.1920.1040/1920.0.1366.728@0.0.1920.1040" timestamp="1592223152942" />
+    <state x="616" y="242" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1592119732947" />
+    <state x="623" y="229" width="672" height="678" key="search.everywhere.popup" timestamp="1592043236677">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="229" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1366.728@0.0.1920.1040" timestamp="1589280862374" />
+    <state x="623" y="229" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1592043236677" />
   </component>
 </project>
