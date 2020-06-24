@@ -1,16 +1,32 @@
-import React from "react";
+//libs
+import React from "react"
+import PropTypes from 'prop-types';
+import classNames from 'classnames'
+//styles
 import './input.css'
 import './../fonts/__proximaNovaRegular/fonts__proximaNovaRegular.css'
 
+Input.propTypes = {
+    classname: PropTypes.string,
+    onChange: PropTypes.func,
+    value: PropTypes.string,
+    placeholder: PropTypes.string,
+    name: PropTypes.string.isRequired,
+    isValid: PropTypes.bool
+};
 export default function Input(props) {
+    let inputClass = classNames({
+        'input fonts__proximaNovaRegular': true,
+        'input_isValid_true': props.isValid,
+    });
     return (
         <input
-            value={props.value}
+            name={props.name}
             type="text"
-            className={'input ' + props.className + ' input_isValid_' + props.isValid + ' fonts__proximaNovaRegular input_required_' + props.required}
-            onChange={(e) => {
-                props.onChange(props.name, e)
-            }}
-            placeholder={props.placeholder}/>
+            className={inputClass + ' ' + props.className}
+            placeholder={props.placeholder}
+            ref={props.register ? props.register : null}
+            defaultValue={props.defaultValue ? props.defaultValue : null}
+        />
     )
 }
