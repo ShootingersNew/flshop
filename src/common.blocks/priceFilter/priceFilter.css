@@ -1,0 +1,42 @@
+.input-range__slider {
+    cursor: pointer;
+    margin-bottom: -10px;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #79ba38;
+    background-color: white;
+    border-radius: unset;
+    top: calc(50% + 1px);
+}
+
+.input-range__track {
+    height: 1px;
+}
+
+.input-range__track--active {
+    background-color: #79ba38;
+}
+
+.input-range {
+    width: 205px;
+}
+
+.input-range__label {
+    display: none;
+}
+
+.priceFilter {
+    height: 56px;
+    width: 205px;
+    position: relative;
+}
+
+.priceFilter__min {
+    position: absolute;
+    left: 0;
+}
+
+.priceFilter__max {
+    position: absolute;
+    right: 0;
+}
