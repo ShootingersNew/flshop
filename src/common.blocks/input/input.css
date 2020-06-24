@@ -2,7 +2,6 @@
     font-size: 16px;
     border: 1px solid #C8C8C8;
     outline: none;
-    width: 606px;
     height: 46px;
     color: black;
     padding: 0 36px;
@@ -13,6 +12,6 @@
     color: #C8C8C8;
 }
 
-.input_isValid_true.input_required_true {
+.input_isValid_true {
     border: 1px solid #79BA38;
 }
