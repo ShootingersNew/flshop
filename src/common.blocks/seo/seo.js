@@ -35,7 +35,7 @@ export default function Seo() {
                     seoArr.map((item) => {
                         return (
                             <div className={'seo__tile'}>
-                                <div className="seo__bg" style={{backgroundImage: 'url(' + item.bg + ')'}}></div>
+                                <div className="seo__bg" style={{backgroundImage: 'url(' + item.bg + ')'}}/>
                                 <div className="seo__content">
                                     <h2 className="seo__header fonts__proximaNovaBold">{item.header}</h2>
                                     <div className="seo__desc">{item.desc}</div>
