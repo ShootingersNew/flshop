@@ -1,4 +1,11 @@
 .listingSidebar {
     width: 270px;
+    height: 100%;
     display: inline-block;
+    position: relative;
+}
+
+.listingSidebar__aside {
+    position: absolute;
+    top: 923px;
 }
