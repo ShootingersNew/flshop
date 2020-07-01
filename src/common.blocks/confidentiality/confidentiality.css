@@ -1,7 +1,8 @@
 .confidentiality {
     display: flex;
-    padding-left: 32px;
+    padding-left: 2px;
     width: 420px;
+    color: #C8C8C8;
 }
 
 .confidentiality__checkbox {
@@ -9,8 +10,16 @@
     margin-top: 3px;
 }
 
+.confidentiality__checkbox .checkbox__true:checked + .checkbox__box {
+    border: 1px solid #79BA38;
+}
+
 .confidentiality__text {
     width: 330px;
     font-size: 12px;
     line-height: 2;
+}
+
+.confidentiality__link {
+    display: block;
 }

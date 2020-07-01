@@ -2,11 +2,19 @@
 import React from "react"
 import {Link} from "react-router-dom"
 import cn from 'classnames'
+import PropTypes from 'prop-types'
 //comps
 import Checkbox from "../checkbox/Checkbox"
 //styles
 import './confidentiality.css'
-import './../link/link.css'
+
+Confidentiality.propTypes = {
+    className: PropTypes.string,
+    register: PropTypes.func,
+    defaultChecked: PropTypes.bool,
+    customText: PropTypes.element
+
+};
 
 export default function Confidentiality(props) {
     let classname = cn({
@@ -23,9 +31,13 @@ export default function Confidentiality(props) {
             />
             <div className="confidentiality__text">
                 Согласен(на) с условиями&ensp;
-                <Link to={'/'} className={'link'}>
-                    «Политики конфиденциальности
-                    и обработки персональных данных»
+                <Link to={'/'} className={'link confidentiality__link'}>
+                    {
+                        props.customText ?
+                            props.customText
+                            :
+                            '«Политики конфиденциальности и обработки персональных данных»'
+                    }
                 </Link>
             </div>
         </div>
