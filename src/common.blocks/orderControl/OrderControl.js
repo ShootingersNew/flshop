@@ -1,12 +1,14 @@
 import React from "react";
+//styles
 import './orderControl.css'
+import img from './img/order.png'
 
 export default function OrderControl() {
     return (
         <div className={'orderControl'}>
                 <div className="orderControl__header">Контроль заказа перед доставкой</div>
                 <div className="orderControl__content">
-                    <img src="#" alt="" className="orderControl__image"/>
+                    <img src={img} alt="" className="orderControl__image"/>
                     <ul className="orderControl__list">
                         <li className="orderControl__li">В день доставки оператор свяжется для уточнения заказа
                             и адреса доставки, будьте внимательны с номером заказа
