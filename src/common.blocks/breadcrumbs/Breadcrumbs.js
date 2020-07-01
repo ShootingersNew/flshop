@@ -13,7 +13,7 @@ export default function Breadcrumbs({items}) {
     return (
         <div className="breadcrumbs">
             {items && items.map((item, i) => (
-                <BreadcrumbsLink active={i === items.length - 1} path={item.path}>{item.title}</BreadcrumbsLink>
+                <BreadcrumbsLink key={i} active={i === items.length - 1} path={item.path}>{item.title}</BreadcrumbsLink>
             ))
             }
 
