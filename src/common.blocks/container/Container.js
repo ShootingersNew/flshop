@@ -7,7 +7,7 @@ import './container.css'
 const Container = (props) => {
     let classname = cn({
         container: true,
-        [props.classname]: props.classname
+        [props.className]: props.className
     });
     return (
         <div className={classname}>
