@@ -1,23 +1,22 @@
 //libs
-import React from "react";
+import React, {forwardRef} from "react";
 import {Link} from "react-router-dom"
 import cn from 'classnames'
 import PropTypes from 'prop-types'
+import FlipMove from 'react-flip-move'
 //comps
 import Container from "../container/Container"
 import Bouquet from "../bouquet/Bouquet"
 import withBDItemsConnect from "../../hoc/withBDItemsConnect"
 //styles
-import './../link/link.css'
 import './showcase.css'
-import './../fonts/__proximaNovaSemibold/fonts__proximaNovaSemibold.css'
 
 Showcase.propTypes = {
     showcaseType: PropTypes.string,
     header: PropTypes.string.isRequired,
     counter: PropTypes.number.isRequired,
-    filterTags: PropTypes.array.isRequired,
-    goods: PropTypes.array.isRequired
+    filterTags: PropTypes.array,
+    goods: PropTypes.array.isRequired,
 };
 
 function Showcase(props) {
@@ -26,13 +25,30 @@ function Showcase(props) {
         [`showcase_${props.showcaseType}`]: props.showcaseType
     });
 
+    const renderItems = () => {
+        //pass refs to bouquet
+        const FunctionalArticle = forwardRef((props, ref) => (
+            <div ref={ref} className={'showcase__animation-wrapper'}>
+                {props.children}
+            </div>
+        ));
+
+        return props.goods.map((item) => {
+            return (
+                <FunctionalArticle key={item.id}>
+                    <Bouquet item={item}/>
+                </FunctionalArticle>
+            )
+        })
+    };
 
     function mapFilterTags(arr) {
         return arr.map((filterTag) => {
             return (
+
                 <div className="showcase__filter">
                     {filterTag.val}
-                    <span className="showcase__filterCounter">{filterTag.resultCounter}</span>
+                    <span className="showcase__filterCounter">{' ' + filterTag.resultCounter}</span>
                     <span
                         onClick={() => props.uncheckCheckbox(filterTag.name, filterTag.val)}
                         className="showcase__closeButton icon-svg__cross"/>
@@ -46,11 +62,14 @@ function Showcase(props) {
                 <div className="showcase__header">
                     {props.header}
                     {
-                        props.counter !== undefined &&
+                        props.counter !== undefined && props.showcaseType === 'listing' &&
                         <span className={'showcase__counter fonts__proximaNovaSemibold'}>{props.counter}</span>
                     }
                     {props.showcaseType !== 'listing' &&
-                    <Link className={'showcase__link link'} to={'/'}>Смотреть все товары</Link>
+                    <React.Fragment>
+                        <Link className={'showcase__link link'} to={'/catalog'}>Смотреть все товары</Link>
+                        <span className={'showcase__counter showcase__counter_small'}>{props.counter}</span>
+                    </React.Fragment>
                     }
                     {
                         props.showcaseType === 'listing' &&
@@ -59,15 +78,14 @@ function Showcase(props) {
                         </div>
                     }
                 </div>
-                <div className="showcase__items">
+                <FlipMove className={'showcase__items'}>
                     {/*если в этот компонент hoc'ом был передан объект с итемами, то рендерим*/}
                     {props.goods ?
-                        props.goods.map((item) => {
-                            return <Bouquet item={item}/>
-                        })
-                        : null
+                        renderItems()
+                        : false
                     }
-                </div>
+                </FlipMove>
+
             </Container>
         </div>
     )

@@ -31,19 +31,18 @@
 
 .showcase__header {
     font-size: 36px;
-    line-height: 62px;
+    height: 48px;
     margin-bottom: 6px;
+    position: relative;
+    top: -4px;
+    display: flex;
+    align-items: baseline;
 }
 
 .showcase__link {
     font-size: 16px;
     margin-left: 34px;
 }
-
-.showcase {
-    padding-top: 16px;
-}
-
 .showcase_listing .showcase__items {
     flex-wrap: wrap;
 }
@@ -61,9 +60,21 @@
     right: -4px;
 }
 
+.showcase__counter_small {
+    font-size: 12px;
+    color: #8C8C8C;
+    top: -8px;
+    right: -6px;
+}
+
 .showcase__closeButton {
     font-size: 10px;
     position: relative;
     right: -12px;
     cursor: pointer;
+}
+
+.showcase_mini {
+    padding-top: 24px;
+    padding-bottom: 56px;
 }
