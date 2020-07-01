@@ -7,9 +7,7 @@ import withCartConnect from "../../hoc/withCartConnect"
 //utils
 import {regExpPrice} from "../../config/utils"
 //styles
-import './../fonts/__proximaNovaBold/fonts__proximaNovaBold.css'
 import './../svgfont/svgfont.css'
-import './../link/link.css'
 import './bouquet.css'
 
 Bouquet.propTypes = {
