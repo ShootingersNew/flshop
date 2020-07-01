@@ -4,7 +4,6 @@ import React from "react"
 import Bouquet from "../bouquet/Bouquet"
 //styles
 import './cart.css'
-import '../fonts/__proximaNovaSemibold/fonts__proximaNovaSemibold.css'
 
 export default function Cart(props) {
     return (
@@ -15,8 +14,9 @@ export default function Cart(props) {
                 </header>
                 <div className="cart__items">
                     {
-                        props.items.map((item) => (
+                        props.items.map((item, idx) => (
                             <Bouquet
+                                key={idx}
                                 classname={'cart__item'}
                                 item={item}
                                 mod={'type_cart'}
