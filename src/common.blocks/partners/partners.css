@@ -1,5 +1,28 @@
+
 .partners__container {
     font-size: 181px;
     display: flex;
     vertical-align: baseline;
+    justify-content: space-between;
+    margin-bottom: -55px;
+}
+
+.partners__logo {
+    position: relative;
+}
+
+.partners__verizon {
+    top: -5px;
+}
+
+.partners__citibank {
+    top: -9px;
+}
+
+.partners__worldplay {
+    top: 2px;
+}
+
+.partners__sandisk {
+    top: -3px;
 }
