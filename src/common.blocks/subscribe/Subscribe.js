@@ -8,7 +8,6 @@ import Form from "../form/Form"
 import {emailRegexp} from "../../config/config"
 //styles
 import './subscribe.css'
-import '../fonts/__proximaNovaBold/fonts__proximaNovaBold.css'
 
 export default function Subscribe() {
     return (
