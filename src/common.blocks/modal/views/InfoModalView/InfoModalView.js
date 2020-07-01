@@ -7,7 +7,7 @@ InfoModalView.propTypes = {
         name: PropTypes.string.isRequired,
         phone: PropTypes.string.isRequired,
         comment: PropTypes.string,
-        finalPrice: PropTypes.number.isRequired,
+        finalPrice: PropTypes.any.isRequired,
         discount: PropTypes.shape({
             salePercent: PropTypes.number.isRequired,
             minPrice: PropTypes.number.isRequired

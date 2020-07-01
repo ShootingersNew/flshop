@@ -1,3 +1,4 @@
+
 .popup-content {
     width: 391px !important;
     height: 406px !important;
@@ -7,7 +8,7 @@
     top: 0;
     bottom: 0;
     margin: auto;
-    padding: 59px 56px 46px 52px !important;
+    padding: 57px 56px 46px 52px !important;
     box-sizing: border-box !important;
     background-color: white;
 }
@@ -26,6 +27,6 @@
 
 .popup__header {
     line-height: 35px;
-    color: #FD0000;
     margin-bottom: 14px;
+    margin-left: 36px;
 }

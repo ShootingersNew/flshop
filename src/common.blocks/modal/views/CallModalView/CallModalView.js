@@ -32,8 +32,8 @@ export default function CallModalView() {
                             as={InputMask}
                             control={control}
                             name={'phone'}
-                            placeholder={'Введите номер телефона'}
-                            className={'input input_required_true input_isValid_' + isValidInput('phone')}
+                            placeholder={'Телефон'}
+                            className={'input callModalView__input input_required_true input_isValid_' + isValidInput('phone')}
                             mask={mask} maskChar="_"
                             defaultValue={''}
                             rules={{
@@ -55,6 +55,11 @@ export default function CallModalView() {
                         <Confidentiality
                             className={'callModalView__confidentiality'}
                             register={register({required: true})}
+                            customText={
+                                <React.Fragment>
+                                    «Политики конфиденциальности <br/> и обработки персональных данных»
+                                </React.Fragment>
+                            }
                         />
                     </React.Fragment>
                 )
