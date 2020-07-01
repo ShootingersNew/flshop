@@ -4,9 +4,8 @@ import PropTypes from 'prop-types'
 //comps
 import Composition from "./composition/Composition"
 import Button from "../button/Button"
+import withCartConnect from "../../hoc/withCartConnect"
 //styles || utils
-import './../link/link.css'
-import './../fonts/__proximaNovaBold/fonts__proximaNovaBold.css'
 import './flower.css'
 import star from './img/star.svg'
 import {regExpPrice} from "../../config/utils"
@@ -14,7 +13,8 @@ import {regExpPrice} from "../../config/utils"
 Flower.propTypes = {
     item: PropTypes.object.isRequired
 };
-export default function Flower(props) {
+
+function Flower(props) {
     return (
         <React.Fragment>
             {props.item ?
@@ -30,7 +30,7 @@ export default function Flower(props) {
                                 <div className="flower__mark">
                                     <img src={star} alt="star"/> {props.item.mark}
                                 </div>
-                                <a href="#" className="flower__reviewsLink link">8 отзывов</a>
+                                <div className="flower__reviewsLink link">8 отзывов</div>
                             </div>
                             <div className="flower__price">
                             <span
@@ -43,12 +43,25 @@ export default function Flower(props) {
                                     </div> : null
                                 }
                             </div>
+
                             <div className="flower__buttons">
-                                <Button className={' flower__inCart'}>В корзину</Button>
-                                <a className={'flower__oneClickBuy fonts__proximaNovaBold'} href="#">Купить в один
-                                    клик</a>
+                                <Button disabled={props.checkInCart(props.item.id)} className={' flower__inCart'}>
+                                    {
+                                        !props.checkInCart(props.item.id) ? 'В корзину' : ' В корзине'
+                                    }
+                                </Button>
+                                {
+                                    !props.checkInCart(props.item.id) &&
+                                    <button className={'flower__click-buy fonts__proximaNovaBold'} href="#">Купить в
+                                        один клик</button>
+                                }
+
                             </div>
                             <Composition composition={props.item.composition}/>
+                            <div className="flower__desc">
+                                Букет станет отличным подарком для девушки на любой праздник. Известная композиция Ларии
+                                Лучевой подарит приятные эмоции и тонкий цветочный аромат
+                            </div>
                         </div>
                     </article>
 
@@ -62,3 +75,5 @@ export default function Flower(props) {
         </React.Fragment>
     )
 }
+
+export default withCartConnect(Flower)
