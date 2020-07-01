@@ -1,7 +1,9 @@
 import React from "react";
-import './composition.css';
-import CompositionItem from "./CompositionItem";
 import PropTypes from 'prop-types';
+//comps
+import CompositionItem from "./CompositionItem";
+//styles
+import './composition.css';
 
 const Composition = ({composition, className}) => {
     const renderComposition = () => {
@@ -18,13 +20,13 @@ const Composition = ({composition, className}) => {
             let colArr = [];
             for (let i = idx; i < idx + 3; i++) {
                 if (composition[i]) {
-                    colArr.push(<CompositionItem item={composition[i]}/>)
+                    colArr.push(<CompositionItem key={i} item={composition[i]}/>)
                 }
             }
             return colArr
         };
         const makeRow = (i) => {
-            return <tr>{makeColumns(i)}</tr>
+            return <tr key={i}>{makeColumns(i)}</tr>
         };
         return renderTable()
     };
