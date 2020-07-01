@@ -4,11 +4,12 @@
 
 .cart {
     width: 867px;
+    padding-top: 10px;
 }
 
 .cart__header {
     font-size: 36px;
-    margin-bottom: 16px;
+    margin-bottom: 13px;
 }
 
 .cart__counter {
