@@ -17,7 +17,7 @@ class PriceFilter extends Component {
     }
 
     static propTypes = {
-        changeHanlder: PropTypes.func.isRequired
+        changeHandler: PropTypes.func.isRequired
     };
 
     componentDidMount() {
@@ -37,8 +37,8 @@ class PriceFilter extends Component {
                         this.props.changeHandler({value})
                     }}
                 />
-                <span className="priceFilter__min">{regExpPrice(this.state.value.min)}</span>
-                <span className="priceFilter__max">{regExpPrice(this.state.value.max)}</span>
+                <span className="priceFilter__min">{regExpPrice(this.state.value.min)}р</span>
+                <span className="priceFilter__max">{regExpPrice(this.state.value.max)}р</span>
             </div>
         )
     }

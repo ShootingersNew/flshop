@@ -3,7 +3,7 @@
     margin-bottom: -10px;
     width: 14px;
     height: 14px;
-    border: 1px solid #79ba38;
+    border: 1px solid #FD0000;
     background-color: white;
     border-radius: unset;
     top: calc(50% + 1px);
@@ -14,11 +14,12 @@
 }
 
 .input-range__track--active {
-    background-color: #79ba38;
+    background-color: #FD0000;
 }
 
 .input-range {
-    width: 205px;
+    width: 191px;
+    margin-left: 20px;
 }
 
 .input-range__label {
@@ -26,17 +27,17 @@
 }
 
 .priceFilter {
-    height: 56px;
+    height: 40px;
     width: 205px;
     position: relative;
 }
 
 .priceFilter__min {
     position: absolute;
-    left: 0;
+    left: 7px;
 }
 
 .priceFilter__max {
     position: absolute;
-    right: 0;
+    right: -5px;
 }
