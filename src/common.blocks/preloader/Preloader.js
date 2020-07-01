@@ -1,5 +1,6 @@
 import React from "react"
 import cn from 'classnames'
+//styles
 import './preloader.css'
 
 export default function Preloader(props) {
