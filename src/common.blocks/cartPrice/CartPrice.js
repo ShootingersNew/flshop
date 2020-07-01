@@ -5,18 +5,18 @@ import PropTypes from 'prop-types'
 import {regExpPrice} from "../../config/utils";
 //styles
 import './cartPrice.css'
-import '../fonts/__proximaNovaBold/fonts__proximaNovaBold.css'
 
 CartPrice.propTypes = {
     price: PropTypes.number.isRequired,
     discount: PropTypes.object.isRequired,
     address: PropTypes.string.isRequired,
     chosenDelivery: PropTypes.object.isRequired,
-    finalPrice: PropTypes.number.isRequired
+    finalPrice: PropTypes.any.isRequired
 };
 export default function CartPrice(props) {
     return (
         <table className={'cartPrice__table'}>
+            <tbody>
             <tr className="cartPrice__tr">
                 <th className="cartPrice__header">Итого</th>
                 <td className="cartPrice__price fonts__proximaNovaBold">{regExpPrice(props.price)}р</td>
@@ -40,6 +40,7 @@ export default function CartPrice(props) {
                     {regExpPrice(props.finalPrice)}р
                 </td>
             </tr>
+            </tbody>
         </table>
     )
 }
