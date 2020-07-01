@@ -2,21 +2,21 @@
   "cart": [
     {
       "bg": "./images/banners/1.png",
-      "link": "/"
+      "url": "/"
     },
     {
       "bg": "./images/banners/2.png",
-      "link": "/"
+      "url": "/"
     },
     {
       "bg": "./images/banners/3.png",
-      "link": "/"
+      "url": "/"
     }
   ],
   "listing": [
     {
-      "bg": "./images/banners/4.png",
-      "link": "/"
+      "bg": "./images/banners/vb1.png",
+      "url": "/"
     }
   ]
 }
