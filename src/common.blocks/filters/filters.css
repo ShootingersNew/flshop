@@ -2,6 +2,7 @@
     border: none;
     padding-left: 0;
     margin-left: 0;
+    padding-bottom: 4px;
     position: relative;
 }
 
@@ -31,11 +32,18 @@
 .filters__tick {
     display: inline-block;
     animation-fill-mode: forwards;
+    position: relative;
+    top: -1px;
 }
 
 .filters__fieldset_opened_true .filters__tick_animationReady_true {
     animation-duration: 0.5s;
     animation-name: rotateOn;
+}
+
+/*if fieldset is opened, tick default rotated 180 deg*/
+.filters__fieldset_opened_true .filters__tick_animationReady_false {
+    transform: rotate(180deg);
 }
 
 .filters__fieldset_opened_false .filters__tick_animationReady_true {
@@ -73,4 +81,8 @@
 
 .filters__additional {
     margin-bottom: 80px;
+}
+
+.filters__button {
+    margin-top: 20px;
 }
