@@ -1,5 +1,4 @@
 .asideBanners {
-    padding-top: 64px;
     box-sizing: border-box;
     vertical-align: top;
 
@@ -11,10 +10,6 @@
 
 }
 
-.asideBanners__banner {
+.asideBanners__banner:not(:last-child) {
     margin-bottom: 30px;
-}
-
-.asideBanners_float {
-    float: right;
 }
