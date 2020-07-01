@@ -14,8 +14,8 @@ export default function AdditionalItems(props) {
         <div className="additionalItems">
             <div className="additionalItems__header">C этим товаром также приобретают</div>
             <div className="additionalItems__inner">
-                {props.addItems && props.addItems.map((item) => {
-                    return (<Bouquet item={item}/>)
+                {props.addItems && props.addItems.map((item, idx) => {
+                    return (<Bouquet item={item} key={idx}/>)
                 })
                 }
             </div>
