@@ -1,5 +1,6 @@
 .seo {
     padding-top: 81px;
+    padding-bottom: 7px;
 }
 
 .seo__container {
@@ -10,12 +11,15 @@
 
 .seo__tile {
     width: 588px;
-    padding-bottom: 41px;
     box-sizing: border-box;
 }
 
+.seo__tile:nth-child(-n+2) {
+    padding-bottom: 43px;
+}
+
 .seo__content {
-    line-height: 35px;
+    line-height: 30px;
     padding-top: 13px;
 }
 
@@ -26,4 +30,9 @@
 
 .seo__header {
     margin: 0;
+    font-size: inherit;
+}
+
+.seo__desc {
+    width: 89%;
 }
