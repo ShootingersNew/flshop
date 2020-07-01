@@ -16,6 +16,7 @@ Bouquet.propTypes = {
     classname: PropTypes.string,
     mod: PropTypes.string,
 };
+
 function Bouquet(props) {
     function increaseQuantity() {
         const quantity = props.item.amount + 1;
