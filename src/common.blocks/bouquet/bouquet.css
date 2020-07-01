@@ -28,6 +28,7 @@
 .bouquet__sale {
     position: relative;
     color: #8C8C8C;
+    text-decoration: line-through;
 }
 
 .bouquet__salePercent {
@@ -58,7 +59,7 @@
 .bouquet__cartButton {
     position: relative;
     top: -6px;
-    margin-left: 119px;
+    margin-left: 113px;
     display: flex;
     align-items: center;
     height: 20px;
