@@ -6,38 +6,33 @@ import cn from 'classnames'
 //styles
 import './button.css'
 
-Button.propTypes = {
-    disabled: PropTypes.bool,
-    mod: PropTypes.string,
-    className: PropTypes.string,
-    onClick: PropTypes.func,
-    type: PropTypes.string,
-    link: PropTypes.string,
-    ePrevent: PropTypes.bool
-};
-export default function Button(props) {
-    function clickHandler(e) {
-        if (props.ePrevent) {
-            e.preventDefault()
+const Button = React.forwardRef((props, ref) => {
+        function clickHandler(e) {
+            if (props.ePrevent) {
+                e.preventDefault()
+            }
+            if (props.onClick) {
+                props.onClick(e)
+            }
         }
-        if (props.onClick) {
-            props.onClick(e)
-        }
-    }
 
-    const btnClassname = cn({
-        button: true,
-        [`button_${props.mod}`]: props.mod,
-        [props.className]: props.className
-    });
+        const btnClassname = cn({
+            'button fonts__proximaNovaBold': true,
+            [`button_${props.mod}`]: props.mod,
+            [props.className]: props.className
+        });
     let button;
     switch (props.type) {
         case 'link':
             button = <Link to={props.link} className={btnClassname}> {props.children} </Link>;
             break;
         case 'input' :
-            button = <input type={'submit'} className={btnClassname}
-                            disabled={props.disabled ? props.disabled : null} value={props.children}/>;
+            button = <input
+                type={'submit'}
+                className={btnClassname}
+                disabled={props.disabled ? props.disabled : null}
+                value={props.children}
+            />;
             break;
         default:
             button =
@@ -49,9 +44,22 @@ export default function Button(props) {
                     {props.children}
                 </button>;
     }
-    return (
-        <React.Fragment>
-            {button}
-        </React.Fragment>
-    )
-}
+
+        return (
+            <React.Fragment>
+                {button}
+            </React.Fragment>
+        )
+
+    }
+);
+Button.propTypes = {
+    disabled: PropTypes.bool,
+    mod: PropTypes.string,
+    className: PropTypes.string,
+    onClick: PropTypes.func,
+    type: PropTypes.string,
+    link: PropTypes.string,
+    ePrevent: PropTypes.bool
+};
+export default Button
