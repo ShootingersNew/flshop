@@ -6,7 +6,6 @@ import PropTypes from 'prop-types'
 import Container from "../container/Container"
 //styles
 import './footer.css'
-import './../fonts/__proximaNovaBold/fonts__proximaNovaBold.css'
 import paypal from './img/paypal.svg'
 import yandex from './img/yandex.svg'
 import webmoney from './img/webmoney.svg'
@@ -17,13 +16,13 @@ Footer.propTypes = {
 };
 export default function Footer(props) {
     return (
-        <footer className={'footer'}>
-            <Container classname={'footer__container'}>
+        <footer className={'footer'} id={'footer'}>
+            <Container className={'footer__container'}>
                 <nav className="footer__nav">
                     {
                         props.navs.map((nav) => {
                             return (
-                                <ul className="footer__navList">
+                                <ul key={nav.id} className="footer__navList">
                                     {
                                         nav.li.map((li) => {
                                             return (
@@ -50,13 +49,13 @@ export default function Footer(props) {
                              style={{backgroundImage: 'url(' + visa + ')'}}/>
                     </div>
                     <div className="footer__socials">
-                        <a href="#" className="footer__socialLink">
+                        <a href="http://twitter.com" className="footer__socialLink">
                             <span className="footer__socialLogo icon-svg__twitter"/>
                         </a>
-                        <a href="#" className="footer__socialLink">
+                        <a href="http://vk.com" className="footer__socialLink">
                             <span className="footer__socialLogo icon-svg__vk"/>
                         </a>
-                        <a href="#" className="footer__socialLink">
+                        <a href="http://viber.com" className="footer__socialLink">
                             <span className="footer__socialLogo icon-svg__viber"/>
                         </a>
 

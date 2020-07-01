@@ -1,6 +1,8 @@
 .footer {
+    height: 256px;
     padding-bottom: 39px;
     padding-top: 40px;
+    box-sizing: border-box;
     background-color: #F8F8F8;
 }
 
