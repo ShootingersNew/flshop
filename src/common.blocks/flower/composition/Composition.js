@@ -34,7 +34,11 @@ const Composition = ({composition, className}) => {
         <section className="composition">
             <div className="composition__header">Композиция</div>
             <table className="composition__table">
-                {renderComposition()}
+                <tbody>
+                {
+                    renderComposition()
+                }
+                </tbody>
 
             </table>
 
