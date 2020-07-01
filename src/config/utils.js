@@ -2,8 +2,7 @@
 
 //this func is for adding whitespace in price ('5 000')
 const regExpPrice = (price) => {
-    const regExped = price.toString().replace(/(\d{1,3}(?=(?:\d\d\d)+(?!\d)))/g, "$1" + ' ')
-    return regExped
+    return price.toString().replace(/(\d{1,3}(?=(?:\d\d\d)+(?!\d)))/g, "$1 ");
 };
 
 //this function is for filtering items according to checkboxes
@@ -31,7 +30,7 @@ class FilterItems {
                 return this._testIncluded(filters.color, item.color)
             },
             flowers: (item, filters) => {
-                return this._testIncluded(filters.flowers, [...item.category, ...item.additionalCategories])
+                return this._testIncluded(filters.flowers, [item.category, ...item.additionalCategories])
             },
             for: (item, filters) => {
                 return this._testIncluded(filters.for, item.for)
@@ -84,4 +83,24 @@ class FilterItems {
 
 }
 
-export {regExpPrice, FilterItems}
+//imitation of loading
+function loadImit(func) {
+    func('loading');
+    setTimeout(() => {
+        func('loaded')
+    }, 1500);
+}
+
+function getScrollbarWidth() {
+    var div = document.createElement('div');
+    div.style.overflowY = 'scroll';
+    div.style.width = '50px';
+    div.style.height = '50px';
+    div.style.visibility = 'hidden';
+    document.body.appendChild(div);
+    var scrollWidth = div.offsetWidth - div.clientWidth;
+    document.body.removeChild(div);
+    return scrollWidth
+}
+
+export {regExpPrice, FilterItems, loadImit, getScrollbarWidth}
