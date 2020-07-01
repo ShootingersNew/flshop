@@ -6,7 +6,6 @@ import {Link} from "react-router-dom"
 import cn from "classnames"
 //styles
 import './search.css'
-import '../fonts/__proximaNovaRegular/fonts__proximaNovaRegular.css'
 
 export default class Search extends React.Component {
     constructor(props) {
