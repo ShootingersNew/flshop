@@ -2,19 +2,23 @@
     height: 555px;
     width: 555px;
     margin-top: 16px;
-    background-color: #C4C4C4;
-    margin-right: 60px;
+    margin-right: 80px;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
+.flower__wrapper {
+    padding-top: 20px;
+}
+
 .flower {
     display: flex;
+    position: relative;
 }
 
 .flower__header {
     width: 100%;
-    margin: 0 0 13px;
+    margin: 0 0 10px;
     padding: 0;
     font-weight: normal;
     line-height: 45px;
@@ -22,15 +26,15 @@
 }
 
 .flower__vendorCode {
-    margin-right: 31px;
+    margin-right: 39px;
     line-height: 19px;
-    color: #C8C8C8;
+    color: #8C8C8C;
 
 }
 
 .flower__vendorCode span {
     margin-left: 12px;
-    color: #8C8C8C;
+    color: black;
 
 }
 
@@ -39,6 +43,7 @@
     position: relative;
     line-height: 19px;
     align-items: center;
+    color: #8C8C8C;
 }
 
 .flower__reviewsLink {
@@ -102,9 +107,13 @@
     right: -5px;
 }
 
-.flower__oneClickBuy {
+.flower__click-buy {
     color: #FD0000;
     text-decoration: none;
+    background: white;
+    border: none;
+    outline: none;
+    font-size: inherit;
 }
 
 .flower__inCart {
@@ -112,3 +121,11 @@
     margin-right: 34px;
 }
 
+.flower__desc {
+    width: 495px;
+    line-height: 30px;
+    position: absolute;
+    bottom: -89px;
+    right: 76px;
+    color: #8c8c8c;
+}
