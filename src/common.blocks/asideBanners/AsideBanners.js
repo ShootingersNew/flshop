@@ -10,7 +10,7 @@ import './asideBanners.css'
 
 AsideBanners.propTypes = {
     type: PropTypes.string,
-    banners: PropTypes.array.isRequired,
+    banners: PropTypes.array,
     className: PropTypes.string
 };
 
@@ -24,12 +24,13 @@ function AsideBanners(props) {
             //render banners dependent on the items in the cart
             if (idx < props.count || props.count === undefined) {
                 return <VerticalBanner
+                    key={idx}
                     type={props.type ? props.type : null}
                     banner={banner}
                     className={'asideBanners__banner'}
                 />
             }
-
+            return false;
         });
     };
     return (
