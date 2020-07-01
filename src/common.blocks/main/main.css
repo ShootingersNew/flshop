@@ -1,12 +1,23 @@
 .main {
     padding-bottom: 33px;
+    height: 100%;
+    flex: 1;
 }
 
-.main_inlineBlock {
-    display: inline-block;
+.main__aside {
+
 }
 
-.main_listing {
+.main__content {
     width: 918px;
-    vertical-align: top;
+
+}
+
+.main__flex-inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main_listing .main__flex-inner {
+    flex-direction: row-reverse;
 }
