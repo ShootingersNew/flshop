@@ -73,10 +73,16 @@ export default function Checkout(props) {
                                   {/*Modal includes submit button*/}
                                   <Modal
                                       trigger={
-                                          () => (<Button className={'checkout__button'} disabled={!formState.isValid}
-                                          > Оформить </Button>)}
+                                          <Button
+                                              className={'checkout__button'}
+                                              disabled={!formState.isValid}>
+                                              Оформить
+                                          </Button>
+                                      }
                                       header={'Сообщение'}
-                                      content={<InfoModalView info={props.popupContent}/>}
+                                      content={
+                                          <InfoModalView info={props.popupContent}/>
+                                      }
                                   />
 
                                   <Confidentiality
