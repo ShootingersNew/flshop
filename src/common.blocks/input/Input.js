@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames'
 //styles
 import './input.css'
-import './../fonts/__proximaNovaRegular/fonts__proximaNovaRegular.css'
 
 Input.propTypes = {
     classname: PropTypes.string,
