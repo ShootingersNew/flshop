@@ -5,9 +5,11 @@
 
 .composition__link {
     text-decoration: none;
-    display: block;
-    border-bottom: 1px dashed black;
+    display: inline-block;
     color: inherit;
+    background-image: url("./../img/line.png");
+    background-position: bottom left;
+    background-repeat: repeat-x;
 }
 
 .composition__link:hover {
@@ -15,6 +17,7 @@
     z-index: 10000111;
     border-bottom: unset;
     color: #FD0000;
+    background: unset;
 }
 
 .composition__link:hover ~ .composition__desc {
