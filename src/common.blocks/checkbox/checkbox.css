@@ -6,7 +6,7 @@
     display: block;
     width: calc(100% - 2px);
     height: calc(100% - 2px);
-    border: 1px solid #79ba38;
+    border: 1px solid #E6E6E6;
 }
 
 .checkbox__true:checked + .checkbox__box {
@@ -19,4 +19,10 @@
     height: 15px;
     display: inline-block;
     cursor: pointer;
+}
+
+.checkbox_red .checkbox__true:checked + .checkbox__box {
+    border: 1px solid #FD0000;
+    background: url("./arrowFilter.svg") no-repeat center 0;
+    background-size: 9px 12px;
 }

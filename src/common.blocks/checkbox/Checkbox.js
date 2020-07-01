@@ -1,6 +1,7 @@
 //libs
 import React from "react"
 import PropTypes from 'prop-types'
+import cn from 'classnames'
 //styles
 import './checkbox.css'
 
@@ -11,13 +12,19 @@ Checkbox.propTypes = {
     checked: PropTypes.bool,
     defaultChecked: PropTypes.bool,
     ref: PropTypes.func,
-    controlled: PropTypes.bool
+    controlled: PropTypes.bool,
+    classname: PropTypes.string
 
 };
 export default function Checkbox(props) {
+    let className = cn({
+        'checkbox': true,
+        [props.className]: props.className,
+    });
     return (
-        <label className={'checkbox ' + props.className}>
-            {props.controlled ? <input
+        <label className={className}>
+            {props.controlled ?
+                <input
                     className={'checkbox__true'}
                     type={'checkbox'}
                     data-inputtype={props.type}
