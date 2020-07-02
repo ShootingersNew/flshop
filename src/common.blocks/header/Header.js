@@ -30,12 +30,12 @@ export default function Header() {
                         trigger={<span className="header__callPopupLink">Обратный звонок</span>}
                         header={'Обратный звонок'}
                         content={<CallModalView/>}
-                        />
-                    </div>
-                    <Search class={'header__search'}/>
-                    {/*линк для того, чтобы по href найти и отобразить блок(компонент) с соответвующим айди*/}
-                    <UserNav class={'header__userNav'}/>
+                    />
                 </div>
+                <Search class={'header__search'}/>
+                {/*линк для того, чтобы по href найти и отобразить блок(компонент) с соответвующим айди*/}
+                <UserNav class={'header__userNav'}/>
+            </div>
         </header>
     )
 }
