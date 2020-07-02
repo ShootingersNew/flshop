@@ -6,13 +6,7 @@
     text-decoration: none;
 }
 
-.verticalBanner__header {
-    position: absolute;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-    bottom: 49px;
-    width: 55%;
-    line-height: 20px;
-    font-size: 16px;
+.verticalBanner_tall {
+    height: 473px;
+    width: 270px;
 }
