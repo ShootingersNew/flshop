@@ -1,16 +1,15 @@
 //libs
-import React from "react";
-import PropTypes from 'prop-types';
-import {connect} from "react-redux";
+import React from "react"
+import PropTypes from 'prop-types'
+import {connect} from "react-redux"
 //comps
-import withCartConnect from "../../hoc/withCartConnect";
-import Cart from "../../common.blocks/cart/Cart";
-import Container from "../../common.blocks/container/Container";
-import Breadcrumbs from "../../common.blocks/breadcrumbs/Breadcrumbs";
-import CartPrice from "../../common.blocks/cartPrice/CartPrice";
-import Checkout from "../../common.blocks/checkout/Checkout";
-import Main from "../../common.blocks/main/Main";
-import AsideBanners from "../../common.blocks/asideBanners/AsideBanners";
+import withCartConnect from "../../hoc/withCartConnect"
+import Cart from "../../common.blocks/cart/Cart"
+import Breadcrumbs from "../../common.blocks/breadcrumbs/Breadcrumbs"
+import CartPrice from "../../common.blocks/cartPrice/CartPrice"
+import Checkout from "../../common.blocks/checkout/Checkout"
+import Main from "../../common.blocks/main/Main"
+import AsideBanners from "../../common.blocks/asideBanners/AsideBanners"
 
 class CartPage extends React.Component {
     constructor(props) {
@@ -86,43 +85,46 @@ class CartPage extends React.Component {
         const {discount, chosenDelivery, address, finalPrice, attributes} = this.state;
         return (
             <React.Fragment>
-                <Container>
-                    <Breadcrumbs
-                        items={
-                            [
-                                {title: 'Главная', path: '/'},
-                                {title: 'Каталог', path: '/catalog'},
-                                {title: 'Корзина'}
-                            ]
-                        }
-                    />
-                    <Main className={'main_inlineBlock main_checkout'}>
+                <Main
+                    className={'main_inlineBlock main_checkout'}
+                    container={true}
+                    content={
+                        <React.Fragment>
+                            <Breadcrumbs
+                                items={
+                                    [
+                                        {title: 'Главная', path: '/'},
+                                        {title: 'Каталог', path: '/catalog'},
+                                        {title: 'Корзина'}
+                                    ]
+                                }
+                            />
+                            <Cart items={items} length={length}/>
 
-                        <Cart items={items} length={length}/>
+                            <CartPrice
+                                price={price}
+                                finalPrice={finalPrice}
+                                discount={discount}
+                                chosenDelivery={chosenDelivery}
+                                address={address}
+                            />
 
-                        <CartPrice
-                            price={price}
-                            finalPrice={finalPrice}
-                            discount={discount}
-                            chosenDelivery={chosenDelivery}
-                            address={address}
+                            <Checkout
+                                submitCheckout={this.submitCheckout}
+                                popupContent={{...attributes, length, items, address, finalPrice, discount}}
+                                setAttrs={this.submitCheckout}
+                            />
+                        </React.Fragment>
+                    }
+                    aside={
+                        <AsideBanners
+                            id={'cart'}
+                            count={length}
+                            className={'asideBanners_float'}
                         />
-
-                        <Checkout
-                            submitCheckout={this.submitCheckout}
-                            popupContent={{...attributes, length, items, address, finalPrice, discount}}
-                            setAttrs={this.submitCheckout}
-                        />
-
-                    </Main>
-
-                    <AsideBanners
-                        id={'cart'}
-                        count={length}
-                        className={'asideBanners_float'}
-                    />
-
-                </Container>
+                    }
+                >
+                </Main>
             </React.Fragment>
         )
     }
