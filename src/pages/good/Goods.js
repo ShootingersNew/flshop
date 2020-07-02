@@ -9,27 +9,32 @@ import Container from "../../common.blocks/container/Container";
 import Main from "../../common.blocks/main/Main";
 //styles
 import '../../common.blocks/container/container.css'
+import {loadImit} from "../../config/utils";
 
 class Goods extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             item: null,
-            isLoaded: false,
+            loadingStatus: 'notLoaded',
             additional: null
         }
     }
 
+    loadingHandler = (status) => {
+        this.setState({loadingStatus: status})
+    };
+
     componentDidMount() {
         //делаем задержку, для имитации асинхронности
-        this.loadImit();
+        loadImit(this.loadingHandler);
 
         //    здесь бы делался запрос к серверу
         const {idx} = this.props.match.params;
 
         const itemsArr = require('../../config/json/allItems');
         //данные просматриваемого товара
-        const curItem = itemsArr.find(item => item.id == idx);
+        const curItem = itemsArr.find(item => item.id === idx);
 
         //массив текущих дополнительных товаров. Из-за отсутствия сервера приходится
         //перебирать все дополнительные товары на предмет наличия у них айдишников
@@ -39,7 +44,7 @@ class Goods extends React.Component {
         const curAdditionals = curItem.additional.reduce((sum, cur) => {
             let currentItem = '';
             additionals.forEach((item) => {
-                if (item.id == cur) {
+                if (item.id === cur) {
                     currentItem = item
                 }
             });
@@ -53,38 +58,32 @@ class Goods extends React.Component {
         });
     }
 
-    loadImit() {
-        //лоад имит существует для имитации загрузки
-        let timer = setTimeout(() => {
-            this.setState({
-                isLoaded: true
-            })
-        }, 500);
-    }
 
     render() {
-
+        const {item, loadingStatus, additional} = this.state;
         return (
 
             <React.Fragment>
                 {
-                    this.state.isLoaded && this.state.item ?
-                        <Container>
-                            <Main>
+                    loadingStatus === 'loaded' && item ?
+
+                        <Main container={true}>
+                            <Container>
                                 <Breadcrumbs
                                     items={
                                         [
                                             {title: 'Главная', path: '/'},
                                             {title: 'Каталог', path: '/catalog'},
-                                            {title: [this.state.item.name]},
+                                            {title: [item.name]},
                                         ]
                                     }
                                 />
-                                <Flower item={this.state.item}/>
-                                <AdditionalItems addItems={this.state.additional}/>
-                            </Main>
-                        </Container>
-                        : <Preloader className={'preloader_fullpage'}/>
+                                <Flower item={item}/>
+                                <AdditionalItems addItems={additional}/>
+                            </Container>
+                        </Main>
+                        :
+                        <Preloader className={'preloader_fullpage'}/>
                 }
             </React.Fragment>
         )
