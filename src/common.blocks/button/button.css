@@ -1,7 +1,6 @@
 .button {
     display: block;
     text-align: center;
-    line-height: 46px;
     height: 46px;
     padding: 0 34px;
     background-color: #FD0000;
@@ -13,9 +12,6 @@
     border: 1px solid transparent;
 }
 
-.button_filter {
-    line-height: unset;
-}
 
 .button_transparent {
     background-color: transparent;
