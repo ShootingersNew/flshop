@@ -76,11 +76,17 @@ export default class Search extends React.Component {
                     onChange={this.search}
                     onFocus={this.search}
                 />
-                {this.state.isSearchTouched && <div className="search__layout ">
+                {this.state.isSearchTouched && this.state.searchResults.length !== 0
+                && <div className="search__layout ">
                     <ul className="search__result-list">
                         <SimpleBar style={{maxHeight: 173}}>
                             {this.state.searchResults.map((res) =>
-                                <li className={'search__li'}>
+                                <li
+                                    className={'search__li'}
+                                    onClick={() => {
+                                        this.setState({isSearchTouched: false})
+                                    }}
+                                >
                                     <Link className={'search__link'} to={'/goods/allItems/' + res.item.id}>
                                         <img src={res.item.src} alt="" className="search__img"/>
                                         <div className="search__info">
