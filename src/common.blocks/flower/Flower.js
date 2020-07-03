@@ -65,11 +65,18 @@ function Flower(props) {
                                 }
 
                             </div>
-                            <Composition composition={props.item.composition}/>
-                            <div className="flower__desc">
-                                Букет станет отличным подарком для девушки на любой праздник. Известная композиция Ларии
-                                Лучевой подарит приятные эмоции и тонкий цветочный аромат
-                            </div>
+                            {
+                                props.type !== 'additionalItems'
+                                &&
+                                <React.Fragment>
+                                    <Composition composition={props.item.composition}/>
+                                    <div className="flower__desc">
+                                        Букет станет отличным подарком для девушки на любой праздник. Известная
+                                        композиция Ларии
+                                        Лучевой подарит приятные эмоции и тонкий цветочный аромат
+                                    </div>
+                                </React.Fragment>
+                            }
                         </div>
                     </article>
 

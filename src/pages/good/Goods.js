@@ -81,7 +81,7 @@ class Goods extends React.Component {
                                         ]
                                     }
                                 />
-                                <Flower item={item}/>
+                                <Flower type={type} item={item}/>
                                 {
                                     type !== 'additionalItems'
                                     &&
