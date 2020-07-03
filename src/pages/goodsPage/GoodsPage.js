@@ -5,7 +5,6 @@ import Preloader from "../../components/preloader/Preloader";
 import Breadcrumbs from "../../components/breadcrumbs/Breadcrumbs";
 import Flower from "../../components/flower/Flower";
 import AdditionalItems from "../../components/additionalItems/AdditionalItems";
-import Container from "../../components/container/Container";
 import Main from "../../components/main/Main";
 //styles
 import '../../components/container/container.css'
@@ -67,27 +66,25 @@ class GoodsPage extends React.Component {
         return (
 
             <React.Fragment>
+
                 {
                     loadingStatus === 'loaded' && item ?
-
                         <Main container={true}>
-                            <Container>
-                                <Breadcrumbs
-                                    items={
-                                        [
-                                            {title: 'Главная', path: '/'},
-                                            {title: 'Каталог', path: '/catalog'},
-                                            {title: [item.name]},
-                                        ]
-                                    }
-                                />
-                                <Flower type={type} item={item}/>
-                                {
-                                    type !== 'additionalItems'
-                                    &&
-                                    <AdditionalItems addItems={additional}/>
+                            <Breadcrumbs
+                                items={
+                                    [
+                                        {title: 'Главная', path: '/'},
+                                        {title: 'Каталог', path: '/catalog'},
+                                        {title: [item.name]},
+                                    ]
                                 }
-                            </Container>
+                            />
+                            <Flower type={type} item={item}/>
+                            {
+                                type !== 'additionalItems'
+                                &&
+                                <AdditionalItems addItems={additional}/>
+                            }
                         </Main>
                         :
                         <Preloader className={'preloader_fullpage'}/>
