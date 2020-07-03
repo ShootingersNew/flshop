@@ -24,22 +24,22 @@ class MainPage extends React.Component {
                     slides={[
                         {
                             header: 'Новинка «Фруктовый десерт»',
-                            back: '../../images/slider/1.png'
+                            back: '../../images/slider/1.jpg'
                         }, {
                             header: 'Особенный букет для невесты ',
-                            back: '../../images/slider/2.png'
+                            back: '../../images/slider/2.jpg'
                         }, {
                             header: 'Новинка «Фруктовый десерт»',
-                            back: '../../images/slider/3.png'
+                            back: '../../images/slider/3.jpg'
                         }, {
                             header: 'Новинка «Фруктовый десерт»',
-                            back: '../../images/slider/4.png'
+                            back: '../../images/slider/4.jpg'
                         },
                     ]}
                 />
                 <Banner
                     key={1}
-                    bg={'../../images/banners/banner1.png'}
+                    bg={'../../images/banners/banner1.jpg'}
                     render={
                         <React.Fragment>
                             <header className={banner.banner__header + ' fonts__proximaNovaBold'}>
@@ -60,7 +60,7 @@ class MainPage extends React.Component {
                 />
                 <Banner
                     key={2}
-                    bg={'../../images/banners/banner2.png'}
+                    bg={'../../images/banners/banner2.jpg'}
                     render={
                         <React.Fragment>
                             <header className={banner.banner__header + ' fonts__proximaNovaBold'}>

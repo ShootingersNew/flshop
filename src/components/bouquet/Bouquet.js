@@ -2,8 +2,10 @@
 import React from "react"
 import {Link} from "react-router-dom"
 import PropTypes from 'prop-types'
+import {LazyImage} from "react-lazy-images";
 //comps
 import withCartConnect from "../../hoc/withCartConnect"
+import Preloader from "../preloader/Preloader";
 //utils
 import {regExpPrice} from "../../config/utils"
 //styles
@@ -42,7 +44,15 @@ function Bouquet(props) {
                         <img className={'bouquet__image'} src={props.item.src} alt={props.item.name}/>
                     </Link>
                     :
-                    <img className={'bouquet__image'} src={props.item.src} alt={props.item.name}/>
+                    // <img className={'bouquet__image'} src={props.item.src} alt={props.item.name}/>
+                    <LazyImage
+                        src={props.item.src}
+                        className={'bouquet__image'}
+                        placeholder={({imageProps, ref}) => (
+                            <Preloader ref={ref} className={imageProps.className}/>
+                        )}
+                        actual={({imageProps}) => <img {...imageProps} alt={props.item.name}/>}
+                    />
                 }
                 <div className="bouquet__info">
                     <div className="bouquet__price-info">

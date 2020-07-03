@@ -20,6 +20,10 @@ export default function SlickSlider(props) {
         arrows: false,
         infinite: true,
         speed: 500,
+        lazyLoad: "ondemand",
+        onLazyLoad: slidesLoaded => {
+            console.log('eee')
+        },
         slidesToShow: 1,
         slidesToScroll: 1
     };

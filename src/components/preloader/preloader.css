@@ -3,11 +3,9 @@
     height: 100%;
     flex: 1;
     position: relative;
+    background-repeat: no-repeat;
 }
 
-.preloader_fullpage {
-
-}
 
 .lds-roller {
     display: inline-block;
