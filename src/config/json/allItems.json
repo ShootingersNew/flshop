@@ -1,6 +1,6 @@
 [
   {
-    "id": "1",
+    "id": 1,
     "name": "Букет «Рубиновое сияние»",
     "src": "/images/bouquets/b1.png",
     "price": 3150,
@@ -67,7 +67,7 @@
     ]
   },
   {
-    "id": "2",
+    "id": 2,
     "name": "Шляпная коробка «Нежность»",
     "src": "/images/bouquets/b2.png",
     "price": 4200,
@@ -134,7 +134,7 @@
     ]
   },
   {
-    "id": "3",
+    "id": 3,
     "name": "Букет «Крем-карамель»",
     "src": "/images/bouquets/b3.png",
     "price": 2150,
@@ -197,7 +197,7 @@
     ]
   },
   {
-    "id": "4",
+    "id": 4,
     "name": "Шляпная коробка «Замок»",
     "src": "/images/bouquets/b4.png",
     "price": 3670,
@@ -254,7 +254,7 @@
     ]
   },
   {
-    "id": "5",
+    "id": 5,
     "name": "Букет «Деревенское утро»",
     "src": "/images/bouquets/b5.png",
     "price": 3150,
@@ -309,7 +309,7 @@
     ]
   },
   {
-    "id": "6",
+    "id": 6,
     "name": "Букет «Шик»",
     "src": "/images/bouquets/b6.png",
     "price": 5500,
@@ -362,7 +362,7 @@
     ]
   },
   {
-    "id": "7",
+    "id": 7,
     "name": "Корзина «Ромашки»",
     "src": "/images/bouquets/b7.png",
     "price": 8990,
@@ -402,7 +402,7 @@
     ]
   },
   {
-    "id": "8",
+    "id": 8,
     "name": "Букет «Малиновый щербет»",
     "src": "/images/bouquets/b8.png",
     "price": 6000,
@@ -444,7 +444,7 @@
     ]
   },
   {
-    "id": "9",
+    "id": 9,
     "name": "Букет «Лиловый ключ»",
     "src": "/images/bouquets/b8.png",
     "price": 3650,
@@ -491,7 +491,7 @@
     ]
   },
   {
-    "id": "10",
+    "id": 10,
     "name": "Букет «Кенийская красавица»",
     "src": "/images/bouquets/b8.png",
     "price": 6500,
@@ -538,7 +538,7 @@
     ]
   },
   {
-    "id": "11",
+    "id": 11,
     "name": "Букет «Ангел»",
     "src": "/images/bouquets/b8.png",
     "price": 4000,
