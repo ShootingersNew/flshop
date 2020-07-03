@@ -37,7 +37,13 @@ function Bouquet(props) {
     return (
         <article className={classes + ' ' + props.classname}>
             <main className="bouquet__main">
-                <img className={'bouquet__image'} src={props.item.src} alt={props.item.name}/>
+                {props.mod && props.mod === 'type_cart' ?
+                    <Link to={'/goods/' + props.item.type + '/' + props.item.id}>
+                        <img className={'bouquet__image'} src={props.item.src} alt={props.item.name}/>
+                    </Link>
+                    :
+                    <img className={'bouquet__image'} src={props.item.src} alt={props.item.name}/>
+                }
                 <div className="bouquet__info">
                     <div className="bouquet__price-info">
                         <span className="bouquet__price fonts__proximaNovaBold">{regExpPrice(props.item.price)}р</span>
@@ -59,22 +65,29 @@ function Bouquet(props) {
 
                 </div>
             </main>
+            {/*controls for cart bouquets*/}
             {props.mod && props.mod === 'type_cart' ?
-                <div className="bouquet__controls">
-                    <div className="bouquet__counter">
+                <React.Fragment>
+                    <div className="bouquet__controls">
+                        <div className="bouquet__counter">
                         <span onClick={() => {
                             decreaseQuantity()
                         }} className={"bouquet__counterButton bouquet__counterButton_left icon-svg__minus"}/>
-                        <span className={"bouquet__counterNumber"}>{props.item.amount}</span>
-                        <span onClick={() => {
-                            increaseQuantity()
-                        }} className={"bouquet__counterButton bouquet__counterButton_right icon-svg__plus"}/>
+                            <span className={"bouquet__counterNumber"}>{props.item.amount}</span>
+                            <span onClick={() => {
+                                increaseQuantity()
+                            }} className={"bouquet__counterButton bouquet__counterButton_right icon-svg__plus"}/>
+                        </div>
+                        <div className="bouquet__sumPrice fonts__proximaNovaBold">
+                            {regExpPrice(props.item.sumPrice)}р
+                        </div>
                     </div>
-                    <div className="bouquet__sumPrice fonts__proximaNovaBold">
-                        {regExpPrice(props.item.sumPrice)}р
-                    </div>
-                </div>
+                    <span onClick={() => {
+                        props.removeItem(props.item.id)
+                    }} className="bouquet__delete icon-svg__cross"/>
+                </React.Fragment>
                 :
+                //default footer
                 <footer className={'bouquet__footer'}>
                     <Link className={'link'} to={'/goods/' + props.item.type + '/' + props.item.id}>Подробнее</Link>
 
@@ -85,11 +98,6 @@ function Bouquet(props) {
                         <span className="icon-svg__cartico bouquet__cart"/>
                     </button>
                 </footer>
-            }
-            {props.mod && props.mod === 'type_cart' ?
-                <span onClick={() => {
-                    props.removeItem(props.item.id)
-                }} className="bouquet__delete icon-svg__cross"/> : false
             }
         </article>
     )
