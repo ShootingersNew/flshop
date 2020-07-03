@@ -15,6 +15,9 @@ Flower.propTypes = {
 };
 
 function Flower(props) {
+    const addInCart = (item) => {
+        props.addInCart(item)
+    };
     return (
         <React.Fragment>
             {props.item ?
@@ -45,14 +48,19 @@ function Flower(props) {
                             </div>
 
                             <div className="flower__buttons">
-                                <Button disabled={props.checkInCart(props.item.id)} className={' flower__inCart'}>
+                                <Button
+                                    onClick={() => {
+                                        addInCart(props.item)
+                                    }}
+                                    disabled={props.checkInCart(props.item.id)}
+                                    className={' flower__inCart'}>
                                     {
                                         !props.checkInCart(props.item.id) ? 'В корзину' : ' В корзине'
                                     }
                                 </Button>
                                 {
                                     !props.checkInCart(props.item.id) &&
-                                    <button className={'flower__click-buy fonts__proximaNovaBold'} href="#">Купить в
+                                    <button className={'flower__click-buy fonts__proximaNovaBold'}>Купить в
                                         один клик</button>
                                 }
 
