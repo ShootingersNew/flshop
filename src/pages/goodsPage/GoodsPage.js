@@ -11,7 +11,7 @@ import Main from "../../components/main/Main";
 import '../../components/container/container.css'
 import {loadImit} from "../../config/utils";
 
-class Goods extends React.Component {
+class GoodsPage extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -97,4 +97,4 @@ class Goods extends React.Component {
     }
 }
 
-export default Goods
+export default GoodsPage
