@@ -30,37 +30,40 @@ class Goods extends React.Component {
         loadImit(this.loadingHandler);
 
         //    здесь бы делался запрос к серверу
-        const {idx} = this.props.match.params;
-
-        const itemsArr = require('../../config/json/allItems');
+        const {idx, type} = this.props.match.params;
+        const itemsArr = require('../../config/json/' + type);
         //данные просматриваемого товара
         const curItem = itemsArr.find(item => item.id === Number.parseInt(idx));
 
-        //массив текущих дополнительных товаров. Из-за отсутствия сервера приходится
-        //перебирать все дополнительные товары на предмет наличия у них айдишников
-        //указанных в данных об итеме
-        const additionals = require('../../config/json/additionalItems');
 
-        const curAdditionals = curItem.additional.reduce((sum, cur) => {
-            let currentItem = '';
-            additionals.forEach((item) => {
-                if (item.id === cur) {
-                    currentItem = item
-                }
-            });
-            return [...sum, currentItem]
-        }, []);
-
+        //
+        // additional items are shown only for flower items
+        if (type !== 'additionalItems') {
+            //массив текущих дополнительных товаров. Из-за отсутствия сервера приходится
+            //перебирать все дополнительные товары на предмет наличия у них айдишников
+            //указанных в данных об итеме
+            const additionals = require('../../config/json/additionalItems');
+            const curAdditionals = curItem.additional.reduce((sum, cur) => {
+                let currentItem = '';
+                additionals.forEach((item) => {
+                    if (item.id === cur) {
+                        currentItem = item
+                    }
+                });
+                return [...sum, currentItem]
+            }, []);
+            this.setState({additional: curAdditionals});
+        }
         this.setState({
             //отправляем в стейт "полученные данные" с "сервера"
             item: curItem,
-            additional: curAdditionals
         });
     }
 
 
     render() {
         const {item, loadingStatus, additional} = this.state;
+        const {type} = this.props.match.params;
         return (
 
             <React.Fragment>
@@ -79,7 +82,11 @@ class Goods extends React.Component {
                                     }
                                 />
                                 <Flower item={item}/>
-                                <AdditionalItems addItems={additional}/>
+                                {
+                                    type !== 'additionalItems'
+                                    &&
+                                    <AdditionalItems addItems={additional}/>
+                                }
                             </Container>
                         </Main>
                         :
