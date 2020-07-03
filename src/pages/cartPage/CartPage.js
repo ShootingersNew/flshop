@@ -4,12 +4,12 @@ import PropTypes from 'prop-types'
 import {connect} from "react-redux"
 //comps
 import withCartConnect from "../../hoc/withCartConnect"
-import Cart from "../../common.blocks/cart/Cart"
-import Breadcrumbs from "../../common.blocks/breadcrumbs/Breadcrumbs"
-import CartPrice from "../../common.blocks/cartPrice/CartPrice"
-import Checkout from "../../common.blocks/checkout/Checkout"
-import Main from "../../common.blocks/main/Main"
-import AsideBanners from "../../common.blocks/asideBanners/AsideBanners"
+import Cart from "../../components/cart/Cart"
+import Breadcrumbs from "../../components/breadcrumbs/Breadcrumbs"
+import CartPrice from "../../components/cartPrice/CartPrice"
+import Checkout from "../../components/checkout/Checkout"
+import Main from "../../components/main/Main"
+import AsideBanners from "../../components/asideBanners/AsideBanners"
 
 class CartPage extends React.Component {
     constructor(props) {

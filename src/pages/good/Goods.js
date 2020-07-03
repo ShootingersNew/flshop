@@ -1,14 +1,14 @@
 //libs
 import React from "react";
 //comps
-import Preloader from "../../common.blocks/preloader/Preloader";
-import Breadcrumbs from "../../common.blocks/breadcrumbs/Breadcrumbs";
-import Flower from "../../common.blocks/flower/Flower";
-import AdditionalItems from "../../common.blocks/additionalItems/AdditionalItems";
-import Container from "../../common.blocks/container/Container";
-import Main from "../../common.blocks/main/Main";
+import Preloader from "../../components/preloader/Preloader";
+import Breadcrumbs from "../../components/breadcrumbs/Breadcrumbs";
+import Flower from "../../components/flower/Flower";
+import AdditionalItems from "../../components/additionalItems/AdditionalItems";
+import Container from "../../components/container/Container";
+import Main from "../../components/main/Main";
 //styles
-import '../../common.blocks/container/container.css'
+import '../../components/container/container.css'
 import {loadImit} from "../../config/utils";
 
 class Goods extends React.Component {

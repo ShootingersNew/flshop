@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from 'prop-types'
-import {useForm, Controller} from "react-hook-form"
+import {Controller, useForm} from "react-hook-form"
 
 Form.propTypes = {
     className: PropTypes.string,

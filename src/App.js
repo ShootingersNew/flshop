@@ -1,5 +1,6 @@
 import React from 'react';
-import Page from "./common.blocks/page/Page";
+import Page from "./components/page/Page";
+
 function App(props) {
     return (
         <Page>

@@ -1,19 +1,19 @@
 //libs
 import React from "react"
 //comps
-import SlickSlider from "../../common.blocks/SlickSlider/SlickSlider"
-import Banner from "../../common.blocks/banner/Banner"
-import Showcase from "../../common.blocks/showcase/Showcase"
-import OrderControl from "../../common.blocks/orderControl/OrderControl"
-import Subscribe from "../../common.blocks/subscribe/Subscribe"
-import Seo from "../../common.blocks/seo/seo"
-import Partners from "../../common.blocks/partners/Partners"
-import Container from "../../common.blocks/container/Container"
-import Main from "../../common.blocks/main/Main"
+import SlickSlider from "../../components/SlickSlider/SlickSlider"
+import Banner from "../../components/banner/Banner"
+import Showcase from "../../components/showcase/Showcase"
+import OrderControl from "../../components/orderControl/OrderControl"
+import Subscribe from "../../components/subscribe/Subscribe"
+import Seo from "../../components/seo/seo"
+import Partners from "../../components/partners/Partners"
+import Container from "../../components/container/Container"
+import Main from "../../components/main/Main"
 //styles
-import '../../common.blocks/container/container.css'
-import banner from "../../common.blocks/banner/banner.module.css";
-import Button from "../../common.blocks/button/Button";
+import '../../components/container/container.css'
+import banner from "../../components/banner/banner.module.css";
+import Button from "../../components/button/Button";
 
 class MainPage extends React.Component {
     render() {

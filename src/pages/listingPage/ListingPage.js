@@ -2,11 +2,11 @@
 import React from "react"
 //comps
 import withBDItemsConnect from "../../hoc/withBDItemsConnect"
-import Showcase from "../../common.blocks/showcase/Showcase"
-import Main from "../../common.blocks/main/Main"
-import ListingSidebar from "../../common.blocks/listingSidebar/ListingSidebar"
-import Filters from "../../common.blocks/filters/Filters"
-import AsideBanners from "../../common.blocks/asideBanners/AsideBanners"
+import Showcase from "../../components/showcase/Showcase"
+import Main from "../../components/main/Main"
+import ListingSidebar from "../../components/listingSidebar/ListingSidebar"
+import Filters from "../../components/filters/Filters"
+import AsideBanners from "../../components/asideBanners/AsideBanners"
 //utils
 import {FilterItems} from "../../config/utils";
 
