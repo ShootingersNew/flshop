@@ -23,7 +23,7 @@ function UserNav(props) {
         userNav: true
     });
     return (
-        <Link to={'./cart'} className={className}>
+        <Link to={'/cart'} className={className}>
             <span className="userNav__userIco icon-svg__userico"/>
             <div className="userNav__cart">
                 <span className="userNav__cartIco icon-svg__cartico"/>
