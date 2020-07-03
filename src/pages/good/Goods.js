@@ -34,7 +34,7 @@ class Goods extends React.Component {
 
         const itemsArr = require('../../config/json/allItems');
         //данные просматриваемого товара
-        const curItem = itemsArr.find(item => item.id === idx);
+        const curItem = itemsArr.find(item => item.id === Number.parseInt(idx));
 
         //массив текущих дополнительных товаров. Из-за отсутствия сервера приходится
         //перебирать все дополнительные товары на предмет наличия у них айдишников
