@@ -46,6 +46,7 @@ function Bouquet(props) {
                     :
                     // <img className={'bouquet__image'} src={props.item.src} alt={props.item.name}/>
                     <LazyImage
+                        loadEagerly
                         src={props.item.src}
                         className={'bouquet__image'}
                         placeholder={({imageProps, ref}) => (
