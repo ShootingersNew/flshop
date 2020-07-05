@@ -23,8 +23,7 @@ class GoodsPage extends React.Component {
     loadingHandler = (status) => {
         this.setState({loadingStatus: status})
     };
-
-    componentDidMount() {
+    getItem = () => {
         //делаем задержку, для имитации асинхронности
         loadImit(this.loadingHandler);
 
@@ -33,9 +32,6 @@ class GoodsPage extends React.Component {
         const itemsArr = require('../../config/json/' + type);
         //данные просматриваемого товара
         const curItem = itemsArr.find(item => item.id === Number.parseInt(idx));
-
-
-        //
         // additional items are shown only for flower items
         if (type !== 'additionalItems') {
             //массив текущих дополнительных товаров. Из-за отсутствия сервера приходится
@@ -57,6 +53,16 @@ class GoodsPage extends React.Component {
             //отправляем в стейт "полученные данные" с "сервера"
             item: curItem,
         });
+    };
+
+    componentDidMount() {
+        this.getItem()
+    }
+
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        if (prevProps.match.params !== this.props.match.params) {
+            this.getItem()
+        }
     }
 
 
