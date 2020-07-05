@@ -4,6 +4,7 @@ import React from "react"
 import Bouquet from "../bouquet/Bouquet"
 //styles
 import './cart.css'
+import {Redirect} from "react-router";
 
 export default function Cart(props) {
     return (
@@ -14,14 +15,17 @@ export default function Cart(props) {
                 </header>
                 <div className="cart__items">
                     {
-                        props.items.map((item, idx) => (
-                            <Bouquet
-                                key={idx}
-                                classname={'cart__item'}
-                                item={item}
-                                mod={'type_cart'}
-                            />
-                        ))
+                        props.items.length !== 0 ?
+                            props.items.map((item, idx) => (
+                                <Bouquet
+                                    key={idx}
+                                    classname={'cart__item'}
+                                    item={item}
+                                    mod={'type_cart'}
+                                />
+                            ))
+                            :
+                            <Redirect to={'/catalog'}/>
                     }
                 </div>
             </div>
