@@ -20,10 +20,16 @@ UserNav.propTypes = {
 function UserNav(props) {
     let className = cn({
         [props.class]: props.class,
-        userNav: true
+        userNav: true,
+        userNav_disabled: props.length === 0
     });
+    const clickHandler = (e) => {
+        if (props.length === 0) {
+            e.preventDefault()
+        }
+    };
     return (
-        <Link to={'/cart'} className={className}>
+        <Link onClick={clickHandler} to={'/cart'} className={className}>
             <span className="userNav__userIco icon-svg__userico"/>
             <div className="userNav__cart">
                 <span className="userNav__cartIco icon-svg__cartico"/>
