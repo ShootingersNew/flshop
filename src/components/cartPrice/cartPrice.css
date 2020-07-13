@@ -1,5 +1,7 @@
 .cartPrice__table {
     margin-left: auto;
+    padding-right: 50px;
+    box-sizing: border-box;
 }
 
 .cartPrice__header {
@@ -7,6 +9,7 @@
     color: #8C8C8C;
     padding: 11px 0;
     padding-right: 51px;
+    font-weight: normal;
 
 }
 
