@@ -33,12 +33,11 @@ class PriceFilter extends Component {
                     minValue={0}
                     value={this.state.value}
                     onChange={value => this.setState({value})}
+                    formatLabel={value => `${regExpPrice(value)}р`}
                     onChangeComplete={value => {
                         this.props.changeHandler({value})
                     }}
                 />
-                <span className="priceFilter__min">{regExpPrice(this.state.value.min)}р</span>
-                <span className="priceFilter__max">{regExpPrice(this.state.value.max)}р</span>
             </div>
         )
     }

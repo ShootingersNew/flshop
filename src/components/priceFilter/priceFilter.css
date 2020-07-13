@@ -22,8 +22,36 @@
     margin-left: 20px;
 }
 
-.input-range__label {
+.input-range__label--max,
+.input-range__label--min {
     display: none;
+}
+
+.input-range__label--value {
+    top: 0.7em;
+}
+
+.input-range__slider-container:first-of-type .input-range__label-container {
+    margin-right: 33px;
+    text-align: right;
+}
+
+.input-range__slider-container:nth-of-type(2) .input-range__label-container {
+    margin-left: 60px;
+    text-align: left;
+}
+
+.input-range__label-container {
+    font-size: inherit;
+    font-family: inherit;
+    width: 60px;
+    display: inline-block;
+}
+
+.input-range__label {
+    font-family: inherit;
+    font-size: inherit;
+    color: black;
 }
 
 .priceFilter {
