@@ -1,5 +1,6 @@
 .bouquet {
     width: 287px;
+    position: relative;
 
 }
 
@@ -53,6 +54,8 @@
     line-height: 50px;
     display: flex;
     align-items: baseline;
+    position: relative;
+    z-index: 2;
 
 }
 
@@ -64,6 +67,13 @@
     align-items: center;
     height: 20px;
     cursor: pointer;
+    z-index: 3;
+    /*position: absolute;*/
+    /*right: 0;*/
+    /*bottom: 0;*/
+    border: none;
+    background-color: transparent;
+    outline: none;
 }
 
 .bouquet__cart {
@@ -84,11 +94,6 @@
     color: #8C8C8C;
 }
 
-.bouquet__cartButton {
-    border: none;
-    background-color: transparent;
-    outline: none;
-}
 
 .bouquet_type_cart {
     height: 130px;
@@ -182,4 +187,19 @@
     margin: auto 0;
     cursor: pointer;
 
+}
+
+.bouquet__link {
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    color: inherit;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.bouquet__counterButton_active:before {
+    color: #c8c8c8
 }
