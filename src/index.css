@@ -69,6 +69,10 @@ code {
   cursor: pointer;
 }
 
+.link:hover {
+  color: #4953AD;
+}
+
 .link_color_inherit {
   color: inherit;
 }
