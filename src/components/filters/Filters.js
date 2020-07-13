@@ -80,6 +80,7 @@ export default class Filters extends React.Component {
                                 setFilters({showWithSale: e.target.checked})
                             }}
                             type={'checkbox'}
+                            className={'checkbox_red'}
                         />
                         <span className={'filters__text'}>Товары со скидкой</span>
                     </label>
