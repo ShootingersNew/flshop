@@ -155,7 +155,12 @@
     height: 80px;
     background-color: #C4C4C4;
     background-size: cover;
+    background-position: center;
     cursor: pointer;
+}
+
+.slider__dot_active {
+    opacity: 0.5;
 }
 
 .slider__dots {
