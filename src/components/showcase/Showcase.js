@@ -46,11 +46,10 @@ function Showcase(props) {
         return arr.map((filterTag) => {
             return (
 
-                <div className="showcase__filter">
+                <div className="showcase__filter " onClick={() => props.uncheckCheckbox(filterTag.name, filterTag.val)}>
                     {filterTag.val}
                     <span className="showcase__filterCounter">{' ' + filterTag.resultCounter}</span>
                     <span
-                        onClick={() => props.uncheckCheckbox(filterTag.name, filterTag.val)}
                         className="showcase__closeButton icon-svg__cross"/>
                 </div>)
         })
