@@ -15,6 +15,7 @@ import '../../components/container/container.css'
 import banner from "../../components/banner/banner.module.css";
 import Button from "../../components/button/Button";
 
+
 class MainPage extends React.Component {
     render() {
         return (

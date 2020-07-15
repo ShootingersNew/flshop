@@ -1,4 +1,5 @@
 import React from "react";
+import {goodsApi} from "../api/api";
 
 //hoc "соединяет" component Showcase "и т.п компоненты с соответствующими товарами по idx, указанному
 // в пропсах
@@ -14,18 +15,10 @@ function withBDItemsConnect(WrappedComponent) {
         }
 
         componentDidMount() {
-            //  если был бы API то, тут можно было бы обратиться к нему
-            //    и после передать полученные данные через handleChange в стейт
-            // но это лишь демонстрация работы, так что берем из json
-            const idx = this.props.idx ? this.props.idx : 'allItems';
-            const arr = require('../config/json/' + idx);
-            this.setCurrentItemsInState(arr);
-        }
-
-        setCurrentItemsInState(goods) {
-            this.setState({
-                goods: goods
+            goodsApi.get(this.props.idx).then((res) => {
+                this.setState({goods: res})
             });
+
         }
 
         render() {

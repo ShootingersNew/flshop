@@ -1,4 +1,5 @@
 import React from "react";
+import {bannersApi} from "../api/api";
 
 //hoc connect banners (1 or more) with bd
 
@@ -13,20 +14,16 @@ function withBannersConnect(Component) {
 
 
         componentDidMount() {
-            //   there is connecting to bd(fetch api)
-
-            //i know that send props to state is bad practice, but
-            //its an imitation of the server
-            const bannerArr = require('../config/json/banners');
-            this.setState({
-                banners: bannerArr
-            })
+            bannersApi.get(this.props.id)
+                .then((res) => {
+                    this.setState({banners: res[this.props.id]})
+                });
         }
 
         render() {
             return (
                 <React.Fragment>
-                    <Component banners={this.state.banners[this.props.id]} {...this.props} />
+                    <Component banners={this.state.banners} {...this.props} />
                 </React.Fragment>
             )
         }
