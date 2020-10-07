@@ -1,3 +1,4 @@
+@import "./../_settings/_variables.css";
 .main {
     padding-bottom: 33px;
     height: 100%;
@@ -20,4 +21,11 @@
 
 .main_listing .main__flex-inner {
     flex-direction: row-reverse;
+}
+
+@media all and (max-width: 600px) {
+    .main {
+        padding-top: 11px;
+        background-color: var(--bg-color);
+    }
 }

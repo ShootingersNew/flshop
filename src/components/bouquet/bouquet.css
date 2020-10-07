@@ -219,6 +219,7 @@
     .bouquet__info {
         box-sizing: border-box;
         padding: 21px 0 0 30px;
+        width: 197px;
     }
 
     .bouquet__footer {
@@ -230,12 +231,12 @@
     }
 
     .bouquet__image {
-        width: 125px;
-        height: 125px;
+        width: 120px;
+        height: 120px;
+        border-right: var(--bg-color);
     }
 
     .bouquet__link {
-        display: none;
     }
 
     .bouquet__image-wrapper {
@@ -243,7 +244,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        border-right: 1px var(--bg-color);
+        border-right: 1px solid var(--bg-color);
     }
 
     .bouquet__main {

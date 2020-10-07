@@ -8,7 +8,9 @@ export default function OrderControl() {
     return (
         <div className={'orderControl'}>
             <Container className={'orderControl__container'}>
-                <div className="orderControl__header">Контроль заказа перед доставкой</div>
+                <Container>
+                    <div className="orderControl__header">Контроль заказа перед доставкой</div>
+                </Container>
                 <div className="orderControl__content">
                     <img src={img} alt="" className="orderControl__image"/>
                     {/*container for wrap items on mobile phones*/}

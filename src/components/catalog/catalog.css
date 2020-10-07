@@ -14,5 +14,7 @@
 
     .catalog__icon {
         font-size: 11px;
+        margin-right: 0;
+        top: 0;
     }
 }

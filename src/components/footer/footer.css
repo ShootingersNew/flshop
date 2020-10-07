@@ -114,6 +114,7 @@
 @media all and (max-width: 600px) {
     .footer {
         height: auto;
+        background-color: white;
     }
 
     .footer__container {

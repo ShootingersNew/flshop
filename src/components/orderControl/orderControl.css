@@ -74,6 +74,8 @@
 @media all and (max-width: 600px) {
     .orderControl__content {
         flex-direction: column;
+        background-color: white;
+        padding-bottom: 25px;
     }
 
     .orderControl__image {
@@ -105,5 +107,16 @@
 
     .orderControl__list {
         padding-top: 25px;
+    }
+
+    .orderControl__header {
+        display: block;
+        font-size: 22px;
+        line-height: 1.1;
+        white-space: pre-line;
+        padding: 35px 0 12px 0;
+        font-family: "Proxima Nova Bold", Arial, sans-serif;
+        margin-bottom: 0;
+        width: 70%;
     }
 }

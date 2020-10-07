@@ -188,9 +188,11 @@
         background-position: center;
     }
 
-    .partners .slick-track {
-        height: 119px;
+    .partners .slick-track,
+    .partners .slick-list {
+        height: 106px !important;
     }
+
 
     .slider__header {
         font-size: 36px;
