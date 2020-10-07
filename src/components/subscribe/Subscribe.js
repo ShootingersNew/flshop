@@ -4,6 +4,7 @@ import React from "react"
 import Input from "../input/Input"
 import Button from "../button/Button"
 import Form from "../form/Form"
+import Container from "../container/Container";
 //utils
 import {emailRegexp} from "../../config/config"
 //styles
@@ -12,9 +13,10 @@ import './subscribe.css'
 export default function Subscribe() {
     return (
         <div className="subscribe">
-            <div className="subscribe__container">
-                <h3 className="subscribe__header fonts__proximaNovaBold">Еженедельные скидки и акции</h3>
-                <Form render={({register}, isInputValid) => (
+            <Container className={'subscribe__container'}>
+
+                <h3 className="subscribe__header fonts__proximaNovaBlack">Еженедельные скидки и акции</h3>
+                <Form className={"subscribe__form"} render={({register}, isInputValid) => (
                     <div className="subscribe__input-wrapper">
                         <Input
                             register={register({
@@ -30,7 +32,8 @@ export default function Subscribe() {
                 )}
                 >
                 </Form>
-            </div>
+            </Container>
+
         </div>
     )
 }

@@ -3,6 +3,7 @@ import React from "react";
 import {Link} from "react-router-dom";
 //styles
 import './seo.css'
+import Container from "../container/Container"
 import bg1 from './img/1.png'
 import bg2 from './img/3.png'
 import bg3 from './img/2.png'
@@ -49,22 +50,24 @@ export default function Seo() {
     ];
     return (
         <div className="seo">
-            <div className="seo__container">
+            <Container className="seo__container">
                 {
                     seoArr.map((item, idx) => {
                         return (
                             <div key={idx} className={'seo__tile'}>
                                 <div className="seo__bg" style={{backgroundImage: 'url(' + item.bg + ')'}}/>
-                                <div className="seo__content">
-                                    <h2 className="seo__header fonts__proximaNovaBold">{item.header}</h2>
-                                    <div className="seo__desc">{item.desc}</div>
-                                    <Link className={'seo__link link'} to={item.link.href}>{item.link.text}</Link>
-                                </div>
+                                <Container className="container container_mobile">
+                                    <div className="seo__content">
+                                        <h2 className="seo__header fonts__proximaNovaBold">{item.header}</h2>
+                                        <div className="seo__desc">{item.desc}</div>
+                                        <Link className={'seo__link link'} to={item.link.href}>{item.link.text}</Link>
+                                    </div>
+                                </Container>
                             </div>
                         )
                     })
                 }
-            </div>
+            </Container>
         </div>
     )
 }

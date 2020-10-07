@@ -29,10 +29,6 @@
     bottom: -1px;
 }
 
-.slider__header {
-    width: 500px;
-}
-
 .userNav_disabled {
     opacity: 0.5;
 }

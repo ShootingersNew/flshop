@@ -10,7 +10,6 @@ import Search from "../search/Search"
 //styles
 import '../svgfont/svgfont.css'
 import '../catalog/catalog.css'
-import 'simplebar/dist/simplebar.min.css'
 import './header.css'
 
 export default function Header() {
@@ -21,7 +20,8 @@ export default function Header() {
                 <Logo/>
                 <Link to={'/catalog'} className="header__catalogButton catalog__button link link_color_inherit ">
                     <span className={'icon-svg__bar catalog__icon'}/>
-                    Каталог
+                    <span className="catalog__text">Каталог</span>
+
                 </Link>
                 <div className="header__telephoneContact">
                     <a href="tel:+79673110351" className={'fonts__proximaNovaBold'}>8 967 311 03 51 </a>

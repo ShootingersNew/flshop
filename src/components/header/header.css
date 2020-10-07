@@ -1,3 +1,4 @@
+@import "./../_settings/_variables.css";
 .header {
     height: 88px;
 }
@@ -6,6 +7,7 @@
     display: flex;
     align-items: center;
     position: relative;
+    height: 100%;
 
 }
 
@@ -41,6 +43,52 @@
     width: 151px;
 }
 
+.slider__header {
+    width: 500px;
+}
+
 .header__work-schedule {
     color: #8C8C8C;
+}
+
+@media all and (max-width: 600px ) {
+    .header {
+        height: 55px;
+        margin-bottom: 11px;
+    }
+
+    .header__telephoneContact {
+        display: none;
+    }
+
+    .header__search {
+        display: none;
+    }
+
+    .header__userNav .userNav__userIco {
+        display: none;
+    }
+
+    .header__catalogButton {
+        margin-left: 45px;
+    }
+
+    .slider__header {
+        width: 100%;
+        line-height: 0.9em;
+    }
+
+    .slider__inner {
+        padding-top: 175px;
+    }
+
+    .slider__link {
+        width: 169px;
+        padding: 0 20px;
+    }
+
+    .slider__dots {
+        width: auto;
+        padding: 0;
+    }
 }

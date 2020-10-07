@@ -4,14 +4,14 @@ import cn from 'classnames'
 //styles
 import './container.css'
 
-const Container = (props) => {
+const Container = ({children, className}) => {
     let classname = cn({
         container: true,
-        [props.className]: props.className
+        [className]: className,
     });
     return (
         <div className={classname}>
-            {props.children}
+            {children}
         </div>
     )
 };

@@ -1,6 +1,8 @@
 // small functions that play the role of 'utilities'
 
 //this func is for adding whitespace in price ('5 000')
+import {useLayoutEffect, useState} from "react";
+
 const regExpPrice = (price) => {
     return price.toString().replace(/(\d{1,3}(?=(?:\d\d\d)+(?!\d)))/g, "$1 ");
 };
@@ -103,4 +105,18 @@ function getScrollbarWidth() {
     return scrollWidth
 }
 
-export {regExpPrice, FilterItems, loadImit, getScrollbarWidth}
+function useWindowSize() {
+    const [size, setSize] = useState([0, 0]);
+    useLayoutEffect(() => {
+        function updateSize() {
+            setSize([window.innerWidth, window.innerHeight]);
+        }
+
+        window.addEventListener('resize', updateSize);
+        updateSize();
+        return () => window.removeEventListener('resize', updateSize);
+    }, []);
+    return size;
+}
+
+export {regExpPrice, FilterItems, loadImit, getScrollbarWidth, useWindowSize}

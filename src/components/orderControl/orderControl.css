@@ -1,11 +1,15 @@
 .orderControl {
     padding: 0 0 50px;
-    height: 403px;
 }
 
 .orderControl__content {
     display: flex;
     justify-content: space-between;
+}
+
+.orderControl__mobileContainer {
+    margin: 0;
+    width: unset;
 }
 
 .orderControl__header {
@@ -65,4 +69,41 @@
 
 .orderControl__li:nth-child(4):before {
     background-image: url("./img/3.png");
+}
+
+@media all and (max-width: 600px) {
+    .orderControl__content {
+        flex-direction: column;
+    }
+
+    .orderControl__image {
+        height: 55vw;
+        width: 100%;
+    }
+
+    .orderControl__mobileContainer {
+        width: 100%;
+        margin: auto;
+    }
+
+    .orderControl__list {
+        width: auto;
+        height: auto;
+    }
+
+    .orderControl__container {
+        max-width: unset;
+    }
+
+    .orderControl__li:before {
+        margin-top: 0;
+    }
+
+    .orderControl__li {
+        line-height: 1.2;
+    }
+
+    .orderControl__list {
+        padding-top: 25px;
+    }
 }

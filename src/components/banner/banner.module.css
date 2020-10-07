@@ -18,6 +18,11 @@
     line-height: 70px;
     margin-bottom: 18px;
     color: white;
+    white-space: pre-line
+}
+
+.banner__mobileHeader {
+    display: none;
 }
 
 .banner__container {
@@ -29,4 +34,26 @@
 .banner__inner {
     width: 419px;
     padding-top: 63px;
+}
+
+@media all and (max-width: 600px) {
+    .banner {
+
+    }
+
+    .banner__header {
+        font-size: 36px;
+        width: 200px;
+        margin-top: 175px;
+        line-height: 0.9;
+    }
+
+    .banner__mobileHeader {
+        display: block;
+        font-size: 22px;
+        line-height: 1.1;
+        width: 300px;
+        white-space: pre-line;
+        padding: 35px 0 12px 0;
+    }
 }

@@ -1,3 +1,15 @@
-.logo object {
+.logo {
+    line-height: 35px;
+    display: flex;
+    align-items: center;
+}
 
+.logo__text {
+    margin-left: 11px;
+}
+
+@media all and ( max-width: 600px) {
+    .logo__text {
+        display: none;
+    }
 }

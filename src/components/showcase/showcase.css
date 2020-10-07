@@ -5,7 +5,7 @@
     /*margins are for gap between items*/
 }
 
-.showcase__items .bouquet {
+.showcase__animation-wrapper {
     margin: 10px 10px 21px;
     /*margins are for gap between items*/
 }
@@ -78,4 +78,40 @@
 .showcase_mini {
     padding-top: 24px;
     padding-bottom: 56px;
+}
+
+.showcase__link_mobile {
+    display: none;
+}
+
+@media all and (max-width: 600px) {
+    .showcase__header {
+        display: none;
+    }
+
+    .showcase__items {
+        flex-direction: column;
+    }
+
+    .showcase__animation-wrapper {
+        margin: 0 0 9px;
+    }
+
+    .showcase__items {
+        margin: 0;
+    }
+
+    .showcase__container {
+        max-width: unset;
+    }
+
+    .showcase_mini {
+        padding: 10px 0 0;
+    }
+
+    .showcase__link_mobile {
+        margin-top: 16px;
+        display: block;
+        line-height: 16px;
+    }
 }

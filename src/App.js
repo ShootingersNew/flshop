@@ -1,5 +1,6 @@
-import React from 'react';
-import Page from "./components/page/Page";
+import React from 'react'
+import Page from "./components/page/Page"
+import './components/_settings/_base.css'
 
 function App(props) {
     return (

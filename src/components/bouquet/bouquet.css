@@ -1,3 +1,5 @@
+@import "./../_settings/_variables.css";
+
 .bouquet {
     width: 287px;
     position: relative;
@@ -32,22 +34,22 @@
     text-decoration: line-through;
 }
 
-.bouquet__salePercent {
+.bouquet__saleMark {
     position: absolute;
     left: calc(100% + 10px);
     top: -1px;
     bottom: 0;
     margin: auto 0;
-    width: 67px;
-    height: 35px;
-    background-image: url("./img/sale.svg");
-    line-height: 35px;
+    width: 52px;
+    height: 29px;
+    border: 1px solid #FD0000;
+    line-height: 31px;
     text-align: center;
     color: black;
 }
 
-.bouquet__saleInner {
-    margin-right: -7px;
+.bouquet__salePercent {
+
 }
 
 .bouquet__footer {
@@ -202,4 +204,74 @@
 
 .bouquet__counterButton_active:before {
     color: #c8c8c8
+}
+
+@media all and (max-width: 600px) {
+    .bouquet {
+        max-width: 320px;
+        width: 100%;
+        margin: auto;
+        height: 170px;
+        display: flex;
+        align-content: center;
+    }
+
+    .bouquet__info {
+        box-sizing: border-box;
+        padding: 21px 0 0 30px;
+    }
+
+    .bouquet__footer {
+        display: none;
+    }
+
+    .bouquet__main {
+        display: flex;
+    }
+
+    .bouquet__image {
+        width: 125px;
+        height: 125px;
+    }
+
+    .bouquet__link {
+        display: none;
+    }
+
+    .bouquet__image-wrapper {
+        width: 123px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-right: 1px var(--bg-color);
+    }
+
+    .bouquet__main {
+        width: 100%;
+    }
+
+    .bouquet__header {
+        color: #8C8C8C;
+    }
+
+    .bouquet__price-info {
+        flex-direction: column;
+    }
+
+    .bouquet__price {
+        line-height: 2.2;
+        font-size: 18px;
+    }
+
+    .bouquet__sale {
+        line-height: 15px;
+        padding-bottom: 13px;
+    }
+
+    .bouquet__saleMark {
+        width: 45px;
+        height: 25px;
+        line-height: 27px;
+        margin-bottom: -1px;
+    }
 }

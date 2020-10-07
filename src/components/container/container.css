@@ -1,6 +1,24 @@
+@import "../_settings/_variables.css";
+
 .container {
-    height: 100%;
     max-width: 1230px;
     width: 100%;
     margin: 0 auto;
+}
+
+.container_mobile {
+    margin: 0;
+    width: unset;
+}
+
+@media all and (max-width: 600px ) {
+    .container {
+        height: unset;
+        max-width: var(--mobile-container);
+    }
+
+    .container_mobile {
+        width: 100%;
+        margin: auto;
+    }
 }

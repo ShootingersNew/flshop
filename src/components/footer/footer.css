@@ -22,23 +22,8 @@
     width: 240px;
 }
 
-.footer__navList {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.footer__navList:not(:last-child) {
+.footer__navWrapper:not(:last-child) {
     margin-right: 78px;
-}
-
-.footer__navLi {
-    line-height: 35px;
-}
-
-.footer__navLi a {
-    color: inherit;
-    text-decoration: none;
 }
 
 .footer__paymentLogos {
@@ -124,4 +109,22 @@
 .footer__socialLogo {
     padding: 5px;
     font-size: 8px;
+}
+
+@media all and (max-width: 600px) {
+    .footer {
+        height: auto;
+    }
+
+    .footer__container {
+        flex-direction: column-reverse;
+    }
+
+    .footer__nav {
+        flex-direction: column;
+    }
+
+    .footer__copyrights {
+        display: none;
+    }
 }

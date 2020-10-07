@@ -1,0 +1,42 @@
+:root {
+    /*!**/
+    /** Colors*/
+    /**!*/
+    /*--brand: linear-gradient(98.36deg, #EC1FB3 9.5%, #FBC60B 131.48%);*/
+    /*--brand-spare: #EC1FB3;*/
+    /*--background-color: white;*/
+    /*--text: #000000;*/
+    /*--grey-1: #8C8C8C;*/
+    /*--grey-2: #C8C8C8;*/
+    /*--grey-3: #DCDCDC;*/
+    /*--grey-4: #ededed;*/
+    /*--color-type-body: var(--text);*/
+    /*--success: #2a7e2e;*/
+    /*--atenttion: #2196f3;*/
+    /*--wait: #fff8dd;*/
+    /*--error: #d92525;*/
+
+    /*!**/
+    /** Fonts*/
+    /**!*/
+    /*--main-font-family: 'Montserrat-Medium';*/
+    /*--base-font-family: Arial, sans-serif;*/
+    /*--headers-font-family: serif;*/
+    /*--base-font-size: 21px;*/
+    /*--small-font-size: 18px;*/
+    /*--header-1-size: 4.76em;*/
+    /*--header-2-size: 3.4285em;*/
+    /*--header-3-size: 2.477em;*/
+    /*--header-4-size: 1.1904em;*/
+    /*--base-line-height: 1.68;*/
+
+
+    /*!**/
+    /*container*/
+    /**!*/
+    /*--width-container: 1752px*/
+    --mobile-container: 260px;
+    --mobile-max-media: 600px;
+    --bg-color: #E5E5E5;
+}
+

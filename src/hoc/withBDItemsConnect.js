@@ -1,5 +1,5 @@
 import React from "react";
-import {goodsApi} from "../api/api";
+import arr from "../config/json/allItems";
 
 //hoc "соединяет" component Showcase "и т.п компоненты с соответствующими товарами по idx, указанному
 // в пропсах
@@ -15,10 +15,10 @@ function withBDItemsConnect(WrappedComponent) {
         }
 
         componentDidMount() {
-            goodsApi.get(this.props.idx).then((res) => {
-                this.setState({goods: res})
-            });
-
+            // goodsApi.get(this.props.idx).then((res) => {
+            //     this.setState({goods: res})
+            // });
+            this.props.idx ? this.setState({goods: arr[this.props.idx]}) : this.setState({goods: arr.allItems})
         }
 
         render() {

@@ -57,9 +57,9 @@ function Showcase(props) {
 
     return (
         <div className={className}>
-            <Container classname={'showcase__container'}>
+            <Container className={'showcase__container'}>
                 <div className="showcase__header">
-                    {props.header}
+                    <span className="showcase__headerText">{props.header}</span>
                     {
                         props.counter !== undefined && props.showcaseType === 'listing' &&
                         <span className={'showcase__counter fonts__proximaNovaSemibold'}>{props.counter}</span>
@@ -84,7 +84,7 @@ function Showcase(props) {
                         : false
                     }
                 </FlipMove>
-
+                <Link className={'showcase__link link showcase__link_mobile'} to={'/catalog'}>Смотреть все</Link>
             </Container>
         </div>
     )

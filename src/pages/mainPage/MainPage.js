@@ -8,12 +8,9 @@ import OrderControl from "../../components/orderControl/OrderControl"
 import Subscribe from "../../components/subscribe/Subscribe"
 import Seo from "../../components/seo/seo"
 import Partners from "../../components/partners/Partners"
-import Container from "../../components/container/Container"
 import Main from "../../components/main/Main"
 //styles
 import '../../components/container/container.css'
-import banner from "../../components/banner/banner.module.css";
-import Button from "../../components/button/Button";
 
 
 class MainPage extends React.Component {
@@ -41,14 +38,9 @@ class MainPage extends React.Component {
                 <Banner
                     key={1}
                     bg={'../../images/banners/banner1.jpg'}
-                    render={
-                        <React.Fragment>
-                            <header className={banner.banner__header + ' fonts__proximaNovaBold'}>
-                                Подарки <br/> к заказам на 8 марта
-                            </header>
-                            <Button className={'banner__link'}>Подробнее</Button>
-                        </React.Fragment>
-                    }
+                    mobileHeader={"Женственные \n подарки к 8 марта"}
+                    header={" Подарки \n к заказам на 8 марта"}
+                    buttonText={"Подробнее"}
                 />
 
                 {/*showcase обернут в hoc withBDComponent, idx - индекс showcase в базе данных*/}
@@ -62,14 +54,9 @@ class MainPage extends React.Component {
                 <Banner
                     key={2}
                     bg={'../../images/banners/banner2.jpg'}
-                    render={
-                        <React.Fragment>
-                            <header className={banner.banner__header + ' fonts__proximaNovaBold'}>
-                                Подарки к заказам на 8 марта
-                            </header>
-                            <Button className={'banner__link'}>Заказать</Button>
-                        </React.Fragment>
-                    }
+                    mobileHeader={'Летние акции'}
+                    header={'Скидка -20% на летние букеты'}
+                    buttonText={'Подробнее'}
 
                 />
                 <Showcase
@@ -78,12 +65,12 @@ class MainPage extends React.Component {
                     showcaseType={'mini'}
                     counter={11}
                 />
-                <Container>
-                    <OrderControl/>
-                    <Subscribe/>
-                    <Seo/>
-                    <Partners/>
-                </Container>
+
+                <OrderControl/>
+                <Subscribe/>
+                <Seo/>
+                <Partners/>
+
             </Main>
         )
     }

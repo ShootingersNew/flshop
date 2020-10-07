@@ -1,14 +1,19 @@
+.partners {
+    height: 185px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
 .partners__container {
-    font-size: 181px;
     display: flex;
-    vertical-align: baseline;
     justify-content: space-between;
-    margin-bottom: -55px;
+    height: auto;
 }
 
 .partners__logo {
     position: relative;
+    height: auto;
 }
 
 .partners__verizon {
@@ -16,7 +21,7 @@
 }
 
 .partners__citibank {
-    top: -9px;
+    top: -11px;
 }
 
 .partners__worldplay {
@@ -24,5 +29,55 @@
 }
 
 .partners__sandisk {
-    top: -3px;
+    top: -5px;
+}
+
+@media all and (max-width: 600px) {
+    .partners {
+        position: relative;
+    }
+
+    .partners {
+        height: 119px;
+    }
+
+    .partners .slick-slider {
+        height: 100%;
+        width: 100%;
+    }
+
+    .partners .slick-list {
+        height: 100%;
+    }
+
+    .partners__logo {
+        height: 100%;
+    }
+
+    .partners .slick-slide div {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .partners__dots {
+        height: 2px;
+        position: absolute;
+        bottom: -20px;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .partners__dots .slider__dot {
+        height: 100%;
+        width: 54px;
+        background-color: #DCDCDC;
+    }
+
+    .partners__dots .slider__dot div {
+        height: 100%;
+        background-color: #FD0000;
+    }
 }

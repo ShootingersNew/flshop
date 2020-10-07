@@ -1,0 +1,59 @@
+.footerNavigation__li {
+    line-height: 35px;
+}
+
+.footerNavigation__li a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.footerNavigation__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footerNavigation__list_closed {
+    display: none;
+}
+
+.footerNavigation__control {
+    display: none;
+}
+
+.footerNavigation__tick_isOpened_false {
+    background-image: url("./img/tick_closed.svg");
+}
+
+.footerNavigation__tick {
+    margin-right: 9px;
+    display: inline-block;
+    position: relative;
+    width: 10px;
+    height: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.footerNavigation__tick_isOpened_true {
+    background-image: url("./img/tick.svg");
+}
+
+@media all and (max-width: 600px) {
+    .footerNavigation__control {
+        display: block;
+        line-height: 35px;
+    }
+
+    .footerNavigation__li a {
+        color: #8C8C8C;
+    }
+
+    .footerNavigation__li {
+
+    }
+
+    .footerNavigation__list {
+        padding-left: 19px;
+    }
+}

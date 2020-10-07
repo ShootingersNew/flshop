@@ -7,6 +7,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    height: auto;
 }
 
 .seo__tile {
@@ -35,4 +36,33 @@
 
 .seo__desc {
     width: 89%;
+}
+
+@media all and (max-width: 600px) {
+    .seo {
+        padding-top: 40px;
+    }
+
+    .seo__desc {
+        width: 100%;
+        margin-bottom: 12px;
+        line-height: 1.2;
+        color: #8C8C8C;
+    }
+
+    .seo__bg {
+        height: 30vw;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .seo__tile {
+        padding-bottom: 30px;
+        margin-bottom: 12px;
+    }
+
+    .seo__container {
+        max-width: unset;
+
+    }
 }

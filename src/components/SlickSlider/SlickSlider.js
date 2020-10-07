@@ -1,7 +1,7 @@
 //libs
 import React, {useRef, useState} from "react"
 import Slider from 'react-slick'
-import PropTypes from 'prop-types'
+import PropTypes, {oneOf} from 'prop-types'
 //comps
 import Button from "../button/Button"
 //styles
@@ -12,19 +12,32 @@ Slider.propTypes = {
         item: PropTypes.string.isRequired,
         back: PropTypes.string.isRequired
     }),
+    params: PropTypes.shape({
+        dots: PropTypes.bool,
+        arrows: PropTypes.bool,
+        infinite: PropTypes.bool,
+        speed: PropTypes.number,
+        lazyLoad: oneOf(['ondemand', 'progressive']),
+        slidesToShow: PropTypes.number,
+        sliderToScroll: PropTypes.number
+    })
 };
-export default function SlickSlider(props) {
+export default function SlickSlider(
+    {
+        slides,
+        params = {
+            dots: false,
+            arrows: false,
+            infinite: true,
+            speed: 500,
+            lazyLoad: "ondemand",
+            slidesToShow: 1,
+            slidesToScroll: 1
+        }
+    }
+) {
     const [activeSlider, setActiveSlider] = useState(0);
     const slider = useRef(null);
-    const settings = {
-        dots: false,
-        arrows: false,
-        infinite: true,
-        speed: 500,
-        lazyLoad: "ondemand",
-        slidesToShow: 1,
-        slidesToScroll: 1
-    };
 
     function goTo(e) {
         const idx = Number(e.target.getAttribute('data-slick'));
@@ -34,9 +47,9 @@ export default function SlickSlider(props) {
 
     return (
         <React.Fragment>
-            <Slider ref={slider} {...settings}>
+            <Slider ref={slider} {...params}>
 
-                {props.slides.map((item, idx) => {
+                {slides.map((item, idx) => {
                     return (
                         <div key={idx} className={"slider__item"}>
                             <div className="slider__container container">
@@ -56,7 +69,7 @@ export default function SlickSlider(props) {
             </Slider>
             {/*делаю кастом дотс, чтобы не колдовать с базовым методом slick*/}
             <div className="slider__dots">
-                {props.slides.map((item, idx) => {
+                {slides.map((item, idx) => {
                     let cn = 'slider__dot';
                     if (idx === activeSlider) {
                         cn = cn + ' slider__dot_active'

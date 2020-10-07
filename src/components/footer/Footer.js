@@ -1,9 +1,9 @@
 //libs
 import React from "react"
-import {Link} from "react-router-dom"
 import PropTypes from 'prop-types'
 //comps
 import Container from "../container/Container"
+import FooterNavigation from "../footerNavigation/footerNavigation";
 //styles
 import './footer.css'
 import paypal from './img/paypal.svg'
@@ -22,17 +22,11 @@ export default function Footer(props) {
                     {
                         props.navs.map((nav) => {
                             return (
-                                <ul key={nav.id} className="footer__navList">
-                                    {
-                                        nav.li.map((li) => {
-                                            return (
-                                                <li key={li.id} className="footer__navLi">
-                                                    <Link to={li.url}>{li.name}</Link>
-                                                </li>
-                                            )
-                                        })
-                                    }
-                                </ul>
+                                <FooterNavigation
+                                    className={'footer__navWrapper'}
+                                    nav={nav}
+                                />
+
                             )
                         })
                     }

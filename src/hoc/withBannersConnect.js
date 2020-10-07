@@ -1,5 +1,5 @@
-import React from "react";
-import {bannersApi} from "../api/api";
+import React from "react"
+import arr from './../config/json/allItems'
 
 //hoc connect banners (1 or more) with bd
 
@@ -14,10 +14,11 @@ function withBannersConnect(Component) {
 
 
         componentDidMount() {
-            bannersApi.get(this.props.id)
-                .then((res) => {
-                    this.setState({banners: res[this.props.id]})
-                });
+            // bannersApi.get(this.props.id)
+            //     .then((res) => {
+            //         this.setState({banners: res[this.props.id]})
+            //     });
+            this.setState({banners: arr.banners[this.props.id]})
         }
 
         render() {

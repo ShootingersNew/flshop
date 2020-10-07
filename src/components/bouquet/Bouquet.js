@@ -50,7 +50,9 @@ function Bouquet(props) {
             {/*if props.mod === type_cart then the content is rendered without a link*/}
 
             <main className="bouquet__main">
-                <img className={'bouquet__image'} src={props.item.src} alt={props.item.name}/>
+                <div className="bouquet__image-wrapper">
+                    <img className={'bouquet__image'} src={props.item.src} alt={props.item.name}/>
+                </div>
                 <div className="bouquet__info">
                     <div className="bouquet__price-info">
                         <span className="bouquet__price fonts__proximaNovaBold">{regExpPrice(props.item.price)}р</span>
@@ -58,8 +60,8 @@ function Bouquet(props) {
                             props.item.sale &&
 
                             <div className="bouquet__sale">{regExpPrice(props.item.salePrice)}р
-                                <div className={'bouquet__salePercent'}>
-                                    <div className="bouquet__saleInner">{props.item.percents}</div>
+                                <div className={'bouquet__saleMark'}>
+                                    <div className="bouquet__salePercent">{props.item.percents}</div>
                                 </div>
                             </div>
                         }
@@ -97,7 +99,7 @@ function Bouquet(props) {
                     //default footer
                     <React.Fragment>
                         <footer className={'bouquet__footer'}>
-                            <Link className={'link'}
+                            <Link className={'link bouquet__footerLink'}
                                   to={'/goods/' + props.item.type + '/' + props.item.id}>Подробнее</Link>
                             <ButtonWithRefs ref={buttonRef} {...props}/>
                         </footer>
