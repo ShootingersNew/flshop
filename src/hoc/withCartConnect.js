@@ -26,7 +26,7 @@ function withCartConnect(Component) {
                 removeItem={this.removeItem}
                 changeQuantity={this.props.changeQuantity}
                 checkInCart={this.checkInCart}
-                addInCart={this.props.addItemInCart}
+                addToCart={this.props.addItemToCart}
                 items={this.props.cart.itemsIn}
                 price={itemsSumPrice}
                 length={itemsLength}
@@ -50,7 +50,7 @@ const mapStateToProps = (state) => {
 };
 const mapDispatchToProps = (dispatch) => {
     return {
-        addItemInCart: (item) => dispatch(addItem(item)),
+        addItemToCart: (item) => dispatch(addItem(item)),
         changeQuantity: (id, entity) => dispatch(changeQuantity(id, entity)),
         removeItem: (id) => dispatch(removeItem(id))
     }
