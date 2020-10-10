@@ -1,7 +1,7 @@
 import React from "react"
 import Container from "../container/Container"
 import LogoSlider from "../logoSlider/SlickSlider"
-import {useWindowSize} from "../../config/utils";
+import {useIsMobile} from "../../config/utils";
 //styles
 import './../svgfont/svgfont.css'
 import './partners.css'

@@ -105,7 +105,8 @@ function getScrollbarWidth() {
     return scrollWidth
 }
 
-function useWindowSize() {
+//hook for determining whether the resolution is mobile
+function useIsMobile() {
     const [size, setSize] = useState([0, 0]);
     useLayoutEffect(() => {
         function updateSize() {
@@ -116,7 +117,7 @@ function useWindowSize() {
         updateSize();
         return () => window.removeEventListener('resize', updateSize);
     }, []);
-    return size;
+    return size[0] <= process.env.REACT_APP_MOBILE_BREAKPOINT;
 }
 
-export {regExpPrice, FilterItems, loadImit, getScrollbarWidth, useWindowSize}
+export {regExpPrice, FilterItems, loadImit, getScrollbarWidth, useIsMobile}

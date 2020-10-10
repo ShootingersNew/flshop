@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
 import cn from 'classnames'
-import {useWindowSize} from "../../config/utils";
+import {useIsMobile} from "../../config/utils";
 import './style.css'
 
 const FooterNavigation = ({nav, className}) => {

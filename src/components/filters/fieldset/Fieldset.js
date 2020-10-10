@@ -1,5 +1,6 @@
 //libs
 import React, {useEffect, useState} from "react";
+import {useIsMobile} from "../../../config/utils";
 import PropTypes from 'prop-types'
 //comps
 import Checkbox from "../../checkbox/Checkbox";
