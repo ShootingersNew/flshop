@@ -128,7 +128,7 @@ function Bouquet(props) {
                         </React.Fragment>
                 }
             </article>
-            {isNotificationOpen && <MobileNotification/>}
+            {isNotificationOpen && isMobile && <MobileNotification/>}
             {
                 isMobile && <Link
                     className={'bouquet__link'}
