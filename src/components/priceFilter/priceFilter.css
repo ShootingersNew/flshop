@@ -51,7 +51,7 @@
 .input-range__label {
     font-family: inherit;
     font-size: inherit;
-    color: black;
+    color: #8C8C8C;
 }
 
 .priceFilter {
@@ -68,4 +68,22 @@
 .priceFilter__max {
     position: absolute;
     right: -5px;
+}
+
+@media all and (max-width: 600px) {
+    .input-range__label--value {
+        top: -2.5em;
+    }
+
+    .input-range {
+        margin-left: 0;
+    }
+
+    .input-range__slider {
+        top: calc(50% + 2px);
+    }
+
+    .priceFilter {
+        height: auto;
+    }
 }

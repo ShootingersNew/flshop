@@ -97,6 +97,8 @@
     .showcase__animation-wrapper {
         margin: 0 0 9px;
         background-color: white;
+        position: relative;
+        overflow: hidden;
     }
 
     .showcase__items {
@@ -105,6 +107,7 @@
 
     .showcase__container {
         max-width: unset;
+        /*padding: 0 0 9px;*/
     }
 
     .showcase_mini {

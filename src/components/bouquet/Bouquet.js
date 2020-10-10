@@ -1,12 +1,12 @@
 //libs
-import React from "react"
+import React, {useState} from "react"
 import {Link} from "react-router-dom"
 import PropTypes from 'prop-types'
 import cn from 'classnames'
 //comps
 import withCartConnect from "../../hoc/withCartConnect"
 //utils
-import {regExpPrice} from "../../config/utils"
+import {regExpPrice, useIsMobile} from "../../config/utils"
 //styles
 import './../svgfont/svgfont.css'
 import './bouquet.css'
@@ -22,6 +22,7 @@ Bouquet.propTypes = {
 function Bouquet(props) {
     const isMobile = useIsMobile();
     const buttonRef = React.createRef();
+    const [isNotificationOpen, setIsNotificationOpen] = useState(false);
 
     function increaseQuantity() {
         const quantity = props.item.amount + 1;
@@ -35,6 +36,17 @@ function Bouquet(props) {
         }
     }
 
+    const showMobileNotification = () => {
+        setIsNotificationOpen(true);
+        setTimeout(() => {
+            setIsNotificationOpen(false)
+        }, 4000)
+    };
+
+    const addTo = () => {
+        showMobileNotification();
+        props.addToCart(props.item)
+    };
     //prevent clicking on the link if e.target ==== add-to-cart button
 
     const bouquetClasses = cn({
@@ -47,70 +59,83 @@ function Bouquet(props) {
     });
 
     return (
-        <article className={bouquetClasses}>
-            {/*if props.mod === type_cart then the content is rendered without a link*/}
+        <>
+            <article className={bouquetClasses}>
+                {/*if props.mod === type_cart then the content is rendered without a link*/}
 
-            <main className="bouquet__main">
-                <div className="bouquet__image-wrapper">
-                    <img className={'bouquet__image'} src={props.item.src} alt={props.item.name}/>
-                </div>
-                <div className="bouquet__info">
-                    <div className="bouquet__price-info">
-                        <span className="bouquet__price fonts__proximaNovaBold">{regExpPrice(props.item.price)}р</span>
-                        {
-                            props.item.sale &&
-
-                            <div className="bouquet__sale">{regExpPrice(props.item.salePrice)}р
-                                <div className={'bouquet__saleMark'}>
-                                    <div className="bouquet__salePercent">{props.item.percents}</div>
-                                </div>
-                            </div>
-                        }
+                <main className="bouquet__main">
+                    <div className="bouquet__image-wrapper">
+                        <img className={'bouquet__image'} src={props.item.src} alt={props.item.name}/>
                     </div>
-                    <header className={'bouquet__header'}>
-                        {
-                            props.item.name
-                        }
-                    </header>
+                    <div className="bouquet__info">
+                        <div className="bouquet__price-info">
+                            <span
+                                className="bouquet__price fonts__proximaNovaBold">{regExpPrice(props.item.price)}р</span>
+                            {
+                                props.item.sale &&
 
-                </div>
-            </main>
-            {
-                props.mod && props.mod === 'type_cart' ?
-                    <React.Fragment>
-                        <div className="bouquet__controls">
-                            <div className="bouquet__counter">
+                                <div className="bouquet__sale">{regExpPrice(props.item.salePrice)}р
+                                    <div className={'bouquet__saleMark'}>
+                                        <div className="bouquet__salePercent">{props.item.percents}</div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                        <header className={'bouquet__header'}>
+                            {
+                                props.item.name
+                            }
+                        </header>
+
+                    </div>
+                </main>
+                {
+                    props.mod && props.mod === 'type_cart' ?
+                        <React.Fragment>
+                            <div className="bouquet__controls">
+                                <div className="bouquet__counter">
                         <span onClick={() => {
                             decreaseQuantity()
                         }} className={decreaseButtonClasses}/>
-                                <span className={"bouquet__counterNumber"}>{props.item.amount}</span>
-                                <span onClick={() => {
-                                    increaseQuantity()
-                                }} className={"bouquet__counterButton bouquet__counterButton_right icon-svg__plus"}/>
+                                    <span className={"bouquet__counterNumber"}>{props.item.amount}</span>
+                                    <span onClick={() => {
+                                        increaseQuantity()
+                                    }}
+                                          className={"bouquet__counterButton bouquet__counterButton_right icon-svg__plus"}/>
+                                </div>
+                                <div className="bouquet__sumPrice fonts__proximaNovaBold">
+                                    {regExpPrice(props.item.sumPrice)}р
+                                </div>
                             </div>
-                            <div className="bouquet__sumPrice fonts__proximaNovaBold">
-                                {regExpPrice(props.item.sumPrice)}р
-                            </div>
-                        </div>
-                        <span onClick={() => {
-                            props.removeItem(props.item.id)
-                        }} className="bouquet__delete icon-svg__cross"/>
-                    </React.Fragment>
-                    :
-                    //default footer
-                    <React.Fragment>
-                        <footer className={'bouquet__footer'}>
-                            <Link className={'link bouquet__footerLink'}
-                                  to={'/goods/' + props.item.type + '/' + props.item.id}>Подробнее</Link>
-                            <ButtonWithRefs ref={buttonRef} {...props}/>
-                        </footer>
-                        <Link
-                            className={'bouquet__link'}
-                            to={'/goods/' + props.item.type + '/' + props.item.id}
-                        />
-                    </React.Fragment>
+                            <span onClick={() => {
+                                props.removeItem(props.item.id)
+                            }} className="bouquet__delete icon-svg__cross"/>
+                        </React.Fragment>
+                        :
+                        //default footer
+                        <React.Fragment>
+                            <footer className={'bouquet__footer'}>
+                                <Link className={'link bouquet__footerLink'}
+                                      to={'/goods/' + props.item.type + '/' + props.item.id}>Подробнее</Link>
+                                <ButtonWithRefs ref={buttonRef} addTo={addTo} {...props}/>
+                            </footer>
+                            {
+                                !isMobile && <Link
+                                    className={'bouquet__link'}
+                                    to={'/goods/' + props.item.type + '/' + props.item.id}
+                                />
+                            }
+                        </React.Fragment>
+                }
+            </article>
+            {isNotificationOpen && <MobileNotification/>}
+            {
+                isMobile && <Link
+                    className={'bouquet__link'}
+                    to={'/goods/' + props.item.type + '/' + props.item.id}
+                />
             }
-        </article>
+        </>
 
     )
 }
@@ -119,13 +144,17 @@ const ButtonWithRefs = React.forwardRef((props, ref) => (
     <button
         ref={ref}
         className="bouquet__cartButton"
-        onClick={() => {
-            props.addInCart(props.item)
-        }}
+        onClick={props.addTo}
         disabled={props.checkInCart(props.item.id)}>
         <span className="icon-svg__plus bouquet__plus"/>
         <span className="icon-svg__cartico bouquet__cart"/>
     </button>
 ));
-
+const MobileNotification = () => {
+    return (
+        <div className="bouquet__mobileNotification">
+            Товар добавлен <Link className={'link'} to={'/cart'}>в корзину</Link>
+        </div>
+    )
+};
 export default withCartConnect(Bouquet)

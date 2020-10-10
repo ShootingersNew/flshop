@@ -1,4 +1,5 @@
 @import "./../_settings/_variables.css";
+
 .main {
     padding-bottom: 33px;
     height: 100%;
@@ -17,6 +18,7 @@
 .main__flex-inner {
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
 }
 
 .main_listing .main__flex-inner {
@@ -24,8 +26,49 @@
 }
 
 @media all and (max-width: 600px) {
+    .main__content {
+        width: 100%;
+    }
+
     .main {
         padding-top: 11px;
         background-color: var(--bg-color);
+        position: relative;
+    }
+
+    .main_listing .main__flex-inner {
+        flex-direction: column;
+        height: calc(100% - 46px);
+        position: relative;
+    }
+
+    .main__container {
+        max-width: unset;
+
+    }
+
+    .main_listing {
+        padding-bottom: 0;
+    }
+
+    .main__aside {
+        height: 100%;
+        position: fixed;
+        z-index: 2222222;
+        width: 100%;
+        transition-property: left;
+        transition-duration: 1s;
+    }
+
+    .main__aside_opened_false {
+        left: -100%;
+    }
+
+    .main__aside_opened_true {
+        left: 0;
+    }
+
+    .main__flex-inner {
+        margin-bottom: 9px;
     }
 }

@@ -4,3 +4,41 @@
     display: inline-block;
     position: relative;
 }
+
+.listingSidebar__mobileButton {
+    display: none;
+}
+
+.listingSidebar__aside {
+    margin-top: 74px;
+}
+
+@media all and (max-width: 600px) {
+    .listingSidebar {
+        z-index: 999999;
+        width: 100%;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .listingSidebar__aside {
+        display: none;
+    }
+
+    .listingSidebar__mobileButton {
+        display: block;
+        position: sticky;
+        bottom: 0;
+        height: 46px;
+        float: right;
+        width: 140px;
+        margin-left: auto;
+        margin-top: -55px;
+        z-index: 20;
+    }
+
+    .listingSidebar__container {
+        margin: 0 auto;
+    }
+}

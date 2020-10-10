@@ -1,141 +1,207 @@
 //libs
-import React from "react"
+import React, {useEffect, useState} from "react"
+import cn from 'classnames'
 //comps
 import PriceFilter from "../priceFilter/PriceFilter"
 import Checkbox from "../checkbox/Checkbox"
 import Button from "../button/Button"
 import Fieldset from "./fieldset/Fieldset"
+import {useIsMobile} from "../../config/utils"
 //styles
 import './filters.css'
 import 'rc-slider/assets/index.css'
+import Container from "../container/Container"
 
-export default class Filters extends React.Component {
-    constructor(props) {
-        super(props);
-        this.setPrice.bind(this);
-        this.checkboxHandler.bind(this);
-    }
+const Filters = ({className, filtersState, countOpenedFilters, setFilters, uncheckAllCheckboxes, closeAside}) => {
+    const isMobile = useIsMobile();
+    const [localFilterState, setLocalFilterState] = useState({
+        checkboxes: {},
+        filtersOpened: 1,
+        price: {},
+        showWithSale: true
+    });
 
     //set price
-    setPrice = (obj) => {
-        this.props.setFilters({price: obj})
+    const setPrice = (obj) => {
+        setFilters({price: obj});
+        setLocalFilterState({...localFilterState, price: obj})
     };
-    checkboxHandler = (e) => {
+
+    useEffect(() => {
+        if (isMobile) {
+            setLocalFilterState(filtersState)
+        }
+    }, [filtersState, isMobile]);
+    const checkboxHandler = (e) => {
+        let oldFilters = !isMobile ? filtersState : localFilterState;
+        let oldCheckboxArray = oldFilters.checkboxes;
+        let newFiltersObj = {};
+
         const {name, value} = e.target;
-        const {checkboxes} = this.props.filtersState;
+
         const type = e.target.getAttribute('data-inputType');
+
+        //for radio inputs
         if (type === 'radio') {
-            if (checkboxes[name] === value) {
+            if (oldCheckboxArray && oldCheckboxArray[name] && oldCheckboxArray[name] === value) {
                 // if this checkbox is already checked and we click on it, we remove this attribute from the checkboxes arr
-                let newCheckboxesState = checkboxes;
+                let newCheckboxesState = oldCheckboxArray;
                 delete newCheckboxesState[name];
-                this.props.setFilters(newCheckboxesState)
+
+                newFiltersObj = {...oldFilters, checkboxes: newCheckboxesState}
+
             } else {
-                this.props.setFilters({checkboxes: {...checkboxes, [name]: value}})
+                newFiltersObj = {...oldFilters, checkboxes: {...oldCheckboxArray, [name]: value}};
+
             }
+            //    for checkboxes
         } else {
-            if (checkboxes[name] && checkboxes[name].includes(value)) {
+            //if such a value already exists in the array
+            if (oldCheckboxArray[name] && oldCheckboxArray[name].includes(value)) {
                 //    remove this val from arr
-                const newCheckboxArr = checkboxes[name].filter((checkbox) => {
+                const newCheckboxArr = oldCheckboxArray[name].filter((checkbox) => {
                     return checkbox !== value
                 });
-                this.props.setFilters({checkboxes: {...checkboxes, [name]: newCheckboxArr}})
+                newFiltersObj = {
+                    ...oldFilters,
+                    checkboxes: {...oldCheckboxArray, [name]: newCheckboxArr}
+                };
+
             } else {
-                if (checkboxes[name] !== undefined && checkboxes[name].length !== 0) {
-                    this.props.setFilters({
-                        checkboxes: {...checkboxes, [name]: [...this.props.filtersState.checkboxes[name], value]}
-                    })
+                //if the array already contains values
+                if (oldCheckboxArray[name] && oldCheckboxArray[name].length !== 0) {
+                    newFiltersObj = {
+                        ...oldFilters,
+                        checkboxes: {
+                            ...oldCheckboxArray,
+                            [name]: [...oldCheckboxArray[name], value]
+                        }
+                    }
                 } else {
-                    //else add this val to arr
-                    this.props.setFilters({
-                        checkboxes: {...checkboxes, [name]: [value]}
-                    })
+                    newFiltersObj = {
+                        ...oldFilters,
+                        checkboxes: {
+                            ...oldCheckboxArray,
+                            [name]: [value]
+                        }
+                    };
                 }
 
             }
         }
+        applyChanges(newFiltersObj)
     };
 
+    const applyChanges = ((arr) => {
+        if (isMobile) {
+            setLocalFilterState({...arr});
+        } else {
+            setFilters(arr)
+        }
+    });
+    const mobileSubmitFilters = (e) => {
+        e.preventDefault();
+        closeAside();
+        setFilters(localFilterState)
+    };
+    const setSale = (e) => {
+        setLocalFilterState({...localFilterState, showWithSale: e.target.checked});
+        setFilters({showWithSale: e.target.checked})
+    };
+    const filterClassNames = cn({
+        filters: true,
+        [`${className}`]: className
+    });
 
-    render() {
-        const {filtersState, setFilters} = this.props;
-        return (
-            <form className={'filters'}>
-                <h4 className={'filters__main-header fonts__proximaNovaSemibold'}>Фильтры</h4>
-                <div className="filters__single-filter">
-                    <h5 className="filters__header fonts__proximaNovaBold">Цена</h5>
+    // if the resolution is mobile - we use an array from the state. else - from props
+    const propFilters = isMobile ? localFilterState : filtersState;
 
-                    <PriceFilter
-                        changeHandler={this.setPrice}
-                    />
+    return (
+        <React.Fragment>
+            <Container className={' listingSidebar__container container_mobile'}>
+                <form className={filterClassNames}>
+                    <h4 className={'filters__main-header fonts__proximaNovaSemibold'}>Фильтры</h4>
+                    <div className="filters__single-filter">
+                        <h5 className="filters__header fonts__proximaNovaBold">Цена</h5>
 
-                </div>
-                <div className="filters__single-filter">
-                    <label className={'filters__label'}>
-                        <Checkbox
-                            name={'showWithSale'}
-                            controlled={true}
-                            checked={filtersState.showWithSale}
-                            onChange={(e) => {
-                                setFilters({showWithSale: e.target.checked})
-                            }}
-                            type={'checkbox'}
-                            className={'checkbox_red'}
+                        <PriceFilter
+                            changeHandler={setPrice}
                         />
-                        <span className={'filters__text'}>Товары со скидкой</span>
-                    </label>
+
+                    </div>
+                    <div className="filters__single-filter">
+                        <label className={'filters__label'}>
+                            <Checkbox
+                                name={'showWithSale'}
+                                controlled={true}
+                                checked={propFilters.showWithSale}
+                                onChange={setSale}
+                                type={'checkbox'}
+                                className={'checkbox_red'}
+                            />
+                            <span className={'filters__text'}>Товары со скидкой</span>
+                        </label>
+                    </div>
+                    <div className="filters__additional" onChange={checkboxHandler}>
+
+                        <Fieldset
+                            checkboxName={'flowerQuantity'}
+                            type={'radio'}
+                            header={'Количество цветов'}
+                            filters={propFilters.checkboxes}
+                            countOpenedFilters={countOpenedFilters}
+                        />
+
+                        <Fieldset
+                            checkboxName={'color'}
+                            type={'checkbox'}
+                            header={'Окрас букета'}
+                            filters={propFilters.checkboxes}
+                            countOpenedFilters={countOpenedFilters}
+                        />
+
+                        <Fieldset
+                            checkboxName={'sortBy'}
+                            type={'radio'}
+                            filters={propFilters.checkboxes}
+                            header={'Сортировать'}
+                            countOpenedFilters={countOpenedFilters}
+                        />
+
+                        <Fieldset
+                            checkboxName={'flowers'}
+                            type={'radio'}
+                            filters={propFilters.checkboxes}
+                            header={'Цветы'}
+                            isDefaultOpened={true}
+                            countOpenedFilters={countOpenedFilters}
+                        />
+                        <Fieldset
+                            checkboxName={'for'}
+                            type={'radio'}
+                            filters={propFilters.checkboxes}
+                            header={'Кому'}
+                            countOpenedFilters={countOpenedFilters}
+                        />
+
+                    </div>
+                </form>
+            </Container>
+            <div className="filters__footer">
+                <Button
+                    mod={'filter button_transparent'}
+                    className={'filters__button'}
+                    onClick={uncheckAllCheckboxes}>
+                    Очистить
+                    фильтры
+                </Button>
+                <div className="filters__mobile-menu">
+                    <Button onClick={mobileSubmitFilters} className={'filters__apply'}>Применить</Button>
+                    <Button onClick={closeAside} mod={'transparent'} className={'filters__close'}>Закрыть</Button>
                 </div>
-                <div className="filters__additional" onChange={this.checkboxHandler}>
+            </div>
+        </React.Fragment>
+    )
 
-                    <Fieldset
-                        checkboxName={'flowerQuantity'}
-                        type={'radio'}
-                        header={'Количество цветов'}
-                        filters={filtersState.checkboxes}
-                        countOpenedFilters={this.props.countOpenedFilters}
-                    />
-
-                    <Fieldset
-                        checkboxName={'color'}
-                        type={'checkbox'}
-                        header={'Окрас букета'}
-                        filters={filtersState.checkboxes}
-                        countOpenedFilters={this.props.countOpenedFilters}
-                    />
-
-                    <Fieldset
-                        checkboxName={'sortBy'}
-                        type={'radio'}
-                        filters={filtersState.checkboxes}
-                        header={'Сортировать'}
-                        countOpenedFilters={this.props.countOpenedFilters}
-                    />
-
-                    <Fieldset
-                        checkboxName={'flowers'}
-                        type={'radio'}
-                        filters={filtersState.checkboxes}
-                        header={'Цветы'}
-                        isDefaultOpened={true}
-                        countOpenedFilters={this.props.countOpenedFilters}
-                    />
-
-                    <Fieldset
-                        checkboxName={'for'}
-                        type={'radio'}
-                        filters={filtersState.checkboxes}
-                        header={'Кому'}
-                        countOpenedFilters={this.props.countOpenedFilters}
-                    />
-
-
-                    <Button mod={'filter button_transparent'} className={'filters__button'}
-                            onClick={this.props.uncheckAllCheckboxes}>
-                        Очистить фильтры
-                    </Button>
-
-                </div>
-            </form>
-        )
-    }
-}
+};
+export default Filters

@@ -214,6 +214,11 @@
         height: 170px;
         display: flex;
         align-content: center;
+        overflow: hidden;
+    }
+
+    .bouquet__cartButton {
+        bottom: 0;
     }
 
     .bouquet__info {
@@ -223,6 +228,31 @@
     }
 
     .bouquet__footer {
+        position: absolute;
+        bottom: 0;
+        left: 83px;
+        height: auto;
+    }
+
+    .bouquet__plus {
+        display: none;
+    }
+
+    .bouquet__cartButton {
+        margin: 0;
+        height: 40px;
+        width: 40px;
+        border: 1px solid var(--bg-color);
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        vertical-align: center;
+        top: unset;
+        bottom: -1px;
+
+    }
+
+    .bouquet__footerLink {
         display: none;
     }
 
@@ -274,5 +304,35 @@
         height: 25px;
         line-height: 27px;
         margin-bottom: -1px;
+    }
+
+    .bouquet__mobileNotification {
+        animation: showNotification 4s;
+
+        position: absolute;
+        bottom: 0;
+        height: 50px;
+        line-height: 50px;
+        width: 100%;
+        text-align: center;
+        background-color: white;
+        z-index: 121212;
+        border-top: 1px solid var(--bg-color);
+    }
+}
+
+@keyframes showNotification {
+    from {
+        bottom: -50px
+    }
+    25% {
+        bottom: 0
+    }
+
+    75% {
+        bottom: 0;
+    }
+    to {
+        bottom: -50px;
     }
 }

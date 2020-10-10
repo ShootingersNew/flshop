@@ -9,6 +9,7 @@ import Filters from "../../components/filters/Filters"
 import AsideBanners from "../../components/asideBanners/AsideBanners"
 //utils
 import {FilterItems} from "../../config/utils";
+import Button from "../../components/button/Button";
 
 class ListingPage extends React.Component {
     constructor(props) {
@@ -91,6 +92,7 @@ class ListingPage extends React.Component {
                 <Main
                     className={'main_listing'}
                     container={true}
+
                     breadcrumbsArray={
                         [
                             {title: 'Главная', path: '/'},
@@ -102,6 +104,7 @@ class ListingPage extends React.Component {
                             <Showcase
                                 counter={filteredItems.length}
                                 showcaseType={'listing'}
+                                mobileLink={false}
                                 header={'Букеты'}
                                 idx={'allItems'}
                                 goods={filteredItems}
@@ -110,9 +113,11 @@ class ListingPage extends React.Component {
                             />
                         </React.Fragment>
                     }
-                    aside={
+                    aside={(closeAsideFunc) => (
                         <ListingSidebar>
                             <Filters
+                                closeAside={closeAsideFunc}
+                                className={'listingSidebar__filters'}
                                 setFilters={this.setFilters}
                                 filtersState={this.state}
                                 uncheckAllCheckboxes={this.uncheckAllCheckboxes}
@@ -126,7 +131,13 @@ class ListingPage extends React.Component {
                                 className={'listingSidebar__aside'}
                             />
                         </ListingSidebar>
-                    }
+                    )}
+
+                    mobileButton={(clickHandler) => (
+                        <Button onClick={clickHandler} className={'listingSidebar__mobileButton'}>
+                            Фильтры
+                        </Button>
+                    )}
 
                 />
             </React.Fragment>

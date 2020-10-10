@@ -48,13 +48,12 @@ const Fieldset = (props) => {
     };
     const [isOpened, setIsOpened] = useState(false);
     const [isChanged, setIsChanged] = useState(false);
-
+    const isMobile = useIsMobile();
     useEffect(() => {
-        if (props.isDefaultOpened) {
-            setIsOpened(props.isDefaultOpened)
+        if (props.isDefaultOpened && !isMobile) {
+            setIsOpened(true)
         }
-    }, [props.isDefaultOpened]);
-
+    }, [props.isDefaultOpened, isMobile]);
     function mapCheckboxes(name, type) {
         return addFilterArr[name].map((checkbox, idx) => {
 

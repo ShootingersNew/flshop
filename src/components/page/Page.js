@@ -4,6 +4,7 @@ import React from "react"
 import Header from "../header/Header"
 import Footer from "../footer/Footer"
 //styles
+import './../fonts/__proximaNova/_regular/fonts__proximaNova_regular.css'
 import './page.css'
 import arr from '../../config/json/menu.json'
 

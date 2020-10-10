@@ -17,6 +17,7 @@ Showcase.propTypes = {
     counter: PropTypes.number.isRequired,
     filterTags: PropTypes.array,
     goods: PropTypes.array.isRequired,
+    mobileLink: PropTypes.bool
 };
 
 function Showcase(props) {
@@ -84,7 +85,10 @@ function Showcase(props) {
                         : false
                     }
                 </FlipMove>
-                <Link className={'showcase__link link showcase__link_mobile'} to={'/catalog'}>Смотреть все</Link>
+                {
+                    props.mobileLink &&
+                    <Link className={'showcase__link link showcase__link_mobile'} to={'/catalog'}>Смотреть все</Link>
+                }
             </Container>
         </div>
     )

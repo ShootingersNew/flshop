@@ -9,6 +9,8 @@ import withCartConnect from "../../hoc/withCartConnect"
 import './flower.css'
 import star from './img/star.svg'
 import {regExpPrice} from "../../config/utils"
+import Breadcrumbs from "../breadcrumbs/Breadcrumbs";
+import Main from "../main/Main";
 
 Flower.propTypes = {
     item: PropTypes.object.isRequired
@@ -18,6 +20,7 @@ function Flower(props) {
     const addInCart = (item) => {
         props.addInCart(item)
     };
+    console.log(props.item);
     return (
         <React.Fragment>
             {props.item ?
@@ -26,6 +29,16 @@ function Flower(props) {
                         <div style={{backgroundImage: "url(" + props.item.src + ")"}} className={'flower__image'}/>
                         <div className="flower__control">
                             <div className="flower__info">
+                                <Breadcrumbs
+                                    items={
+                                        [
+                                            {title: 'Главная', path: '/'},
+                                            {title: 'Каталог', path: '/catalog'},
+                                            {title: props.item.category},
+                                            {title: [props.item.name]},
+                                        ]
+                                    }
+                                />
                                 <h1 className="flower__header">{props.item.name}</h1>
                                 <div className="flower__vendorCode">
                                     Артикул<span>{props.item.vendorCode}</span>
