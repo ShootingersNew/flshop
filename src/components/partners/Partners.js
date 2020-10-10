@@ -13,8 +13,8 @@ import svg4 from './svg/logo4.svg'
 import svg5 from './svg/logo5.svg'
 
 export default function Partners() {
-    let windowWidth = useWindowSize()[0];
-    return windowWidth <= Number(process.env.REACT_APP_MOBILE_BREAKPOINT) ?
+    const isMobile = useIsMobile();
+    return isMobile ?
         <LogoSlider>
             <div className={'partners__logo '}><img alt={'logo'} src={svg1}/></div>
             <div className={'partners__logo partners__verizon '}><img alt={'logo'} src={svg2}/></div>

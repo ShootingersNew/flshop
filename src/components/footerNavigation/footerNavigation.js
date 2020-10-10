@@ -6,8 +6,7 @@ import './style.css'
 
 const FooterNavigation = ({nav, className}) => {
     const [isOpen, setIsOpen] = useState(false);
-    let windowWidth = useWindowSize()[0];
-    const isMobile = windowWidth <= Number(process.env.REACT_APP_MOBILE_BREAKPOINT);
+    const isMobile = useIsMobile();
     const navClassName = cn({
         footerNavigation__wrapper: true,
         [`${className}`]: className

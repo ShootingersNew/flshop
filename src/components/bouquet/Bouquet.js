@@ -20,6 +20,7 @@ Bouquet.propTypes = {
 };
 
 function Bouquet(props) {
+    const isMobile = useIsMobile();
     const buttonRef = React.createRef();
 
     function increaseQuantity() {
