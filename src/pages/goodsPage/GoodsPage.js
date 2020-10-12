@@ -1,14 +1,13 @@
 //libs
-import React from "react";
+import React from "react"
 //comps
-import Preloader from "../../components/preloader/Preloader";
-import Breadcrumbs from "../../components/breadcrumbs/Breadcrumbs";
-import Flower from "../../components/flower/Flower";
-import AdditionalItems from "../../components/additionalItems/AdditionalItems";
-import Main from "../../components/main/Main";
+import Preloader from "../../components/preloader/Preloader"
+import Flower from "../../components/flower/Flower"
+import Main from "../../components/main/Main"
+import Showcase from "../../components/showcase/Showcase"
 //styles
 import '../../components/container/container.css'
-import {loadImit} from "../../config/utils";
+import {loadImit} from "../../config/utils"
 
 class GoodsPage extends React.Component {
     constructor(props) {
@@ -29,7 +28,8 @@ class GoodsPage extends React.Component {
 
         //    здесь бы делался запрос к серверу
         const {idx, type} = this.props.match.params;
-        const itemsArr = require('../../config/json/' + type);
+        const itemsArr = require('../../config/json/allItems')[type];
+        console.log(itemsArr);
         //данные просматриваемого товара
         const curItem = itemsArr.find(item => item.id === Number.parseInt(idx));
         // additional items are shown only for flower items
@@ -69,6 +69,7 @@ class GoodsPage extends React.Component {
     render() {
         const {item, loadingStatus, additional} = this.state;
         const {type} = this.props.match.params;
+        let photoArr = [{}, {}, {}];
         return (
 
             <React.Fragment>
@@ -76,20 +77,24 @@ class GoodsPage extends React.Component {
                 {
                     loadingStatus === 'loaded' && item ?
                         <Main container={true}>
-                            <Breadcrumbs
-                                items={
-                                    [
-                                        {title: 'Главная', path: '/'},
-                                        {title: 'Каталог', path: '/catalog'},
-                                        {title: [item.name]},
-                                    ]
-                                }
-                            />
                             <Flower type={type} item={item}/>
+                            <Showcase
+                                className={'photoReviews'}
+                                listingLink={false}
+                                counter={8}
+                                header={'Фотоотзывы'}
+                                showcaseType={'photoReview'}
+                                goods={photoArr}
+                            />
                             {
                                 type !== 'additionalItems'
                                 &&
-                                <AdditionalItems addItems={additional}/>
+                                <Showcase
+                                    header={'С этим товаром также приобретают'}
+                                    listingLink={false}
+                                    showcaseType={'additional'}
+                                    goods={additional}
+                                />
                             }
                         </Main>
                         :

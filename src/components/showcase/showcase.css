@@ -41,6 +41,10 @@
     align-items: baseline;
 }
 
+.showcase__headerText {
+    font-family: "Proxima Nova Bold", Arial, sans-serif;
+}
+
 .showcase__link {
     font-size: 16px;
     margin-left: 34px;
@@ -83,6 +87,19 @@
 
 .showcase__link_mobile {
     display: none;
+}
+
+.showcase_photoReview {
+}
+
+.showcase_additional {
+    padding-top: 25px;
+}
+
+.showcase_additional .showcase__items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 @media all and (max-width: 600px) {

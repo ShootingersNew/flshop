@@ -4,29 +4,30 @@ import PropTypes from 'prop-types'
 //comps
 import Composition from "./composition/Composition"
 import Button from "../button/Button"
+import Gallery from "../gallery/Gallery";
 import withCartConnect from "../../hoc/withCartConnect"
 //styles || utils
 import './flower.css'
 import star from './img/star.svg'
 import {regExpPrice} from "../../config/utils"
 import Breadcrumbs from "../breadcrumbs/Breadcrumbs";
-import Main from "../main/Main";
 
 Flower.propTypes = {
     item: PropTypes.object.isRequired
 };
 
 function Flower(props) {
+
     const addInCart = (item) => {
         props.addInCart(item)
     };
-    console.log(props.item);
     return (
         <React.Fragment>
             {props.item ?
                 <div className="flower__wrapper">
                     <article className={'flower'}>
-                        <div style={{backgroundImage: "url(" + props.item.src + ")"}} className={'flower__image'}/>
+                        <Gallery item={props.item}/>
+
                         <div className="flower__control">
                             <div className="flower__info">
                                 <Breadcrumbs
@@ -51,12 +52,14 @@ function Flower(props) {
                             <div className="flower__price">
                             <span
                                 className="flower__actualPrice fonts__proximaNovaBold">{regExpPrice(props.item.price)}р</span>
-                                {props.item.sale ?
+                                {
+                                    props.item.sale ?
 
-                                    <div className="flower__sale">
-                                        <span className="flower__salePrice">{props.item.salePrice}р</span>
-                                        <span className="flower__salePercents"><span>{props.item.percents}</span></span>
-                                    </div> : null
+                                        <div className="flower__sale">
+                                            <span className="flower__salePrice">{props.item.salePrice}р</span>
+                                            <span
+                                                className="flower__salePercents"><span>{props.item.percents}</span></span>
+                                        </div> : null
                                 }
                             </div>
 

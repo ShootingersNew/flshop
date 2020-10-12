@@ -8,6 +8,7 @@ import FlipMove from 'react-flip-move'
 import Container from "../container/Container"
 import Bouquet from "../bouquet/Bouquet"
 import withBDItemsConnect from "../../hoc/withBDItemsConnect"
+import PhotoReview from "../photoReviews/PhotoReviews";
 //styles
 import './showcase.css'
 
@@ -17,7 +18,8 @@ Showcase.propTypes = {
     counter: PropTypes.number.isRequired,
     filterTags: PropTypes.array,
     goods: PropTypes.array.isRequired,
-    mobileLink: PropTypes.bool
+    mobileLink: PropTypes.bool,
+    listingLink: PropTypes.bool
 };
 
 function Showcase(props) {
@@ -34,13 +36,50 @@ function Showcase(props) {
             </div>
         ));
 
-        return props.goods.map((item) => {
-            return (
-                <FunctionalArticle key={item.id}>
-                    <Bouquet item={item}/>
-                </FunctionalArticle>
-            )
-        })
+        let card = (item) => {
+            if (props.showcaseType && props.showcaseType === 'photoReview') {
+                return (
+                    <div className="showcase__animation-wrapper">
+                        <PhotoReview/>
+                    </div>
+                )
+            } else {
+                return (
+                    <FunctionalArticle key={item.id}>
+                        <Bouquet item={item}/>
+                    </FunctionalArticle>
+                )
+            }
+        };
+
+        let mappedItems = () => {
+            return props.goods.map((item) => {
+                return card(item)
+            })
+        };
+
+        let wrapper = (items) => {
+            if (props.showcaseType && props.showcaseType === 'photoReview') {
+                return (
+                    <div className={'showcase__items'}>
+                        {
+                            items()
+                        }
+                    </div>
+                )
+            } else {
+                return <FlipMove className={'showcase__items'}>
+                    {
+                        items()
+                    }
+                </FlipMove>
+            }
+        };
+        // const item=props.type && props.type==='photoReviews'? <PhotoReview/>:;
+        return (
+            wrapper(mappedItems)
+        )
+
     };
 
     function mapFilterTags(arr) {
@@ -56,6 +95,10 @@ function Showcase(props) {
         })
     }
 
+    const counterClassNames = cn({
+        showcase__counter: true,
+        showcase__counter_small: props.showcaseType !== 'listing' && props.listingLink !== false
+    });
     return (
         <div className={className}>
             <Container className={'showcase__container'}>
@@ -65,11 +108,16 @@ function Showcase(props) {
                         props.counter !== undefined && props.showcaseType === 'listing' &&
                         <span className={'showcase__counter fonts__proximaNovaSemibold'}>{props.counter}</span>
                     }
-                    {props.showcaseType !== 'listing' &&
-                    <React.Fragment>
-                        <Link className={'showcase__link link'} to={'/catalog'}>Смотреть все товары</Link>
-                        <span className={'showcase__counter showcase__counter_small'}>{props.counter}</span>
-                    </React.Fragment>
+                    {
+                        props.showcaseType !== 'listing' ?
+                            <React.Fragment>
+                                {
+                                    props.listingLink !== false &&
+                                    <Link className={'showcase__link link'} to={'/catalog'}>Смотреть все товары</Link>
+                                }
+                                <span className={counterClassNames}>{props.counter}</span>
+                            </React.Fragment>
+                            : false
                     }
                     {
                         props.showcaseType === 'listing' &&
@@ -78,13 +126,9 @@ function Showcase(props) {
                         </div>
                     }
                 </div>
-                <FlipMove className={'showcase__items'}>
-                    {/*если в этот компонент hoc'ом был передан объект с итемами, то рендерим*/}
-                    {props.goods ?
-                        renderItems()
-                        : false
-                    }
-                </FlipMove>
+
+                {renderItems()}
+
                 {
                     props.mobileLink &&
                     <Link className={'showcase__link link showcase__link_mobile'} to={'/catalog'}>Смотреть все</Link>

@@ -1,14 +1,46 @@
+@import "./../_settings/_variables.css";
+
 .flower__image {
-    height: 555px;
-    width: 555px;
-    margin-top: 16px;
-    margin-right: 80px;
+    height: 513px;
+    width: 500px;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
+.flower__mainImageWrapper {
+    border: 1px solid var(--bg-color);
+}
+
+.flower__gallery {
+    margin-top: 16px;
+    margin-right: 80px;
+    display: flex;
+}
+
+.flower__sideImagesWrapper {
+    margin-right: 16px;
+}
+
+.flower__sideImage {
+    height: 85px;
+    width: 70px;
+    border: 1px solid transparent;
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.flower__sideImage_isOpen_true {
+    border: 1px solid #FD0000;
+}
+
+.flower__sideImage:not(:last-child) {
+    margin-bottom: 16px;
+}
+
 .flower__wrapper {
     padding-top: 20px;
+    padding-bottom: 61px;
 }
 
 .flower {
@@ -90,21 +122,26 @@
 
 .flower__salePrice {
     color: #8C8C8C;
-    text-decoration: line-through;
+    position: relative;
     margin-right: 14px;
+}
+
+.flower__salePrice::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 1px;
+
 }
 
 .flower__salePercents {
     display: inline-block;
-    width: 67px;
-    height: 35px;
+    width: 50px;
+    height: 29px;
     text-align: center;
-    background-image: url("./img/sale.svg");
-}
-
-.flower__salePercents span {
-    position: relative;
-    right: -5px;
+    background-color: black;
+    color: white;
+    line-height: 29px;
 }
 
 .flower__click-buy {
@@ -122,10 +159,8 @@
 }
 
 .flower__desc {
+    margin-top: 29px;
     width: 495px;
     line-height: 30px;
-    position: absolute;
-    bottom: -89px;
-    right: 76px;
     color: #8c8c8c;
 }
