@@ -1,14 +1,32 @@
 import React from "react"
-import {Link} from "react-router-dom"
+import {Link, withRouter, useRouteMatch} from "react-router-dom"
 // styles
 import logo from './Logo.svg'
 import './logo.css'
+import back from './Back.svg'
+import {useIsMobile} from "../../config/utils";
 
-export default function Logo() {
+function Logo({history}) {
+    const isMobile = useIsMobile();
+    const isExact = useRouteMatch().isExact;
+    console.log(isExact);
     return (
-        <Link className={'logo'} to={'/'}>
-            <img src={logo} alt={'logo'}/>
-            <span className="logo__text fonts__proximaNovaBlack">FlowerBox</span>
-        </Link>
+        <div className="logo__wrapper">
+            {
+                isMobile && !isExact ?
+                    <button className={'logo__backButton'} onClick={() => history.goBack()}>
+                        <img src={back} alt="Назад"/>
+                    </button>
+                    :
+                    <Link className={'logo'} to={'/'}>
+                        <img src={logo} alt={'logo'}/>
+                        <span className="logo__text fonts__proximaNovaBlack">FlowerBox</span>
+                    </Link>
+            }
+        </div>
+
     )
 }
+
+export default withRouter(Logo)
+
