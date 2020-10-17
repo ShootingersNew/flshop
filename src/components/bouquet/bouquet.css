@@ -319,6 +319,45 @@
         z-index: 121212;
         border-top: 1px solid var(--bg-color);
     }
+
+    .bouquet__sumPrice,
+    .bouquet__delete {
+        display: none;
+    }
+
+    .bouquet__controls {
+        height: auto;
+        top: unset;
+        bottom: 24px;
+    }
+
+    .bouquet_type_cart {
+        height: 200px;
+    }
+
+    .bouquet_type_cart .bouquet__price {
+        font-size: 18px;
+    }
+
+    .bouquet_type_cart .bouquet__header {
+        line-height: 1.1;
+    }
+
+    .bouquet_type_cart .bouquet__info {
+        padding-top: 20px;
+    }
+
+    .bouquet_type_cart .bouquet__sale {
+        padding-bottom: 0;
+    }
+
+    .bouquet_type_cart .bouquet__saleMark {
+        margin: auto 0;
+    }
+
+    .bouquet_type_cart .bouquet__price-info {
+        margin-bottom: 11px;
+    }
 }
 
 @keyframes showNotification {

@@ -89,7 +89,6 @@ const Filters = ({className, filtersState, countOpenedFilters, setFilters, unche
 
             }
         }
-        console.log(newFiltersObj.checkboxes);
         applyChanges(newFiltersObj)
     };
 

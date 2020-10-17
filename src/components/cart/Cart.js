@@ -17,12 +17,14 @@ export default function Cart(props) {
                     {
                         props.items.length !== 0 ?
                             props.items.map((item, idx) => (
-                                <Bouquet
-                                    key={idx}
-                                    classname={'cart__item'}
-                                    item={item}
-                                    mod={'type_cart'}
-                                />
+                                <div className="cart__itemWrapper">
+                                    <Bouquet
+                                        key={idx}
+                                        classname={'cart__item'}
+                                        item={item}
+                                        mod={'type_cart'}
+                                    />
+                                </div>
                             ))
                             :
                             <Redirect to={'/catalog'}/>

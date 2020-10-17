@@ -117,7 +117,7 @@ class CartPage extends React.Component {
                         </React.Fragment>
                     }
                     aside={
-                        <AsideBanners
+                        () => <AsideBanners
                             id={'cart'}
                             count={length}
                             className={'asideBanners_float'}

@@ -12,17 +12,30 @@
 .photoReview__image {
     width: 100%;
     height: 100%;
+    background-position: bottom;
 }
 
 .photoReview__link {
-    position: absolute;
-    left: 0;
-    bottom: -2px;
+    display: inline-block;
     padding-top: 12px;
     padding-right: 14px;
     background-color: white;
     line-height: 14px;
     font-size: 14px;
+    width: auto;
+    position: absolute;
+    top: -23px;
+}
+
+.photoReview__linkText {
+    background: linear-gradient(263.19deg, #3243EF 5.23%, #7E28C3 20.61%, rgba(195, 7, 141, 0.81) 46.62%, #ED4135 73.12%, #FFD66C 96.5%);
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.photoReview__contentContainer {
+    position: relative;
 }
 
 .photoReview__date {
@@ -40,4 +53,98 @@
 
 .photoReview__markIcon:not(:last-child) {
     margin-right: 4px;
+}
+
+.photoReview__markIcon {
+    width: 13px;
+    height: 13px;
+}
+
+.photoReview__linkContainer {
+
+}
+
+.photoReview__mark {
+    display: inline-block;
+}
+
+.photoReview__mark_mobile {
+    display: none;
+}
+
+.photoReview__name_mobile {
+    display: none;
+}
+
+@media all and (max-width: 600px) {
+    .photoReview__name {
+        display: none;
+    }
+
+    .photoReview__name_mobile {
+        display: inline-block;
+        line-height: 28px;
+    }
+
+    .photoReview__mark {
+        display: none;
+    }
+
+    .photoReview__mark_mobile {
+        display: inline-block;
+        color: #8C8C8C;
+    }
+
+    .photoReview__linkContainer {
+        position: relative;
+        top: -19px;
+    }
+
+    .photoReview__link {
+        line-height: 19px;
+        top: -14px;
+        padding: 0 6px 0 7px;
+    }
+
+    .photoReview__imageWrapper {
+        width: 100%;
+        height: 58.7vw;
+    }
+
+    .photoReview__image {
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .photoReview {
+        width: 100%;
+        height: auto;
+        padding-bottom: 25px;
+    }
+
+    .photoReview__header {
+
+        line-height: 16px;
+    }
+
+    .photoReview__main {
+        line-height: 1.2;
+        padding-top: 13px;
+    }
+
+    .photoReview__contentContainer {
+        padding-top: 20px;
+
+    }
+
+    .photoReview__markIcon {
+        margin-right: 6px;
+    }
+
+    .photoReview__date {
+        display: block;
+        line-height: 16px;
+        margin-top: 1px;
+    }
 }

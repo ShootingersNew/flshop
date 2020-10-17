@@ -36,7 +36,7 @@ export default function Main(props) {
                         </div>
                         <div className={asideClassNames}>
                             {
-                                props.aside(closeButtonClickHandler)
+                               props.aside && props.aside(closeButtonClickHandler)
                             }
                         </div>
                         {

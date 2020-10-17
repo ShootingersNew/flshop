@@ -19,24 +19,31 @@ export default function CartPrice(props) {
             <tbody>
             <tr className="cartPrice__tr">
                 <th className="cartPrice__header">Итого</th>
-                <td className="cartPrice__price fonts__proximaNovaBold">{regExpPrice(props.price)}р</td>
+                <td className="cartPrice__price ">{regExpPrice(props.price)}р</td>
             </tr>
             <tr className="cartPrice__tr">
-                <th className="cartPrice__header">Скидка {props.discount.salePercent}%
+                <th className="cartPrice__header">Скидка
+                    <span className="cartPrice__percents">
+                    {props.discount.salePercent}%
                     от {regExpPrice(props.discount.minPrice)}р
+                    </span>
                 </th>
-                <td className="cartPrice__price fonts__proximaNovaBold">-{regExpPrice(props.price * (props.discount.salePercent / 100))}р</td>
+                <td className="cartPrice__price ">-{regExpPrice(props.price * (props.discount.salePercent / 100))}р
+                    <span className="cartPrice__percents cartPrice__percents_mobile">
+                           {props.discount.salePercent}%
+                    </span>
+                </td>
             </tr>
-            <tr className="cartPrice__tr">
+            <tr className="cartPrice__tr cartPrice__tr_delivery">
                 <th className="cartPrice__header"><span>{props.chosenDelivery.type}</span> <span
                     className={'cartPrice__separator'}>/</span> {props.address}</th>
-                <td className="cartPrice__price fonts__proximaNovaBold">+{regExpPrice(props.chosenDelivery.price)}р</td>
+                <td className="cartPrice__price ">+{regExpPrice(props.chosenDelivery.price)}р</td>
             </tr>
             <tr className="cartPrice__tr cartPrice__sum">
                 <th className="cartPrice__header">
                     Общая сумма
                 </th>
-                <td className="cartPrice__price fonts__proximaNovaBold">
+                <td className="cartPrice__price">
                     {regExpPrice(props.finalPrice)}р
                 </td>
             </tr>

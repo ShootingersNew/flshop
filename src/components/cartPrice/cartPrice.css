@@ -1,3 +1,5 @@
+@import "../_settings/_variables.css";
+
 .cartPrice__table {
     margin-left: auto;
     padding-right: 50px;
@@ -21,8 +23,8 @@
     vertical-align: middle;
     box-sizing: border-box;
     text-align: left;
+    font-family: "Proxima Nova Bold", Arial, sans-serif;
 }
-
 .cartPrice__header span {
     color: #5866BB;
 }
@@ -49,4 +51,61 @@
 
 .cartPrice__sum .cartPrice__header {
     padding-bottom: 0;
+}
+
+.cartPrice__percents_mobile {
+    display: none;
+}
+
+@media all and (max-width: 600px) {
+    .cartPrice__header span {
+        color: inherit;
+    }
+
+    .cartPrice__table {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: white;
+        padding: 25px 0;
+        border-top: 1px solid var(--bg-color);
+        z-index: 10;
+    }
+
+    .cartPrice__tr_delivery {
+        display: none;
+    }
+
+    .cartPrice__price {
+        font-family: "Proxima Nova Regular", Arial, sans-serif;
+        font-size: 16px;
+        padding-bottom: 0;
+    }
+
+    .cartPrice__header {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .cartPrice__tr {
+        height: 17px;
+        line-height: 17px;
+    }
+
+    .cartPrice__sum .cartPrice__price, .cartPrice__sum .cartPrice__header {
+        padding-top: 8px;
+    }
+
+    .cartPrice__sum .cartPrice__price {
+        font-family: "Proxima Nova Bold", Arial, sans-serif;
+    }
+
+    .cartPrice__percents {
+        display: none;
+    }
+
+    .cartPrice__percents_mobile {
+        display: inline-block;
+        margin-left: 13px;
+    }
 }

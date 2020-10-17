@@ -1,4 +1,5 @@
 @import "./../_settings/_variables.css";
+
 .header {
     height: 88px;
 }
@@ -54,6 +55,12 @@
 @media all and (max-width: 600px ) {
     .header {
         height: 55px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 222;
+        border: 1px solid var(--bg-color);
     }
 
     .header__container {

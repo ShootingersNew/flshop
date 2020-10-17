@@ -137,4 +137,12 @@
         width: var(--mobile-container);
         margin: 7px auto 0;
     }
+
+    .showcase_photoReview {
+        display: none;
+    }
+
+    .showcase_mobile {
+        display: block;
+    }
 }

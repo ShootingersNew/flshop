@@ -18,3 +18,23 @@
     vertical-align: top;
     margin-left: 3px;
 }
+
+.cart__itemWrapper {
+    position: relative;
+}
+
+@media all and (max-width: 600px) {
+    .cart__header {
+        display: none;
+    }
+
+    .cart {
+        width: auto;
+        padding-top: 0;
+    }
+
+    .cart__itemWrapper {
+        background-color: white;
+        margin-bottom: 10px;
+    }
+}

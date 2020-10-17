@@ -19,13 +19,15 @@ Showcase.propTypes = {
     filterTags: PropTypes.array,
     goods: PropTypes.array.isRequired,
     mobileLink: PropTypes.bool,
-    listingLink: PropTypes.bool
+    listingLink: PropTypes.bool,
+    isMobile: PropTypes.bool
 };
 
 function Showcase(props) {
     let className = cn({
         showcase: true,
-        [`showcase_${props.showcaseType}`]: props.showcaseType
+        [`showcase_${props.showcaseType}`]: props.showcaseType,
+        showcase_mobile: props.isMobile
     });
 
     const renderItems = () => {

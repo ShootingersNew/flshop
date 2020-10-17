@@ -8,6 +8,7 @@
         "/images/bouquets/ref1.png",
         "/images/bouquets/ref2.png"
       ],
+      "mobileRetouch": "/images/mobileRetouch/image.jpg",
       "price": 3150,
       "vendorCode": "12934569",
       "mark": 3.5,
@@ -79,6 +80,7 @@
         "/images/bouquets/ref1.png",
         "/images/bouquets/ref2.png"
       ],
+      "mobileRetouch": "/images/mobileRetouch/image.jpg",
       "price": 4200,
       "vendorCode": "19239247",
       "mark": 4.2,
@@ -150,6 +152,7 @@
         "/images/bouquets/ref1.png",
         "/images/bouquets/ref2.png"
       ],
+      "mobileRetouch": "/images/mobileRetouch/image.jpg",
       "price": 2150,
       "vendorCode": "45239237",
       "mark": 4.8,
@@ -217,6 +220,7 @@
         "/images/bouquets/ref1.png",
         "/images/bouquets/ref2.png"
       ],
+      "mobileRetouch": "/images/mobileRetouch/image.jpg",
       "price": 3670,
       "vendorCode": "88239247",
       "mark": 3.3,
@@ -278,6 +282,7 @@
         "/images/bouquets/ref1.png",
         "/images/bouquets/ref2.png"
       ],
+      "mobileRetouch": "/images/mobileRetouch/image.jpg",
       "price": 3150,
       "vendorCode": "22229247",
       "mark": 4.2,
@@ -337,6 +342,7 @@
         "/images/bouquets/ref1.png",
         "/images/bouquets/ref2.png"
       ],
+      "mobileRetouch": "/images/mobileRetouch/image.jpg",
       "price": 5500,
       "vendorCode": "33239237",
       "mark": 2,
@@ -394,6 +400,7 @@
         "/images/bouquets/ref1.png",
         "/images/bouquets/ref2.png"
       ],
+      "mobileRetouch": "/images/mobileRetouch/image.jpg",
       "price": 8990,
       "vendorCode": "45231247",
       "mark": 4.2,
@@ -438,6 +445,7 @@
         "/images/bouquets/ref1.png",
         "/images/bouquets/ref2.png"
       ],
+      "mobileRetouch": "/images/mobileRetouch/image.jpg",
       "price": 6000,
       "vendorCode": "88139247",
       "mark": 1,
@@ -484,6 +492,7 @@
         "/images/bouquets/ref1.png",
         "/images/bouquets/ref2.png"
       ],
+      "mobileRetouch": "/images/mobileRetouch/image.jpg",
       "price": 3650,
       "vendorCode": "88122247",
       "mark": 4.2,
@@ -535,6 +544,7 @@
         "/images/bouquets/ref1.png",
         "/images/bouquets/ref2.png"
       ],
+      "mobileRetouch": "/images/mobileRetouch/image.jpg",
       "price": 6500,
       "vendorCode": "11122247",
       "mark": 3.3,
@@ -586,6 +596,7 @@
         "/images/bouquets/ref1.png",
         "/images/bouquets/ref2.png"
       ],
+      "mobileRetouch": "/images/mobileRetouch/image.jpg",
       "price": 4000,
       "vendorCode": "33322247",
       "mark": 4.3,

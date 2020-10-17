@@ -1,0 +1,19 @@
+.mobileDescription__image {
+    width: 100%;
+    height: 68.1vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.mobileDescription__content {
+    background-color: white;
+    padding-top: 26px;
+    padding-bottom: 24px;
+}
+
+.mobileDescription__header {
+    margin: 0 0 13px;
+    font-family: "Proxima Nova Bold", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.15;
+}

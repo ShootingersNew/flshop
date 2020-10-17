@@ -8,6 +8,9 @@ import Showcase from "../../components/showcase/Showcase"
 //styles
 import '../../components/container/container.css'
 import {loadImit} from "../../config/utils"
+import {Route, Switch} from "react-router-dom"
+import Composition from "../../components/composition/Composition"
+import MobileDescription from "../../components/mobileDescription/MobileDescription.js";
 
 class GoodsPage extends React.Component {
     constructor(props) {
@@ -29,7 +32,6 @@ class GoodsPage extends React.Component {
         //    здесь бы делался запрос к серверу
         const {idx, type} = this.props.match.params;
         const itemsArr = require('../../config/json/allItems')[type];
-        console.log(itemsArr);
         //данные просматриваемого товара
         const curItem = itemsArr.find(item => item.id === Number.parseInt(idx));
         // additional items are shown only for flower items
@@ -70,36 +72,69 @@ class GoodsPage extends React.Component {
         const {item, loadingStatus, additional} = this.state;
         const {type} = this.props.match.params;
         let photoArr = [{}, {}, {}];
+        const path = this.props.match.url;
         return (
 
             <React.Fragment>
-
-                {
-                    loadingStatus === 'loaded' && item ?
-                        <Main container={true}>
-                            <Flower type={type} item={item}/>
+                <Switch>
+                    <Route exact path={path}>
+                        {
+                            loadingStatus === 'loaded' && item ?
+                                <Main className={'main_flower'} container={true}>
+                                    <Flower type={type} item={item} path={path}/>
+                                    <Showcase
+                                        className={'photoReviews'}
+                                        listingLink={false}
+                                        counter={8}
+                                        header={'Фотоотзывы'}
+                                        showcaseType={'photoReview'}
+                                        goods={photoArr}
+                                    />
+                                    {
+                                        type !== 'additionalItems'
+                                        &&
+                                        <Showcase
+                                            header={'С этим товаром также приобретают'}
+                                            listingLink={false}
+                                            showcaseType={'additional'}
+                                            goods={additional}
+                                        />
+                                    }
+                                </Main>
+                                :
+                                <Preloader className={'preloader_fullpage'}/>
+                        }
+                    </Route>
+                    <Route path={`${path}/composition`}>
+                        <Main className={'main_composition'}>
+                            {item && <Composition composition={item.composition}/>}
+                        </Main>
+                    </Route>
+                    <Route path={`${path}/reviews`}>
+                        <Main className={'main_reviews'}>
                             <Showcase
-                                className={'photoReviews'}
                                 listingLink={false}
                                 counter={8}
                                 header={'Фотоотзывы'}
                                 showcaseType={'photoReview'}
                                 goods={photoArr}
+                                isMobile={true}
                             />
+                        </Main>
+                    </Route>
+                    <Route path={`${path}/desc`}>
+                        <Main className={'main_reviews'}>
                             {
-                                type !== 'additionalItems'
-                                &&
-                                <Showcase
-                                    header={'С этим товаром также приобретают'}
-                                    listingLink={false}
-                                    showcaseType={'additional'}
-                                    goods={additional}
+                                item && <MobileDescription
+                                    src={item.mobileRetouch}
+                                    desc={'Букет станет отличным подарком для девушки на любой праздник. Известная композиция Ларии Лучевой подарит приятные эмоции \n' +
+                                    'и тонкий цветочный аромат белых роз и статицы'}
+                                    title={item.name}
                                 />
                             }
                         </Main>
-                        :
-                        <Preloader className={'preloader_fullpage'}/>
-                }
+                    </Route>
+                </Switch>
             </React.Fragment>
         )
     }

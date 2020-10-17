@@ -18,7 +18,6 @@
 .main__flex-inner {
     display: flex;
     justify-content: space-between;
-    flex-direction: column;
 }
 
 .main_listing .main__flex-inner {
@@ -34,6 +33,10 @@
         padding-top: 11px;
         background-color: var(--bg-color);
         position: relative;
+    }
+
+    .main__flex-inner {
+        flex-direction: column
     }
 
     .main_listing .main__flex-inner {
@@ -70,5 +73,17 @@
 
     .main__flex-inner {
         margin-bottom: 9px;
+    }
+
+    .main_flower {
+        padding-top: 0;
+    }
+
+    .main_composition {
+        padding-bottom: 10px;
+    }
+
+    .main_reviews {
+        padding-bottom: 10px;
     }
 }
