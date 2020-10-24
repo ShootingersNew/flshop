@@ -64,7 +64,7 @@
 
     .cartPrice__table {
         position: fixed;
-        bottom: 0;
+        bottom: 50px;
         width: 100%;
         background-color: white;
         padding: 25px 0;
@@ -107,5 +107,17 @@
     .cartPrice__percents_mobile {
         display: inline-block;
         margin-left: 13px;
+    }
+
+    .cartPrice_checkout .cartPrice__tr_delivery {
+        display: table-row;
+    }
+
+    .cartPrice_checkout {
+        border-top: 10px solid var(--bg-color);
+    }
+
+    .cartPrice_checkout .cartPrice__salePrice {
+        color: #79BA38;
     }
 }

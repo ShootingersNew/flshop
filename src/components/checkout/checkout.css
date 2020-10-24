@@ -42,4 +42,56 @@
     .checkout {
         display: none;
     }
+
+    .checkout_mobile {
+        display: block;
+    }
+
+    .checkout__header {
+        display: none;
+    }
+
+    .checkout__form {
+        width: auto;
+    }
+
+    .checkout__name {
+        display: none;
+    }
+
+    .checkout__input {
+        margin-left: 0;
+        width: 100%
+    }
+
+    .checkout__confidentiality {
+        display: none;
+    }
+
+    .checkout__button {
+        width: 100%;
+        margin: 0;
+    }
+
+    .checkout__map {
+        background-color: #C4C4C4;
+        width: 100vw;
+        height: 520px;
+    }
+
+    .checkout__cartPrice {
+        position: static;
+    }
+
+    .checkout__form {
+        background-color: white;
+    }
+
+    .checkout__map {
+        margin-top: -2px;
+    }
+
+    .checkout__form {
+        padding-top: 30px;
+    }
 }

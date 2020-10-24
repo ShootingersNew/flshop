@@ -176,6 +176,7 @@
     top: 0;
     bottom: 0;
     margin: auto 0;
+    z-index: 10;
 }
 
 .bouquet__delete {

@@ -30,7 +30,7 @@
     }
 
     .main {
-        padding-top: 11px;
+        padding-top: 66px;
         background-color: var(--bg-color);
         position: relative;
     }
@@ -71,9 +71,6 @@
         left: 0;
     }
 
-    .main__flex-inner {
-        margin-bottom: 9px;
-    }
 
     .main_flower {
         padding-top: 0;
@@ -85,5 +82,10 @@
 
     .main_reviews {
         padding-bottom: 10px;
+    }
+
+    .main_checkout {
+        padding-top: 114px;
+        padding-bottom: 164px;
     }
 }

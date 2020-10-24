@@ -6,26 +6,42 @@ import classNames from 'classnames'
 import './input.css'
 
 Input.propTypes = {
-    classname: PropTypes.string,
+    className: PropTypes.string,
     onChange: PropTypes.func,
     value: PropTypes.string,
     placeholder: PropTypes.string,
     name: PropTypes.string.isRequired,
-    isValid: PropTypes.bool
+    isValid: PropTypes.bool,
+    type: PropTypes.string
 };
 export default function Input(props) {
     let inputClass = classNames({
         'input fonts__proximaNovaRegular': true,
         'input_isValid_true': props.isValid,
+        [`${props.className}`]: props.className
     });
-    return (
-        <input
+    let input;
+    if (props.type && props.type === 'textarea') {
+        input = <textarea
+
             name={props.name}
-            type="text"
-            className={inputClass + ' ' + props.className}
+            onChange={props.onChange ? props.onChange : null}
+            className={inputClass + ' input_textarea'}
             placeholder={props.placeholder}
             ref={props.register ? props.register : null}
             defaultValue={props.defaultValue ? props.defaultValue : null}
         />
-    )
+    } else {
+        input = <input
+
+            name={props.name}
+            onChange={props.onChange ? props.onChange : null}
+            type="text"
+            className={inputClass}
+            placeholder={props.placeholder}
+            ref={props.register ? props.register : null}
+            defaultValue={props.defaultValue ? props.defaultValue : null}
+        />
+    }
+    return input
 }

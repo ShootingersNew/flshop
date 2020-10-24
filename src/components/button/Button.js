@@ -17,7 +17,7 @@ const Button = React.forwardRef((props, ref) => {
         }
 
         const btnClassname = cn({
-            'button fonts__proximaNovaBold': true,
+            'button': true,
             [`button_${props.mod}`]: props.mod,
             [props.className]: props.className
         });

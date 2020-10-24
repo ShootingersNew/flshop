@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 import cn from 'classnames'
 //comps
 import withCartConnect from "../../hoc/withCartConnect"
+import Checkbox from "../checkbox/Checkbox"
 //utils
 import {regExpPrice, useIsMobile} from "../../config/utils"
 //styles
@@ -13,10 +14,14 @@ import './bouquet.css'
 
 Bouquet.propTypes = {
     item: PropTypes.object.isRequired,
-    addInCart: PropTypes.func.isRequired,
+    addToCart: PropTypes.func.isRequired,
     classname: PropTypes.string,
     mod: PropTypes.string,
-    itemAmount: PropTypes.number
+    itemAmount: PropTypes.number,
+    cartIsChecked: PropTypes.func,
+    cartCheckedItems: PropTypes.array,
+    cartCheckCheckbox: PropTypes.func
+
 };
 
 function Bouquet(props) {
@@ -47,8 +52,8 @@ function Bouquet(props) {
         showMobileNotification();
         props.addToCart(props.item)
     };
-    //prevent clicking on the link if e.target ==== add-to-cart button
 
+    //prevent clicking on the link if e.target ==== add-to-cart button
     const bouquetClasses = cn({
         bouquet: true,
         [`bouquet_${props.mod}`]: props.mod
@@ -57,7 +62,6 @@ function Bouquet(props) {
         'bouquet__counterButton  bouquet__counterButton_left icon-svg__minus': true,
         'bouquet__counterButton_active': props.item.amount !== 1
     });
-
     return (
         <>
             <article className={bouquetClasses}>
@@ -90,26 +94,44 @@ function Bouquet(props) {
                     </div>
                 </main>
                 {
+                    //cart footer
                     props.mod && props.mod === 'type_cart' ?
                         <React.Fragment>
                             <div className="bouquet__controls">
                                 <div className="bouquet__counter">
-                        <span onClick={() => {
-                            decreaseQuantity()
-                        }} className={decreaseButtonClasses}/>
+                                    {
+                                        (!isMobile || props.item.amount > 1) && <span
+                                            onClick={() => {
+                                                decreaseQuantity()
+                                            }}
+                                            className={decreaseButtonClasses}
+                                        />
+                                    }
                                     <span className={"bouquet__counterNumber"}>{props.item.amount}</span>
                                     <span onClick={() => {
                                         increaseQuantity()
                                     }}
                                           className={"bouquet__counterButton bouquet__counterButton_right icon-svg__plus"}/>
                                 </div>
+                                {
+                                    isMobile &&
+                                    <Checkbox
+                                        controlled={true}
+                                        checked={props.cartIsChecked(props.cartCheckedItems, props.item.id)}
+                                        name={'bouquet_chosen'}
+                                        onChange={() => props.cartCheckCheckbox(props.item.id)}
+                                    />
+                                }
                                 <div className="bouquet__sumPrice fonts__proximaNovaBold">
                                     {regExpPrice(props.item.sumPrice)}р
                                 </div>
                             </div>
-                            <span onClick={() => {
-                                props.removeItem(props.item.id)
-                            }} className="bouquet__delete icon-svg__cross"/>
+                            <span
+                                onClick={() => {
+                                    props.removeItems([props.item.id])
+                                }}
+                                className="bouquet__delete icon-svg__cross"
+                            />
                         </React.Fragment>
                         :
                         //default footer
@@ -128,7 +150,10 @@ function Bouquet(props) {
                         </React.Fragment>
                 }
             </article>
-            {isNotificationOpen && isMobile && <MobileNotification/>}
+            {
+                isNotificationOpen && isMobile &&
+                <MobileNotification/>
+            }
             {
                 isMobile && <Link
                     className={'bouquet__link'}

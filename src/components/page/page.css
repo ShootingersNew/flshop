@@ -17,7 +17,6 @@
 
 @media all and (max-width: 600px) {
     .page {
-        padding-top: 55px;
         position: relative;
     }
 }

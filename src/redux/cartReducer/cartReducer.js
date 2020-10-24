@@ -1,4 +1,4 @@
-import {ADD_ITEM, CHANGE_QUANTITY, REMOVE_ITEM} from "./actions"
+import {ADD_ITEM, CHANGE_QUANTITY, REMOVE_ITEMS} from "./actions"
 
 const initialState = {
     itemsIn: [
@@ -87,8 +87,11 @@ export default function cartReducer(state = initialState, action) {
                 ...state,
                 itemsIn: newArr
             };
-        case REMOVE_ITEM:
-            return {...state, itemsIn: state.itemsIn.filter((item) => (item.id !== action.id))};
+        case REMOVE_ITEMS:
+            return {
+                ...state,
+                itemsIn: state.itemsIn.filter((item) => (!action.selectedIdArr.includes(item.id)))
+            };
         default:
             return state
     }

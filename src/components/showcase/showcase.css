@@ -118,6 +118,10 @@
         overflow: hidden;
     }
 
+    .showcase__animation-wrapper:last-child {
+        margin-bottom: 0;
+    }
+
     .showcase__items {
         margin: 0;
     }

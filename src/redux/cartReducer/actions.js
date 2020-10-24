@@ -1,6 +1,6 @@
 export const ADD_ITEM = 'ADD_ITEM';
 export const CHANGE_QUANTITY = 'CHANGE_QUANTITY';
-export const REMOVE_ITEM = 'REMOVE_ITEM';
+export const REMOVE_ITEMS = 'REMOVE_ITEMS';
 
 function addItem(item) {
     return {
@@ -16,12 +16,11 @@ function changeQuantity(id, quantity) {
     }
 }
 
-function removeItem(id) {
-    console.log(id)
+function removeItems(selectedIdArr) {
     return {
-        type: REMOVE_ITEM,
-        id
+        type: REMOVE_ITEMS,
+        selectedIdArr
     }
 }
 
-export {addItem, changeQuantity, removeItem}
+export {addItem, changeQuantity, removeItems}

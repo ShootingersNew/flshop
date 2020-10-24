@@ -1,0 +1,78 @@
+.mobileButtons__wrapper {
+    display: none;
+}
+
+.mobileButtons__wrapper {
+    position: fixed;
+    height: 50px;
+    width: 100%;
+    background-color: white;
+}
+
+.mobileButtons__wrapper_top {
+    top: 57px;
+}
+
+.mobileButtons__wrapper_bot {
+    bottom: 0;
+}
+
+.mobileButtons__button {
+    width: 50%;
+    height: 100%;
+    border: unset;
+    padding: 0;
+    display: inline-block;
+    font-family: "Proxima Nova Regular", Arial, sans-serif;
+    line-height: 50px;
+    text-align: center;
+}
+
+.mobileButtons__button_transparent {
+    color: red;
+}
+
+.mobileButtons__button_oneClick {
+    color: red;
+}
+
+.mobileButtons__button_add {
+    color: #5590C7;
+    font-size: 14px;
+    text-align: right;
+    padding-right: calc((20 / 340) * 100vw);
+}
+
+.mobileButtons__button_remove {
+    color: #FD0000;
+    width: 60%;
+    font-size: 14px;
+    text-align: left;
+    padding-left: calc((20 / 340) * 100vw);
+}
+
+.mobileButtons__button_oneClick,
+.mobileButtons__button_remove {
+    width: 56%;
+}
+
+.mobileButtons__button_add,
+.mobileButtons__button_checkout {
+    width: 44%;
+}
+
+.mobileButtons__button_checkout {
+    font-family: "Proxima Nova Bold", Arial, sans-serif;
+    display: inline-block;
+    background-color: #fd0000;
+    color: white;
+}
+
+.mobileButtons__button_remove .mobileButtons__text {
+}
+
+@media all and (max-width: 600px) {
+    .mobileButtons__wrapper {
+        display: flex;
+    }
+}

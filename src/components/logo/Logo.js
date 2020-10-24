@@ -9,11 +9,10 @@ import {useIsMobile} from "../../config/utils";
 function Logo({history}) {
     const isMobile = useIsMobile();
     const isExact = useRouteMatch().isExact;
-    console.log(isExact);
     return (
         <div className="logo__wrapper">
             {
-                isMobile && !isExact ?
+                isMobile && !!!isExact ?
                     <button className={'logo__backButton'} onClick={() => history.goBack()}>
                         <img src={back} alt="Назад"/>
                     </button>
