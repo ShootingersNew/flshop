@@ -16,3 +16,20 @@
 .callModalView__confidentiality .confidentiality__text {
     width: 230px;
 }
+
+@media all and (max-width: 600px) {
+    .callModalView__btn {
+        width: 100%;
+    }
+
+    .callModalView__confidentiality {
+        display: none;
+    }
+
+    .callModalView__header {
+        padding-left: 36px;
+        font-weight: normal;
+        margin: 11px 0 0;
+        line-height: 48px;
+    }
+}

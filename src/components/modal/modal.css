@@ -30,3 +30,6 @@
     margin-bottom: 14px;
     margin-left: 36px;
 }
+
+@media all and (max-width: 600px) {
+}

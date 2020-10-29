@@ -1,8 +1,10 @@
 import React from "react"
 import InfoContainer from "./InfoContainer"
 import Container from "../container/Container";
+import {useIsMobile} from "../../config/utils";
 
 const CompositionDescription = (props) => {
+    const isMobile = useIsMobile();
     return (
         <InfoContainer key={props.name} name={props.name} render={(name) => {
             return (
@@ -11,10 +13,13 @@ const CompositionDescription = (props) => {
                         <div className="composition__desc-text">
                             <Container className={'container_mobile'}>
                                 {/*for mobiles */}
-                                <div className={'composition__link composition__link_mobile'}>
-                                    <span className={'composition__linkText fonts__proximaNovaBold'}>{props.name}</span>
-                                    <span className="composition__amount"> {props.amount}</span>
-                                </div>
+                                {
+                                    isMobile && <div className={'composition__link composition__link_mobile'}>
+                                        <span
+                                            className={'composition__linkText fonts__proximaNovaBold'}>{props.name}</span>
+                                        <span className="composition__amount"> {props.amount}</span>
+                                    </div>
+                                }
 
                                 Тут была бы информация о цветке, на который вы навелись ( {name} ) но это лишь пример.
                                 Удачного дня

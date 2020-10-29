@@ -20,7 +20,8 @@ Showcase.propTypes = {
     goods: PropTypes.array.isRequired,
     mobileLink: PropTypes.bool,
     listingLink: PropTypes.bool,
-    isMobile: PropTypes.bool
+    isMobile: PropTypes.bool,
+    mobileContainer: PropTypes.bool
 };
 
 function Showcase(props) {
@@ -101,9 +102,13 @@ function Showcase(props) {
         showcase__counter: true,
         showcase__counter_small: props.showcaseType !== 'listing' && props.listingLink !== false
     });
+    const containerClassNames = cn({
+        showcase__container: true,
+        container_mobile: props.mobileContainer
+    });
     return (
         <div className={className}>
-            <Container className={'showcase__container'}>
+            <Container className={containerClassNames}>
                 <div className="showcase__header">
                     <span className="showcase__headerText">{props.header}</span>
                     {

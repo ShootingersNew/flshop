@@ -28,14 +28,24 @@
 
     .listingSidebar__mobileButton {
         display: block;
-        position: sticky;
-        bottom: 0;
+        /*position: sticky;*/
+        /*bottom: 55px;*/
         height: 46px;
         float: right;
         width: 140px;
-        margin-left: auto;
-        margin-top: -46px;
-        z-index: 20;
+        /*margin-left: auto;*/
+        /*margin-top: -46px;*/
+
+        position: relative;
+        z-index: 2323423;
+    }
+
+    .listingSidebar__sticky {
+        position: fixed;
+        bottom: 55px;
+        width: 100vw;
+        left: 0;
+        right: 0;
     }
 
     .listingSidebar__container {

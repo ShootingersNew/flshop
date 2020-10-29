@@ -32,7 +32,7 @@ export default function Header() {
                         content={<CallModalView/>}
                     />
                 </div>
-                <Search class={'header__search'}/>
+                <Search className={'header__search'}/>
                 {/*линк для того, чтобы по href найти и отобразить блок(компонент) с соответвующим айди*/}
                 <UserNav class={'header__userNav'}/>
             </div>

@@ -45,6 +45,7 @@
 
     .checkout_mobile {
         display: block;
+        padding-bottom: 0;
     }
 
     .checkout__header {
@@ -93,5 +94,9 @@
 
     .checkout__form {
         padding-top: 30px;
+    }
+
+    .checkout__label_comment {
+        margin-top: 10px;
     }
 }

@@ -19,9 +19,12 @@ UserNav.propTypes = {
 
 function UserNav(props) {
     let className = cn({
-        [props.class]: props.class,
         userNav: true,
         userNav_disabled: props.length === 0
+    });
+    let wrapperClassname = cn({
+        userNav__wrapper: true,
+        [props.class]: props.class
     });
     const clickHandler = (e) => {
         if (props.length === 0) {
@@ -29,16 +32,30 @@ function UserNav(props) {
         }
     };
     return (
-        <Link onClick={clickHandler} to={'/cart'} className={className}>
-            <span className="userNav__userIco icon-svg__userico"/>
-            <div className="userNav__cart">
-                <span className="userNav__cartIco icon-svg__cartico"/>
+        <div className={wrapperClassname}>
+            <Link onClick={clickHandler} to={'/cart'} className={className}>
+                <span className="userNav__userIco icon-svg__userico"/>
+                <div className="userNav__cart">
+                    <span className="userNav__cartIco icon-svg__cartico"/>
 
-                <span className="userNav__itemCounter">{props.length}</span>
-                <span className="userNav__separator"> / </span>
-                <span className="userNav__price">{regExpPrice(props.price)}р</span>
-            </div>
-        </Link>
+                    <span className="userNav__itemCounter">{props.length}</span>
+                    <span className="userNav__separator"> / </span>
+                    <span className="userNav__price">{regExpPrice(props.price)}р</span>
+                </div>
+            </Link>
+
+            {/*<div className="userNav__popup">*/}
+            {/*    <div className="userNav__header">*/}
+            {/*        <span>{props.length}</span><span></span><span></span><span></span>*/}
+            {/*    </div>*/}
+            {/*    <div className="userNav__content">*/}
+
+            {/*    </div>*/}
+            {/*    <div className="userNav__buttons">*/}
+
+            {/*    </div>*/}
+            {/*</div>*/}
+        </div>
     )
 }
 

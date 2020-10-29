@@ -1,3 +1,5 @@
+@import "./../_settings/_variables.css";
+
 .footer {
     height: 256px;
     padding-bottom: 39px;
@@ -115,6 +117,8 @@
     .footer {
         height: auto;
         background-color: white;
+        border-top: 40px solid var(--bg-color);
+        border-bottom: 32px solid var(--bg-color);
     }
 
     .footer__container {

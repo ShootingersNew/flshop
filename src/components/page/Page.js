@@ -7,22 +7,24 @@ import Footer from "../footer/Footer"
 import './../fonts/__proximaNova/_regular/fonts__proximaNova_regular.css'
 import './page.css'
 import arr from '../../config/json/menu.json'
-import {withRouter} from 'react-router-dom';
-import {useIsMobile} from "../../config/utils";
+import {withRouter} from 'react-router-dom'
+import {useIsMobile} from "../../config/utils"
+import MobileFooterNav from "../mobileFooterNav/MobileFooterNav";
 
 const Page = (props) => {
     const isMobile = useIsMobile();
-    console.log(props);
     return (
         <div className={'page fonts__proximaNovaRegular'}>
             <Header/>
             {props.children}
-            {console.log(props.match.isExact || !!isMobile)}
             {
                 (props.match.isExact || !!!isMobile) &&
                 <Footer
                     navs={arr.footer}
                 />
+            }
+            {
+                isMobile && <MobileFooterNav/>
             }
         </div>
     )

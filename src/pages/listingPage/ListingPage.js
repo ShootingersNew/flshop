@@ -10,6 +10,7 @@ import AsideBanners from "../../components/asideBanners/AsideBanners"
 //utils
 import {FilterItems} from "../../config/utils";
 import Button from "../../components/button/Button";
+import Container from "../../components/container/Container";
 
 class ListingPage extends React.Component {
     constructor(props) {
@@ -134,9 +135,11 @@ class ListingPage extends React.Component {
                     )}
 
                     mobileButton={(clickHandler) => (
-                        <Button onClick={clickHandler} className={'listingSidebar__mobileButton'}>
-                            Фильтры
-                        </Button>
+                        <Container className={'container_mobile listingSidebar__sticky'}>
+                            <Button onClick={clickHandler} className={'listingSidebar__mobileButton'}>
+                                Фильтры
+                            </Button>
+                        </Container>
                     )}
 
                 />

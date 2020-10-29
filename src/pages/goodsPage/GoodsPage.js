@@ -11,6 +11,8 @@ import {loadImit} from "../../config/utils"
 import {Route, Switch} from "react-router-dom"
 import Composition from "../../components/composition/Composition"
 import MobileDescription from "../../components/mobileDescription/MobileDescription.js";
+import MobileButtons from "../../components/mobileButtons/MobileButtons";
+import withCartConnect from "../../hoc/withCartConnect";
 
 class GoodsPage extends React.Component {
     constructor(props) {
@@ -80,36 +82,71 @@ class GoodsPage extends React.Component {
                     <Route exact path={path}>
                         {
                             loadingStatus === 'loaded' && item ?
-                                <Main className={'main_flower'} container={true}>
-                                    <Flower type={type} item={item} path={path}/>
-                                    <Showcase
-                                        className={'photoReviews'}
-                                        listingLink={false}
-                                        counter={8}
-                                        header={'Фотоотзывы'}
-                                        showcaseType={'photoReview'}
-                                        goods={photoArr}
-                                    />
-                                    {
-                                        type !== 'additionalItems'
-                                        &&
-                                        <Showcase
-                                            header={'С этим товаром также приобретают'}
-                                            listingLink={false}
-                                            showcaseType={'additional'}
-                                            goods={additional}
-                                        />
+                                <Main
+                                    className={'main_flower'}
+                                    container={true}
+                                    content={
+                                        <>
+                                            <Flower addInCart={this.props.addInCart} type={type} item={item}
+                                                    path={path}/>
+                                            <Showcase
+                                                className={'photoReviews'}
+                                                listingLink={false}
+                                                counter={8}
+                                                header={'Фотоотзывы'}
+                                                showcaseType={'photoReview'}
+                                                goods={photoArr}
+                                                mobileContainer
+                                            />
+                                            {
+                                                type !== 'additionalItems'
+                                                &&
+                                                <Showcase
+                                                    header={'С этим товаром также приобретают'}
+                                                    listingLink={false}
+                                                    showcaseType={'additional'}
+                                                    goods={additional}
+                                                    mobileContainer
+                                                />
+                                            }
+
+                                        </>
                                     }
+                                    mobileButton={
+                                        () => (
+                                            <MobileButtons
+                                                bot={[
+                                                    {
+                                                        name: 'В корзину',
+                                                        fun: () => {
+                                                            this.props.addInCart(item.id)
+                                                        },
+                                                    },
+                                                    {
+                                                        name: 'Купить в один клик',
+                                                        fun: () => {
+                                                            return false
+                                                        },
+                                                        type: 'oneClick',
+                                                        btnMod: 'transparent'
+                                                    }
+                                                ]}
+                                            />
+                                        )
+                                    }
+                                >
                                 </Main>
                                 :
                                 <Preloader className={'preloader_fullpage'}/>
                         }
                     </Route>
+
                     <Route path={`${path}/composition`}>
                         <Main className={'main_composition'}>
                             {item && <Composition composition={item.composition}/>}
                         </Main>
                     </Route>
+
                     <Route path={`${path}/reviews`}>
                         <Main className={'main_reviews'}>
                             <Showcase
@@ -122,6 +159,7 @@ class GoodsPage extends React.Component {
                             />
                         </Main>
                     </Route>
+
                     <Route path={`${path}/desc`}>
                         <Main className={'main_reviews'}>
                             {
@@ -134,10 +172,11 @@ class GoodsPage extends React.Component {
                             }
                         </Main>
                     </Route>
+
                 </Switch>
             </React.Fragment>
         )
     }
 }
 
-export default GoodsPage
+export default withCartConnect(GoodsPage)

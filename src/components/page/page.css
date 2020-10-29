@@ -18,5 +18,7 @@
 @media all and (max-width: 600px) {
     .page {
         position: relative;
+        padding-bottom: 56px;
+        box-sizing: border-box;
     }
 }

@@ -9,6 +9,7 @@
 .container_mobile {
     margin: 0;
     width: unset;
+    max-width: unset;
 }
 
 @media all and (max-width: 600px ) {

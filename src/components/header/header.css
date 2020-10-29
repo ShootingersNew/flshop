@@ -34,8 +34,7 @@
 }
 
 .header__userNav {
-    position: absolute;
-    right: 0;
+    margin-left: auto;
 }
 
 .header__search {
@@ -84,7 +83,7 @@
     }
 
     .header__catalogButton {
-        margin-left: 24px;
+        margin-left: 0;
         width: 59px;
         line-height: 55px;
         text-align: center;

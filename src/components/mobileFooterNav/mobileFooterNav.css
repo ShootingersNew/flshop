@@ -1,0 +1,40 @@
+@import "./../_settings/_variables.css";
+
+.mobileFooterNav__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+.mobileFooterNav {
+    position: fixed;
+    bottom: 0;
+    height: 55px;
+    line-height: 55px;
+    width: 100%;
+    background-color: white;
+    z-index: 11;
+    border-top: 1px solid var(--bg-color);
+}
+
+.mobileFooterNav__listItem:not(:last-child) {
+    margin-right: 25px;
+}
+
+.mobileFooterNav__listItem {
+    display: inline-block;
+}
+
+.mobileFooterNav__link {
+    color: #8C8C8C;
+}
+
+.mobileFooterNav_icon {
+    float: right;
+}
+
+.mobileFooterNav_icon a {
+    position: relative;
+    bottom: -7px;
+}

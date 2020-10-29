@@ -1,3 +1,4 @@
+@import "./../_settings/_variables.css";
 .mobileButtons__wrapper {
     display: none;
 }
@@ -7,6 +8,7 @@
     height: 50px;
     width: 100%;
     background-color: white;
+    z-index: 11;
 }
 
 .mobileButtons__wrapper_top {
@@ -14,7 +16,11 @@
 }
 
 .mobileButtons__wrapper_bot {
-    bottom: 0;
+    bottom: 55px;
+    -webkit-box-shadow: inset 0px -1px 0px 0px var(--bg-color);
+    -moz-box-shadow: inset 0px -1px 0px 0px var(--bg-color);
+    box-shadow: inset 0px -1px 0px 0px var(--bg-color);
+    border-top: 1px solid var(--bg-color);
 }
 
 .mobileButtons__button {

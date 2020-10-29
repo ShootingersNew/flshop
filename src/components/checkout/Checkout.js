@@ -77,7 +77,7 @@ export default function Checkout(props) {
                                   props.map && props.map(register, isValidInput)
                               }
                               <Container className={'container container_mobile'}>
-                                  <label className={'checkout__label'}>
+                                  <label className={'checkout__label checkout__label_comment'}>
                                       <span className="checkout__name"> Комментарий</span>
 
                                       <Input

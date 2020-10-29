@@ -50,6 +50,7 @@ class MainPage extends React.Component {
                     idx={'showcase_1'}
                     showcaseType={'mini'}
                     counter={6}
+
                 />
                 <Banner
                     key={2}
@@ -64,6 +65,7 @@ class MainPage extends React.Component {
                     idx={'showcase_2'}
                     showcaseType={'mini'}
                     counter={11}
+
                 />
 
                 <OrderControl/>

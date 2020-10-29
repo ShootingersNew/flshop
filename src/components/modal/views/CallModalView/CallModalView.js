@@ -6,12 +6,13 @@ import Form from "../../../form/Form"
 import Input from "../../../input/Input"
 import Button from "../../../button/Button"
 import Confidentiality from "../../../confidentiality/Confidentiality"
+import Container from "../../../container/Container"
 //styles
 import './callModalView.css'
 //config
 import {mask} from "../../../../config/config"
 
-export default function CallModalView() {
+export default function CallModalView({title}) {
     return (
         <Form
             submitHandler={(data) => {
@@ -19,7 +20,10 @@ export default function CallModalView() {
             }}
             render={
                 ({register, control, formState, getValues, errors}, isValidInput, Controller) => (
-                    <React.Fragment>
+                    <Container className={'container_mobile'}>
+                        {
+                            title && <h3 className={'callModalView__header'}>{title}</h3>
+                        }
                         <Input
                             className={'callModalView__input'}
                             isValid={isValidInput('name')}
@@ -61,7 +65,7 @@ export default function CallModalView() {
                                 </React.Fragment>
                             }
                         />
-                    </React.Fragment>
+                    </Container>
                 )
             }/>
 

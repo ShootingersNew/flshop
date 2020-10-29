@@ -1,3 +1,4 @@
+@import "../_settings/_variables.css";
 .userNav {
     text-decoration: none;
     color: inherit;
@@ -31,4 +32,20 @@
 
 .userNav_disabled {
     opacity: 0.5;
+}
+
+.userNav__popup {
+    width: 412px;
+    height: 415px;
+    background-color: red;
+    position: absolute;
+    z-index: 20;
+    border: 1px solid var(--bg-color);
+    padding: 45px 54px 54px;
+    box-sizing: border-box;
+    right: 0;
+    top: 0;
+}
+
+.userNav__wrapper {
 }

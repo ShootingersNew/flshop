@@ -14,7 +14,7 @@ function Logo({history}) {
             {
                 isMobile && !!!isExact ?
                     <button className={'logo__backButton'} onClick={() => history.goBack()}>
-                        <img src={back} alt="Назад"/>
+                        <img className={'logo__backButtonImg'} src={back} alt="Назад"/>
                     </button>
                     :
                     <Link className={'logo'} to={'/'}>

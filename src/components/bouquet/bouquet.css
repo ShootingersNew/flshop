@@ -308,8 +308,7 @@
     }
 
     .bouquet__mobileNotification {
-        animation: showNotification 4s;
-
+        animation: showNotification 4.1s;
         position: absolute;
         bottom: 0;
         height: 50px;
@@ -317,7 +316,7 @@
         width: 100%;
         text-align: center;
         background-color: white;
-        z-index: 121212;
+        /*z-index: 10;*/
         border-top: 1px solid var(--bg-color);
     }
 

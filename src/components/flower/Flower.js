@@ -99,7 +99,7 @@ function Flower(props) {
                                             Артикул<span>{item.vendorCode}</span>
                                         </div>
                                         <div className="flower__mark">
-                                            <img src={star} alt="star"/> {item.mark}
+                                            <img className={'flower__markIcon'} src={star} alt="star"/> {item.mark}
                                         </div>
                                         <div className="flower__reviewsLink link">8 отзывов</div>
                                     </div>
