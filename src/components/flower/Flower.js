@@ -30,17 +30,18 @@ function Flower(props) {
     const {item, type, path} = props;
     return (
         <React.Fragment>
-            {item ?
-                <div className="flower__wrapper">
-                    <article className={'flower'}>
-                        <Gallery item={item}/>
+            {
+                item ?
+                    <div className="flower__wrapper">
+                        <article className={'flower'}>
+                            <Gallery item={item}/>
 
-                        {
-                            isMobile ?
+                            {
+                                isMobile ?
 
-                                // MOBILE VER
-                                <>
-                                    <div className="flower__sticky">
+                                    // MOBILE VER
+                                    <>
+                                        <div className="flower__sticky">
                                         <Container>
                                             <div className="flower__price">
                                             <span
@@ -53,7 +54,8 @@ function Flower(props) {
                                                             className="flower__salePrice">{item.salePrice}р</span>
                                                             <span
                                                                 className="flower__salePercents"><span>{item.percents}</span></span>
-                                                        </div> : null
+                                                        </div>
+                                                        : null
                                                 }
                                             </div>
                                             <h1 className="flower__header">{item.name}</h1>
@@ -155,7 +157,6 @@ function Flower(props) {
 
                 :
                 null
-                //    todo сделать страницу error
             }
 
         </React.Fragment>

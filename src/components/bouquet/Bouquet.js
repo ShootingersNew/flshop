@@ -137,8 +137,12 @@ function Bouquet(props) {
                         //default footer
                         <React.Fragment>
                             <footer className={'bouquet__footer'}>
-                                <Link className={'link bouquet__footerLink'}
-                                      to={'/goods/' + props.item.type + '/' + props.item.id}>Подробнее</Link>
+                                <Link
+                                    className={'link bouquet__footerLink'}
+                                    to={'/goods/' + props.item.type + '/' + props.item.id}
+                                >
+                                    Подробнее
+                                </Link>
                                 <ButtonWithRefs ref={buttonRef} addTo={addTo} {...props}/>
                             </footer>
                             {

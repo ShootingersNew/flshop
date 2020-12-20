@@ -20,7 +20,7 @@ Checkout.propTypes = {
     submitCheckout: PropTypes.func.isRequired,
     popupContent: PropTypes.object.isRequired,
     className: PropTypes.string,
-    map: PropTypes.element
+    map: PropTypes.func
 };
 
 export default function Checkout(props) {

@@ -13,7 +13,25 @@
     margin-top: 74px;
 }
 
+.listingSidebar__sticky {
+    display: none;
+}
+
+@media all and (max-width: 1100px) and (min-width: 601px) {
+    .listingSidebar__container {
+        padding: 0;
+    }
+
+    .listingSidebar {
+        width: 254px;
+    }
+}
+
 @media all and (max-width: 600px) {
+    .listingSidebar__sticky {
+        display: block;
+    }
+
     .listingSidebar {
         z-index: 999999;
         width: 100%;

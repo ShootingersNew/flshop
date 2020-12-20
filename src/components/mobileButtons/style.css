@@ -32,6 +32,11 @@
     font-family: "Proxima Nova Regular", Arial, sans-serif;
     line-height: 50px;
     text-align: center;
+    border: none;
+}
+
+.mobileButtons__button:disabled {
+    border: none;
 }
 
 .mobileButtons__button_transparent {

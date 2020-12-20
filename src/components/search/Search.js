@@ -82,16 +82,17 @@ export default class Search extends React.Component {
             }
 
         };
-        return arr().map((result) => {
-                const res = result.item || result;
-                return (
-                    <li
-                        className={'search__li'}
-                        onClick={() => {
-                            this.setState({isSearchTouched: false})
-                        }}
-                    >
-                        <Link className={'search__link'} to={'/goods/allItems/' + res.id}>
+        return arr().map((result, i) => {
+            const res = result.item || result;
+            return (
+                <li
+                    key={i}
+                    className={'search__li'}
+                    onClick={() => {
+                        this.setState({isSearchTouched: false})
+                    }}
+                >
+                    <Link className={'search__link'} to={'/goods/allItems/' + res.id}>
                             <Container className="container_mobile search__linkContainer">
                                 <img src={res.src} alt="" className="search__img"/>
                                 <div className="search__info">
@@ -100,9 +101,9 @@ export default class Search extends React.Component {
                                         {res.composition && res.composition.map((item, idx) => {
 
                                             if (this.props.defaultItems && idx === 1) {
-                                                return <span> {item.name + ' ' + item.amount + '..'}</span>
+                                                return <span key={i}> {item.name + ' ' + item.amount + '..'}</span>
                                             } else {
-                                                return <span> {item.name + ' ' + item.amount + ', '}</span>
+                                                return <span key={i}> {item.name + ' ' + item.amount + ', '}</span>
                                             }
                                         })}
                                     </div>

@@ -27,9 +27,30 @@
 .main_white {
     background-color: white;
 }
+@media all and (max-width: 1100px) and (min-width: 601px) {
+    .main_checkout .main__aside {
+        display: none;
+    }
+
+    .main {
+        padding-bottom: 10px;
+    }
+
+    .main__container {
+        width: 100%;
+    }
+
+    .main__content {
+        width: 100%;
+    }
+}
 
 @media all and (max-width: 600px) {
     .main__content {
+        width: 100%;
+    }
+
+    .main_listing .main__content {
         width: 100%;
     }
 

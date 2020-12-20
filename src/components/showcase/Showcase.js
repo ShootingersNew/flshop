@@ -39,10 +39,10 @@ function Showcase(props) {
             </div>
         ));
 
-        let card = (item) => {
+        let card = (item, i) => {
             if (props.showcaseType && props.showcaseType === 'photoReview') {
                 return (
-                    <div className="showcase__animation-wrapper">
+                    <div key={i} className="showcase__animation-wrapper">
                         <PhotoReview/>
                     </div>
                 )
@@ -56,8 +56,8 @@ function Showcase(props) {
         };
 
         let mappedItems = () => {
-            return props.goods.map((item) => {
-                return card(item)
+            return props.goods.map((item, i) => {
+                return card(item, i)
             })
         };
 
@@ -86,10 +86,11 @@ function Showcase(props) {
     };
 
     function mapFilterTags(arr) {
-        return arr.map((filterTag) => {
+        return arr.map((filterTag, i) => {
             return (
 
-                <div className="showcase__filter " onClick={() => props.uncheckCheckbox(filterTag.name, filterTag.val)}>
+                <div key={i} className="showcase__filter "
+                     onClick={() => props.uncheckCheckbox(filterTag.name, filterTag.val)}>
                     {filterTag.val}
                     <span className="showcase__filterCounter">{' ' + filterTag.resultCounter}</span>
                     <span
@@ -126,6 +127,7 @@ function Showcase(props) {
                             </React.Fragment>
                             : false
                     }
+                    {/*filters*/}
                     {
                         props.showcaseType === 'listing' &&
                         <div className="showcase__filters">
@@ -134,7 +136,9 @@ function Showcase(props) {
                     }
                 </div>
 
-                {renderItems()}
+                {
+                    renderItems()
+                }
 
                 {
                     props.mobileLink &&

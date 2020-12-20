@@ -10,3 +10,12 @@
     height: 473px;
     width: 270px;
 }
+
+@media all and (max-width: 1100px) {
+    .verticalBanner_tall {
+        width: 213px;
+        background-size: cover;
+        background-position: center;
+    }
+
+}

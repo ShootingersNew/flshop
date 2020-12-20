@@ -37,6 +37,15 @@
 .checkout__footer {
     display: flex;
 }
+@media all and (max-width: 1100px) and (min-width: 601px) {
+    .checkout__form {
+        width: 750px;
+    }
+
+    .checkout__button {
+        margin-left: 144px;
+    }
+}
 
 @media all and (max-width: 600px) {
     .checkout {

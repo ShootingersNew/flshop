@@ -12,9 +12,11 @@ export default function Main(props) {
     const className = props.className ? props.className : '';
     const openButtonClickHandler = () => {
         setIsOpenAside(true)
+        document.body.style.overflow = 'hidden'
     };
     const closeButtonClickHandler = () => {
         setIsOpenAside(false)
+        document.body.style.overflow = 'unset'
     };
     const asideClassNames = cn({
         main__aside: true,
@@ -36,7 +38,7 @@ export default function Main(props) {
                         </div>
                         <div className={asideClassNames}>
                             {
-                               props.aside && props.aside(closeButtonClickHandler)
+                                props.aside && props.aside(closeButtonClickHandler)
                             }
                         </div>
                         {

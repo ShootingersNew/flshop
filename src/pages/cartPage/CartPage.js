@@ -158,11 +158,12 @@ class CartPage extends React.Component {
                                             [
                                                 {
                                                     name: 'Выбрать все',
+                                                    alt: "Все выбрано",
                                                     fun: (e) => {
                                                         e.preventDefault();
                                                         this.props.checkCheckbox()
                                                     },
-                                                    isActive: true,
+                                                    isActive: false,
                                                     type: 'add',
                                                     btnMod: 'transparent'
                                                 },
@@ -172,7 +173,7 @@ class CartPage extends React.Component {
                                                         e.preventDefault();
                                                         this.props.removeItems(this.props.checkedItems)
                                                     },
-                                                    isActive: true,
+                                                    isActive: false,
                                                     type: 'remove',
                                                     btnMod: 'transparent'
                                                 }
@@ -215,7 +216,8 @@ class CartPage extends React.Component {
                                         <div className="checkout__map map">
                                             <YMap/>
                                         </div>
-                                    </>)
+                                    </>
+                                )
                             }
                         >
                             <CartPrice

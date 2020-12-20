@@ -43,13 +43,13 @@ const MobileButtons = ({top, bot}) => {
                         key={idx}
                         onClick={button.fun}
                         mod={button.btnMod}
-                        disabled={button.isActive ? !button.isActive : false}
+                        disabled={button.isActive !== undefined ? button.isActive : undefined}
                         className={`mobileButtons__button mobileButtons__button_${side} mobileButtons__button_${button.type}`}
                     >
                <span className="mobileButtons__text">
-                    {
-                        !!button.isActive || !button.alt ? button.name : button.alt
-                    }
+                   {
+                       !!!button.isActive || !button.alt ? button.name : button.alt
+                   }
                </span>
                     </Button>
                 )

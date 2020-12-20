@@ -117,18 +117,21 @@ class GoodsPage extends React.Component {
                                             <MobileButtons
                                                 bot={[
                                                     {
-                                                        name: 'В корзину',
+                                                        type: "addToCard",
+                                                        name: "В корзину",
+                                                        isActive: this.props.checkInCart(item.id),
+                                                        alt: "Уже в корзине",
                                                         fun: () => {
-                                                            this.props.addInCart(item.id)
+                                                            this.props.addToCart(item)
                                                         },
                                                     },
                                                     {
-                                                        name: 'Купить в один клик',
+                                                        name: "Купить в один клик",
                                                         fun: () => {
                                                             return false
                                                         },
-                                                        type: 'oneClick',
-                                                        btnMod: 'transparent'
+                                                        type: "oneClick",
+                                                        btnMod: "transparent"
                                                     }
                                                 ]}
                                             />
@@ -140,7 +143,6 @@ class GoodsPage extends React.Component {
                                 <Preloader className={'preloader_fullpage'}/>
                         }
                     </Route>
-
                     <Route path={`${path}/composition`}>
                         <Main className={'main_composition'}>
                             {item && <Composition composition={item.composition}/>}

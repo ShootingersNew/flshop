@@ -12,6 +12,20 @@
     max-width: unset;
 }
 
+@media all and (max-width: 1100px ) and (min-width: 601px) {
+    .container {
+        height: unset;
+        max-width: unset;
+        width: auto;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    .container_mobile {
+        padding: 0;
+    }
+}
+
 @media all and (max-width: 600px ) {
     .container {
         height: unset;
