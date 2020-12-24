@@ -10,8 +10,10 @@ const Composition = ({composition, className}) => {
 
         let renderTable = () => {
             let tableArr = [];
-            for (let i = 0; i < composition.length; i = i + 3) {
-                tableArr.push(makeRow(i))
+            if (composition) {
+                for (let i = 0; i < composition.length; i = i + 3) {
+                    tableArr.push(makeRow(i))
+                }
             }
             return tableArr
         };
