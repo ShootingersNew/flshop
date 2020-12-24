@@ -10,7 +10,7 @@ const MobileButtons = ({top, bot}) => {
         name: PropTypes.string.isRequired,
         alt: PropTypes.string,
         fun: PropTypes.func,
-        type: PropTypes.oneOf(['add', 'remove', 'checkout', 'oneClick']),
+        type: PropTypes.oneOf(['add', 'remove', 'checkout', 'oneClick', 'addToCard']),
         isActive: PropTypes.bool
     };
     MobileButtons.propTypes = {
