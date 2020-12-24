@@ -17,7 +17,7 @@ const MobileFooterNav = () => {
                     </li>
                     <li className="mobileFooterNav__listItem">
                         <Link to={'/search'} className="mobileFooterNav__link mobileFooterNav_active">
-                            Каталог
+                            Поиск
                         </Link>
                     </li>
                     <li className="mobileFooterNav__listItem">

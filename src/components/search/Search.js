@@ -75,7 +75,7 @@ export default class Search extends React.Component {
     renderItems = () => {
         // const arr = defaultItems || items || [];
         let arr = () => {
-            if (this.props.defaultItems.length !== 0 && this.state.searchResults.length === 0) {
+            if (this.props.defaultItems && this.props.defaultItems.length !== 0 && this.state.searchResults.length === 0) {
                 return this.state.default
             } else {
                 return this.state.searchResults
@@ -98,14 +98,16 @@ export default class Search extends React.Component {
                                 <div className="search__info">
                                     <p className="search__header"> {res.name}</p>
                                     <div className="search__composition">
-                                        {res.composition && res.composition.map((item, idx) => {
+                                        {
+                                            res.composition && res.composition.map((item, idx) => {
 
-                                            if (this.props.defaultItems && idx === 1) {
-                                                return <span key={i}> {item.name + ' ' + item.amount + '..'}</span>
-                                            } else {
-                                                return <span key={i}> {item.name + ' ' + item.amount + ', '}</span>
-                                            }
-                                        })}
+                                                if (this.props.defaultItems && idx === 1) {
+                                                    return <span key={i}> {item.name + ' ' + item.amount + '..'}</span>
+                                                } else {
+                                                    return <span key={i}> {item.name + ' ' + item.amount + ', '}</span>
+                                                }
+                                            })
+                                        }
                                     </div>
                                 </div>
                             </Container>
