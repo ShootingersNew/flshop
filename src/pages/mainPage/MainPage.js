@@ -49,7 +49,6 @@ class MainPage extends React.Component {
                     header={'Женственные подарки к 8 марта'}
                     idx={'showcase_1'}
                     showcaseType={'mini'}
-                    counter={6}
 
                 />
                 <Banner
@@ -64,8 +63,6 @@ class MainPage extends React.Component {
                     header={'Летние акции'}
                     idx={'showcase_2'}
                     showcaseType={'mini'}
-                    counter={11}
-
                 />
 
                 <OrderControl/>
