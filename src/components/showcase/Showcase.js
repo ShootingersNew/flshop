@@ -1,5 +1,5 @@
 //libs
-import React, {forwardRef} from "react";
+import React, {forwardRef, useState} from "react";
 import {Link} from "react-router-dom"
 import cn from 'classnames'
 import PropTypes from 'prop-types'
@@ -15,7 +15,7 @@ import './showcase.css'
 Showcase.propTypes = {
     showcaseType: PropTypes.string,
     header: PropTypes.string.isRequired,
-    counter: PropTypes.number.isRequired,
+    counter: PropTypes.number,
     filterTags: PropTypes.array,
     goods: PropTypes.array.isRequired,
     mobileLink: PropTypes.bool,
@@ -30,6 +30,7 @@ function Showcase(props) {
         [`showcase_${props.showcaseType}`]: props.showcaseType,
         showcase_mobile: props.isMobile
     });
+    const [isOpened, setIsOpened] = useState(false);
 
     const renderItems = () => {
         //pass refs to bouquet
@@ -43,7 +44,7 @@ function Showcase(props) {
             if (props.showcaseType && props.showcaseType === 'photoReview') {
                 return (
                     <div key={i} className="showcase__animation-wrapper">
-                        <PhotoReview/>
+                        <PhotoReview id={i}/>
                     </div>
                 )
             } else {
@@ -57,21 +58,35 @@ function Showcase(props) {
 
         let mappedItems = () => {
             return props.goods.map((item, i) => {
-                return card(item, i)
+                if (props.showcaseType === 'mini') {
+                    if (i < 4 || isOpened === true) {
+                        return card(item, i)
+                    } else {
+                        return false
+                    }
+                } else {
+                    return card(item, i)
+                }
             })
         };
 
         let wrapper = (items) => {
-            if (props.showcaseType && props.showcaseType === 'photoReview') {
+
+            const wrapperClassnames = cn({
+                showcase__items: true,
+                showcase__items_opened: props.showcaseType === 'mini' && isOpened
+            })
+
+            if (props.showcaseType && (props.showcaseType === 'photoReview' || props.showcaseType === 'mini')) {
                 return (
-                    <div className={'showcase__items'}>
+                    <div className={wrapperClassnames}>
                         {
                             items()
                         }
                     </div>
                 )
             } else {
-                return <FlipMove className={'showcase__items'}>
+                return <FlipMove className={wrapperClassnames}>
                     {
                         items()
                     }
@@ -88,15 +103,22 @@ function Showcase(props) {
     function mapFilterTags(arr) {
         return arr.map((filterTag, i) => {
             return (
-
-                <div key={i} className="showcase__filter "
-                     onClick={() => props.uncheckCheckbox(filterTag.name, filterTag.val)}>
+                <div
+                    key={i} className="showcase__filter "
+                    onClick={() => props.uncheckCheckbox(filterTag.name, filterTag.val)}
+                >
                     {filterTag.val}
                     <span className="showcase__filterCounter">{' ' + filterTag.resultCounter}</span>
                     <span
                         className="showcase__closeButton icon-svg__cross"/>
-                </div>)
+                </div>
+            )
         })
+    }
+
+    const toggleShowcase = (e) => {
+        e.preventDefault();
+        setIsOpened(!isOpened)
     }
 
     const counterClassNames = cn({
@@ -114,18 +136,25 @@ function Showcase(props) {
                     <span className="showcase__headerText">{props.header}</span>
                     {
                         props.counter !== undefined && props.showcaseType === 'listing' &&
-                        <span className={'showcase__counter fonts__proximaNovaSemibold'}>{props.counter}</span>
+                        <span className={'showcase__counter fonts__proximaNovaSemibold'}>{props.goods.length}</span>
                     }
                     {
-                        props.showcaseType !== 'listing' ?
-                            <React.Fragment>
-                                {
-                                    props.listingLink !== false &&
-                                    <Link className={'showcase__link link'} to={'/catalog'}>Смотреть все товары</Link>
-                                }
-                                <span className={counterClassNames}>{props.counter}</span>
-                            </React.Fragment>
-                            : false
+
+                        props.showcaseType !== 'listing' &&
+                        <React.Fragment>
+                            {
+                                props.listingLink !== false &&
+                                <Link onClick={toggleShowcase} className={'showcase__link link'} to={'/catalog'}>
+                                    {
+                                        !isOpened ? <>Смотреть все товары</> : <>Свернуть</>
+                                    }
+                                </Link>
+                            }
+                            {
+                                !isOpened && <span className={counterClassNames}>{props.goods.length}</span>
+                            }
+                        </React.Fragment>
+
                     }
                     {/*filters*/}
                     {
@@ -142,7 +171,12 @@ function Showcase(props) {
 
                 {
                     props.mobileLink &&
-                    <Link className={'showcase__link link showcase__link_mobile'} to={'/catalog'}>Смотреть все</Link>
+                    <Link
+                        onClick={toggleShowcase}
+                        className={'showcase__link link showcase__link_mobile'}
+                        to={'/catalog'}>
+                        Смотреть все
+                    </Link>
                 }
             </Container>
         </div>

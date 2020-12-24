@@ -837,6 +837,148 @@
         1004,
         1006
       ]
+    },
+    {
+      "id": 5,
+      "name": "Букет «Деревенское утро»",
+      "src": "./images/bouquets/b5.png",
+      "price": 3150,
+      "sale": true,
+      "salePrice": 3300,
+      "percents": "-9% ",
+      "category": "Ромашки",
+      "type": "allItems",
+      "composition": [
+        {
+          "name": "Ромашка",
+          "id": "romashka",
+          "amount": 10
+        },
+        {
+          "name": "Эустома сиреневая",
+          "id": "aystomasir",
+          "amount": 4
+        },
+        {
+          "name": "Альстромерия",
+          "id": "alstromeria",
+          "amount": 6
+        },
+        {
+          "name": "Хризантема кустовая",
+          "id": "hrizantema",
+          "amount": 4
+        }
+      ],
+      "additional": [
+        1002,
+        1008,
+        1007,
+        1006,
+        1003,
+        1005,
+        1001,
+        1004
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Букет «Шик»",
+      "src": "./images/bouquets/b6.png",
+      "price": 5500,
+      "sale": true,
+      "salePrice": 9300,
+      "percents": "-44%",
+      "category": "Орхидеи",
+      "type": "allItems",
+      "composition": [
+        {
+          "name": "Орхидея",
+          "id": "orhideya",
+          "amount": 15
+        },
+        {
+          "name": "Эустома сиреневая",
+          "id": "aystomasir",
+          "amount": 4
+        },
+        {
+          "name": "Альстромерия",
+          "id": "alstromeria",
+          "amount": 6
+        },
+        {
+          "name": "Хризантема кустовая",
+          "id": "hrizantema",
+          "amount": 4
+        }
+      ],
+      "additional": [
+        1002,
+        1008,
+        1007,
+        1006,
+        1003,
+        1005,
+        1001,
+        1004
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Корзина «Ромашки»",
+      "src": "./images/bouquets/b7.png",
+      "price": 8990,
+      "sale": true,
+      "salePrice": 9999,
+      "percents": "-20% ",
+      "category": "Ромашки",
+      "type": "allItems",
+      "composition": [
+        {
+          "name": "Ромашка",
+          "id": "romashka",
+          "amount": 200
+        }
+      ],
+      "additional": [
+        1003,
+        1002,
+        1007,
+        1005,
+        1001,
+        1004,
+        1006,
+        1008
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Букет «Малиновый щербет»",
+      "src": "./images/bouquets/b8.png",
+      "price": 6000,
+      "sale": true,
+      "salePrice": 9000,
+      "percents": "-28%",
+      "category": "Ромашки",
+      "type": "allItems",
+      "composition": [
+        {
+          "name": "Малина",
+          "id": "malina",
+          "amount": 20
+        }
+      ],
+      "additional": [
+        1003,
+        1002,
+        1007,
+        1005,
+        1001,
+        1004,
+        1006,
+        1008
+      ]
     }
   ],
   "showcase_2": [
@@ -980,6 +1122,207 @@
         1004,
         1006,
         1008
+      ]
+    },
+    {
+      "id": 1,
+      "name": "Букет «Рубиновое сияние»",
+      "src": "./images/bouquets/b1.png",
+      "price": 3150,
+      "vendorCode": "12934569",
+      "mark": 3,
+      "sale": false,
+      "salePrice": false,
+      "percents": false,
+      "category": "Хризантемы",
+      "type": "allItems",
+      "composition": [
+        {
+          "name": "Лист аспидистры",
+          "id": "aspidistra",
+          "amount": 4
+        },
+        {
+          "name": "Альстромерия",
+          "id": "alstromeria",
+          "amount": 3
+        },
+        {
+          "name": "Хризантема кустовая",
+          "id": "hrizantema",
+          "amount": 1
+        },
+        {
+          "name": "Рускус Зеленый",
+          "id": "ruskus",
+          "amount": 7
+        },
+        {
+          "name": "Гипсофила",
+          "id": "gipsophila",
+          "amount": 3
+        },
+        {
+          "name": "Гербера",
+          "id": "gerbera",
+          "amount": 3
+        }
+      ],
+      "additional": [
+        1001,
+        1002,
+        1003,
+        1004,
+        1005,
+        1006,
+        1007,
+        1008
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Шляпная коробка «Нежность»",
+      "src": "./images/bouquets/b2.png",
+      "price": 4200,
+      "vendorCode": "19239247",
+      "mark": 3,
+      "sale": true,
+      "salePrice": 6300,
+      "percents": "-19%",
+      "category": "Подсолнухи",
+      "type": "allItems",
+      "composition": [
+        {
+          "name": "Эустома сиреневая",
+          "id": "aystomasir",
+          "amount": 4
+        },
+        {
+          "name": "Альстромерия",
+          "id": "alstromeria",
+          "amount": 3
+        },
+        {
+          "name": "Эустома лавандовая",
+          "id": "aystomalav",
+          "amount": 1
+        },
+        {
+          "name": "Рускус Зеленый",
+          "id": "ruskus",
+          "amount": 2
+        },
+        {
+          "name": "Гипсофила",
+          "id": "gipsophila",
+          "amount": 3
+        },
+        {
+          "name": "Гербера",
+          "id": "gerbera",
+          "amount": 3
+        }
+      ],
+      "additional": [
+        1002,
+        1004,
+        1005,
+        1008,
+        1001,
+        1007,
+        1006,
+        1003
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Букет «Крем-карамель»",
+      "src": "./images/bouquets/b3.png",
+      "price": 2150,
+      "sale": false,
+      "salePrice": false,
+      "percents": false,
+      "category": "Гортензии",
+      "type": "allItems",
+      "composition": [
+        {
+          "name": "Лист аспидистры",
+          "id": "aspidistra",
+          "amount": 4
+        },
+        {
+          "name": "Альстромерия",
+          "id": "alstromeria",
+          "amount": 6
+        },
+        {
+          "name": "Хризантема кустовая",
+          "id": "hrizantema",
+          "amount": 4
+        },
+        {
+          "name": "Тюльпаны",
+          "id": "tulpan",
+          "amount": 1
+        },
+        {
+          "name": "Гербера",
+          "id": "gerbera",
+          "amount": 2
+        }
+      ],
+      "additional": [
+        1002,
+        1001,
+        1003,
+        1005,
+        1004,
+        1007,
+        1006,
+        1008
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Шляпная коробка «Замок»",
+      "src": "./images/bouquets/b4.png",
+      "price": 3670,
+      "sale": true,
+      "salePrice": 5180,
+      "percents": "-32%",
+      "category": "Тюльпаны",
+      "type": "allItems",
+      "composition": [
+        {
+          "name": "Тюльпаны",
+          "id": "tylpan",
+          "amount": 22
+        },
+        {
+          "name": "Альстромерия",
+          "id": "alstromeria",
+          "amount": 6
+        },
+        {
+          "name": "Хризантема кустовая",
+          "id": "hrizantema",
+          "amount": 4
+        },
+        {
+          "name": "Гербера",
+          "id": "gerbera",
+          "amount": 2
+        }
+      ],
+      "additional": [
+        1008,
+        1002,
+        1007,
+        1003,
+        1005,
+        1001,
+        1004,
+        1006
       ]
     }
   ],
