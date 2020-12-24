@@ -5,26 +5,26 @@ import emptyRedRhombus from '../flower/img/Star.svg'
 import emptyBlackRhombus from './img/blackRhombus.svg'
 import Container from "../container/Container"
 
-const PhotoReview = () => {
+const PhotoReview = ({id}) => {
     const renderMark = (num) => {
-        const markIcon = (src) => <img className={'photoReview__markIcon'} src={src} alt="mark"/>;
+        const markIcon = (src, id) => <img key={id} className={'photoReview__markIcon'} src={src} alt="mark"/>;
         let mark = [];
         for (let i = 0; i < 5; i++) {
             if (i < Math.floor(num)) {
-                mark.push(markIcon(fullRhombus))
+                mark.push(markIcon(fullRhombus, i))
             } else {
-                mark.push(markIcon(emptyBlackRhombus))
+                mark.push(markIcon(emptyBlackRhombus, i))
             }
         }
         return mark
     };
     return (
-        <article className={'photoReview'}>
+        <article key={id} className={'photoReview'}>
             <div className="photoReview__imageWrapper">
-                <div style={{backgroundImage: `url('/images/reviews/image.png')`}} className="photoReview__image"/>
+                <img alt='preview' src={"/images/banners/r/Image.png"} className="photoReview__image"/>
             </div>
             <Container className={'container_mobile photoReview__contentContainer'}>
-                <a href="#" className="photoReview__link">
+                <a href="https://www.instagram.com/?hl=ru" className="photoReview__link">
                     <div className="photoReview__linkText">@anatol</div>
                 </a>
                 <header className="photoReview__header">

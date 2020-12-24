@@ -20,9 +20,10 @@ export default function Footer(props) {
             <Container className={'footer__container'}>
                 <nav className="footer__nav">
                     {
-                        props.navs.map((nav) => {
+                        props.navs.map((nav, id) => {
                             return (
                                 <FooterNavigation
+                                    key={id}
                                     className={'footer__navWrapper'}
                                     nav={nav}
                                 />
