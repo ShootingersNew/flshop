@@ -38,6 +38,11 @@
 .footerNavigation__tick_isOpened_true {
     background-image: url("./img/tick.svg");
 }
+@media all and (min-width: 1100px) {
+    .footerNavigation__li:hover {
+        font-weight: bolder;
+    }
+}
 
 @media all and (max-width: 600px) {
     .footerNavigation__control {

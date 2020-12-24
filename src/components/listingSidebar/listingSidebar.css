@@ -46,14 +46,9 @@
 
     .listingSidebar__mobileButton {
         display: block;
-        /*position: sticky;*/
-        /*bottom: 55px;*/
         height: 46px;
         float: right;
         width: 140px;
-        /*margin-left: auto;*/
-        /*margin-top: -46px;*/
-
         position: relative;
         z-index: 2323423;
     }
@@ -61,9 +56,10 @@
     .listingSidebar__sticky {
         position: fixed;
         bottom: 55px;
-        width: 100vw;
+        right: -120px;
         left: 0;
-        right: 0;
+        width: 140px;
+        z-index: 88;
     }
 
     .listingSidebar__container {

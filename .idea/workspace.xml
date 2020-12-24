@@ -1,26 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="25e137b3-2318-423b-89a6-368a7c35aa66" name="Default Changelist" comment="remove">
+    <list default="true" id="25e137b3-2318-423b-89a6-368a7c35aa66" name="Default Changelist" comment="&quot;useWindowSize&quot; has been renamed to &quot;useIsMobile&quot;, it now returns a boolean value">
+      <change afterPath="$PROJECT_DIR$/public/android-chrome-192x192.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/android-chrome-512x512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/apple-touch-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/browserconfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/favicon-16x16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/favicon-32x32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/mstile-144x144.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/mstile-150x150.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/mstile-310x150.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/mstile-310x310.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/mstile-70x70.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/safari-pinned-tab.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/site.webmanifest" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/cartPopup/CartPopup.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/banners/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/banners/1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/banners/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/banners/2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/banners/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/banners/3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common.blocks/asideBanners/AsideBanners.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common.blocks/asideBanners/AsideBanners.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common.blocks/showcase/Showcase.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common.blocks/showcase/Showcase.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hoc/withBDConnect/withBDConnect.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hoc/withCartConnect.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hoc/withCartConnect.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/cartPage/CartPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/cartPage/CartPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/good/Goods.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/good/Goods.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/mobileRetouch/Image.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/mobileRetouch/image.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/reviews/Image-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/banners/r/Image-1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/reviews/Image-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/banners/r/Image-2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/reviews/Image.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/banners/r/Image.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/_settings/_base.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/_settings/_base.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/banner/banner.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/banner/banner.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/breadcrumbs/BreadcrumbsLink.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/breadcrumbs/BreadcrumbsLink.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/button/button.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/button/button.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/composition/Composition.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/composition/Composition.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/footer/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/Footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/footerNavigation/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footerNavigation/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/gallery/Gallery.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/gallery/Gallery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/listingSidebar/listingSidebar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/listingSidebar/listingSidebar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/main/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/main/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/mobileButtons/MobileButtons.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/mobileButtons/MobileButtons.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/mobileFooterNav/MobileFooterNav.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/mobileFooterNav/MobileFooterNav.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/photoReviews/PhotoReviews.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/photoReviews/PhotoReviews.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/photoReviews/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/photoReviews/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/search/Search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/search/Search.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/seo/seo.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/seo/seo.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/showcase/Showcase.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/showcase/Showcase.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/showcase/showcase.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/showcase/showcase.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/json/allItems.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/json/allItems.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/goodsPage/GoodsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/goodsPage/GoodsPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/mainPage/MainPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/mainPage/MainPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/cartReducer/cartReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/cartReducer/cartReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/goodsReducer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/rootReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/rootReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,9 +52,21 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ComposerSettings">
-    <execution>
-      <executable />
-    </execution>
+    <execution />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -41,7 +77,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="RESET_MODE" value="MIXED" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="GithubPullRequestsUISettings">
     <option name="hiddenUrls">
@@ -56,14 +92,19 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/images/banners" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -72,21 +113,22 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2019.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\PhpstormProjects\flshop\public" />
+      <recent name="C:\Users\User\PhpstormProjects\flshop\src\components\search" />
+      <recent name="C:\Users\User\PhpstormProjects\flshop\src\components\mobileFooterNav\img" />
+      <recent name="C:\Users\User\PhpstormProjects\flshop\src\components\logo" />
+      <recent name="C:\Users\User\PhpstormProjects\flshop\public\images\mobileRetouch" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\PhpstormProjects\flshop\public\images\banners" />
+      <recent name="C:\Users\User\PhpstormProjects\flshop\src\components\flower\img" />
+      <recent name="C:\Users\User\PhpstormProjects\flshop\src\components" />
       <recent name="C:\Users\User\PhpstormProjects\flshop\src\hoc" />
       <recent name="C:\Users\User\PhpstormProjects\flshop\src\common.blocks\flower\composition" />
-      <recent name="C:\Users\User\PhpstormProjects\flshop\src\common.blocks\modal\views" />
-      <recent name="C:\Users\User\PhpstormProjects\flshop\src\common.blocks\modal\views\InfoModalView\CallModalView" />
-      <recent name="C:\Users\User\PhpstormProjects\flshop\src\common.blocks\priceFilter" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\User\PhpstormProjects\flshop\public\images\banners" />
-      <recent name="C:\Users\User\PhpstormProjects\flshop\src\common.blocks\flower\img" />
-      <recent name="C:\Users\User\PhpstormProjects\flshop\public\images\composition" />
-      <recent name="C:\Users\User\PhpstormProjects\flshop\src\common.blocks\fonts\__proximaNovaSemibold" />
-      <recent name="C:\Users\User\PhpstormProjects\flshop\src\common.blocks\fonts" />
     </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
@@ -116,6 +158,7 @@
       </list>
     </option>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -214,118 +257,50 @@
       <workItem from="1592901137561" duration="6174000" />
       <workItem from="1592912140212" duration="5390000" />
       <workItem from="1592989392636" duration="5748000" />
-    </task>
-    <task id="LOCAL-00078" summary="created comp Input">
-      <created>1592906174797</created>
-      <option name="number" value="00078" />
-      <option name="presentableId" value="LOCAL-00078" />
-      <option name="project" value="LOCAL" />
-      <updated>1592906174797</updated>
-    </task>
-    <task id="LOCAL-00079" summary="added subscribe comp">
-      <created>1592906216098</created>
-      <option name="number" value="00079" />
-      <option name="presentableId" value="LOCAL-00079" />
-      <option name="project" value="LOCAL" />
-      <updated>1592906216098</updated>
-    </task>
-    <task id="LOCAL-00080" summary="added checkout comp with form">
-      <created>1592906298501</created>
-      <option name="number" value="00080" />
-      <option name="presentableId" value="LOCAL-00080" />
-      <option name="project" value="LOCAL" />
-      <updated>1592906298502</updated>
-    </task>
-    <task id="LOCAL-00081" summary="added partners comp">
-      <created>1592906376941</created>
-      <option name="number" value="00081" />
-      <option name="presentableId" value="LOCAL-00081" />
-      <option name="project" value="LOCAL" />
-      <updated>1592906376942</updated>
-    </task>
-    <task id="LOCAL-00082" summary="preloader fixed">
-      <created>1592906403290</created>
-      <option name="number" value="00082" />
-      <option name="presentableId" value="LOCAL-00082" />
-      <option name="project" value="LOCAL" />
-      <updated>1592906403290</updated>
-    </task>
-    <task id="LOCAL-00083" summary="added styles(padding top, headers font,line height)">
-      <created>1592913062743</created>
-      <option name="number" value="00083" />
-      <option name="presentableId" value="LOCAL-00083" />
-      <option name="project" value="LOCAL" />
-      <updated>1592913062745</updated>
-    </task>
-    <task id="LOCAL-00084" summary="added proptypes &amp;&amp; classname library">
-      <created>1592913159618</created>
-      <option name="number" value="00084" />
-      <option name="presentableId" value="LOCAL-00084" />
-      <option name="project" value="LOCAL" />
-      <updated>1592913159618</updated>
-    </task>
-    <task id="LOCAL-00085" summary="added proptypes and classnames library&#10;refactored imports with comments">
-      <created>1592913422811</created>
-      <option name="number" value="00085" />
-      <option name="presentableId" value="LOCAL-00085" />
-      <option name="project" value="LOCAL" />
-      <updated>1592913422811</updated>
-    </task>
-    <task id="LOCAL-00086" summary="changed - the float property was passed to the modifier">
-      <created>1592913557551</created>
-      <option name="number" value="00086" />
-      <option name="presentableId" value="LOCAL-00086" />
-      <option name="project" value="LOCAL" />
-      <updated>1592913557551</updated>
-    </task>
-    <task id="LOCAL-00087" summary="changed - conditional rendering of banners">
-      <created>1592913623604</created>
-      <option name="number" value="00087" />
-      <option name="presentableId" value="LOCAL-00087" />
-      <option name="project" value="LOCAL" />
-      <updated>1592913623604</updated>
-    </task>
-    <task id="LOCAL-00088" summary="changed -&#10;1)optimized imports&#10;2)added proptypes&#10;3)changed link to button">
-      <created>1592913715566</created>
-      <option name="number" value="00088" />
-      <option name="presentableId" value="LOCAL-00088" />
-      <option name="project" value="LOCAL" />
-      <updated>1592913715566</updated>
-    </task>
-    <task id="LOCAL-00089" summary="changes:&#10;1)added proptypes&#10;2)optimized imports">
-      <created>1592913771800</created>
-      <option name="number" value="00089" />
-      <option name="presentableId" value="LOCAL-00089" />
-      <option name="project" value="LOCAL" />
-      <updated>1592913771800</updated>
-    </task>
-    <task id="LOCAL-00090" summary="changes:&#10;1)opimized imports&#10;2)added proptypes">
-      <created>1592913856055</created>
-      <option name="number" value="00090" />
-      <option name="presentableId" value="LOCAL-00090" />
-      <option name="project" value="LOCAL" />
-      <updated>1592913856055</updated>
-    </task>
-    <task id="LOCAL-00091" summary="added full functionality of breadcrumbs">
-      <created>1592913967025</created>
-      <option name="number" value="00091" />
-      <option name="presentableId" value="LOCAL-00091" />
-      <option name="project" value="LOCAL" />
-      <updated>1592913967025</updated>
-    </task>
-    <task id="LOCAL-00092" summary="changed - separator was made as pseudo-element">
-      <created>1592914024880</created>
-      <option name="number" value="00092" />
-      <option name="presentableId" value="LOCAL-00092" />
-      <option name="project" value="LOCAL" />
-      <updated>1592914024880</updated>
-    </task>
-    <task id="LOCAL-00093" summary="refactor of code and imports">
-      <created>1592914070565</created>
-      <option name="number" value="00093" />
-      <option name="presentableId" value="LOCAL-00093" />
-      <option name="project" value="LOCAL" />
-      <updated>1592914070565</updated>
+      <workItem from="1602145240514" duration="22836000" />
+      <workItem from="1602231017861" duration="27053000" />
+      <workItem from="1602316530418" duration="13875000" />
+      <workItem from="1602404140561" duration="20642000" />
+      <workItem from="1602487986407" duration="16728000" />
+      <workItem from="1602576554041" duration="22388000" />
+      <workItem from="1602759269415" duration="1029000" />
+      <workItem from="1602832909671" duration="27003000" />
+      <workItem from="1602925566430" duration="18327000" />
+      <workItem from="1603000472272" duration="4000" />
+      <workItem from="1603097811798" duration="24859000" />
+      <workItem from="1603126585686" duration="833000" />
+      <workItem from="1603127697815" duration="623000" />
+      <workItem from="1603183355866" duration="20324000" />
+      <workItem from="1603278395599" duration="2899000" />
+      <workItem from="1603282498780" duration="703000" />
+      <workItem from="1603283262528" duration="2461000" />
+      <workItem from="1603350091801" duration="9696000" />
+      <workItem from="1603371213480" duration="9700000" />
+      <workItem from="1603382075175" duration="593000" />
+      <workItem from="1603382733503" duration="18000" />
+      <workItem from="1603382798890" duration="232000" />
+      <workItem from="1603383143877" duration="185000" />
+      <workItem from="1603526607754" duration="11392000" />
+      <workItem from="1603698348675" duration="2252000" />
+      <workItem from="1603702611154" duration="2139000" />
+      <workItem from="1603778733990" duration="17608000" />
+      <workItem from="1603808415828" duration="4331000" />
+      <workItem from="1603868940064" duration="18392000" />
+      <workItem from="1603889219322" duration="6174000" />
+      <workItem from="1603956464226" duration="12606000" />
+      <workItem from="1603974101390" duration="52000" />
+      <workItem from="1604055553900" duration="116000" />
+      <workItem from="1604757446152" duration="1956000" />
+      <workItem from="1604763799903" duration="1176000" />
+      <workItem from="1605026517319" duration="666000" />
+      <workItem from="1605633040438" duration="89000" />
+      <workItem from="1607946285552" duration="505000" />
+      <workItem from="1607946817296" duration="955000" />
+      <workItem from="1608289585168" duration="12247000" />
+      <workItem from="1608442126978" duration="21157000" />
+      <workItem from="1608472875510" duration="6092000" />
+      <workItem from="1608709027323" duration="243000" />
+      <workItem from="1608817716112" duration="674000" />
     </task>
     <task id="LOCAL-00094" summary="1)refactor of  imports&#10;2)added proptypes">
       <created>1592914112966</created>
@@ -558,42 +533,139 @@
       <option name="project" value="LOCAL" />
       <updated>1592998039227</updated>
     </task>
-    <option name="localTasksCounter" value="127" />
+    <task id="LOCAL-00127" summary="add mobile version of mainpage">
+      <created>1602063429170</created>
+      <option name="number" value="00127" />
+      <option name="presentableId" value="LOCAL-00127" />
+      <option name="project" value="LOCAL" />
+      <updated>1602063429170</updated>
+    </task>
+    <task id="LOCAL-00128" summary="fix bg and paddings">
+      <created>1602069994303</created>
+      <option name="number" value="00128" />
+      <option name="presentableId" value="LOCAL-00128" />
+      <option name="project" value="LOCAL" />
+      <updated>1602069994303</updated>
+    </task>
+    <task id="LOCAL-00129" summary="makes fonts components">
+      <created>1602320107110</created>
+      <option name="number" value="00129" />
+      <option name="presentableId" value="LOCAL-00129" />
+      <option name="project" value="LOCAL" />
+      <updated>1602320107113</updated>
+    </task>
+    <task id="LOCAL-00130" summary="&quot;useWindowSize&quot; has been renamed to &quot;useIsMobile&quot;, it now returns a boolean value">
+      <created>1602320402325</created>
+      <option name="number" value="00130" />
+      <option name="presentableId" value="LOCAL-00130" />
+      <option name="project" value="LOCAL" />
+      <updated>1602320402325</updated>
+    </task>
+    <task id="LOCAL-00131" summary="renamed fc">
+      <created>1602327259930</created>
+      <option name="number" value="00131" />
+      <option name="presentableId" value="LOCAL-00131" />
+      <option name="project" value="LOCAL" />
+      <updated>1602327259935</updated>
+    </task>
+    <task id="LOCAL-00132" summary="refactored usage a custom hook">
+      <created>1602327424668</created>
+      <option name="number" value="00132" />
+      <option name="presentableId" value="LOCAL-00132" />
+      <option name="project" value="LOCAL" />
+      <updated>1602327424668</updated>
+    </task>
+    <task id="LOCAL-00133" summary="add listing mobile ver">
+      <created>1602327551143</created>
+      <option name="number" value="00133" />
+      <option name="presentableId" value="LOCAL-00133" />
+      <option name="project" value="LOCAL" />
+      <updated>1602327551143</updated>
+    </task>
+    <task id="LOCAL-00134" summary="fix mobile notification">
+      <created>1602327699537</created>
+      <option name="number" value="00134" />
+      <option name="presentableId" value="LOCAL-00134" />
+      <option name="project" value="LOCAL" />
+      <updated>1602327699537</updated>
+    </task>
+    <task id="LOCAL-00135" summary="goodsPage design edits 1.0">
+      <created>1602499231052</created>
+      <option name="number" value="00135" />
+      <option name="presentableId" value="LOCAL-00135" />
+      <option name="project" value="LOCAL" />
+      <updated>1602499231053</updated>
+    </task>
+    <task id="LOCAL-00136" summary="mobile cart page &amp;&amp; goodspage">
+      <created>1602946711933</created>
+      <option name="number" value="00136" />
+      <option name="presentableId" value="LOCAL-00136" />
+      <option name="project" value="LOCAL" />
+      <updated>1602946711935</updated>
+    </task>
+    <task id="LOCAL-00137" summary="add mobile button">
+      <created>1602946759710</created>
+      <option name="number" value="00137" />
+      <option name="presentableId" value="LOCAL-00137" />
+      <option name="project" value="LOCAL" />
+      <updated>1602946759710</updated>
+    </task>
+    <task id="LOCAL-00138" summary="add cartPage mob ver">
+      <created>1603528500551</created>
+      <option name="number" value="00138" />
+      <option name="presentableId" value="LOCAL-00138" />
+      <option name="project" value="LOCAL" />
+      <updated>1603528500552</updated>
+    </task>
+    <task id="LOCAL-00139" summary="upd dependencies">
+      <created>1603528523587</created>
+      <option name="number" value="00139" />
+      <option name="presentableId" value="LOCAL-00139" />
+      <option name="project" value="LOCAL" />
+      <updated>1603528523587</updated>
+    </task>
+    <task id="LOCAL-00140" summary="add mob ver. of cart &amp;&amp; add mobile nav menu">
+      <created>1603974017969</created>
+      <option name="number" value="00140" />
+      <option name="presentableId" value="LOCAL-00140" />
+      <option name="project" value="LOCAL" />
+      <updated>1603974017970</updated>
+    </task>
+    <task id="LOCAL-00141" summary="add tablet res">
+      <created>1608451885490</created>
+      <option name="number" value="00141" />
+      <option name="presentableId" value="LOCAL-00141" />
+      <option name="project" value="LOCAL" />
+      <updated>1608451885491</updated>
+    </task>
+    <task id="LOCAL-00142" summary="fix function incorrect name">
+      <created>1608818393993</created>
+      <option name="number" value="00142" />
+      <option name="presentableId" value="LOCAL-00142" />
+      <option name="project" value="LOCAL" />
+      <updated>1608818393993</updated>
+    </task>
+    <option name="localTasksCounter" value="143" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="refactored imports, added proptypes" />
-    <MESSAGE value="refactored imports, proptypes added" />
-    <MESSAGE value="imports refactored, catalog button replaced by Link, added Modal" />
-    <MESSAGE value="proptypes refactored, added classnames library, added support of ref and name attributes" />
-    <MESSAGE value="fixed styles - removed input's width" />
-    <MESSAGE value="fixed styles" />
-    <MESSAGE value="added link with color inherit" />
-    <MESSAGE value="added Link" />
-    <MESSAGE value="added padding bottom &amp;&amp; main_listing" />
-    <MESSAGE value="proptypes added, styles refactored, added ...props" />
-    <MESSAGE value="removed in another library" />
-    <MESSAGE value="refactored tags" />
-    <MESSAGE value="refactored imports, added classnames,refactored empty tags" />
-    <MESSAGE value="imports refactored, added classnames library, added register &amp;&amp; default checked props, removed Onchange and checked props" />
-    <MESSAGE value="rename button.module.css" />
-    <MESSAGE value="refactored empty tags" />
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="added proptypes, classnames library, tags on 'listing'type" />
     <MESSAGE value="added filters styles" />
     <MESSAGE value="refactored jsx, tag a replaced by Link" />
@@ -603,93 +675,23 @@
     <MESSAGE value="refactored imports, added proptypes, classnames library, deleted h2 header" />
     <MESSAGE value="added configs of masked inputs,filter of items,email regexp" />
     <MESSAGE value="renamed" />
-    <option name="LAST_COMMIT_MESSAGE" value="renamed" />
+    <MESSAGE value="add mobile version of mainpage" />
+    <MESSAGE value="fix bg and paddings" />
+    <MESSAGE value="makes fonts components" />
+    <MESSAGE value="&quot;useWindowSize&quot; has been renamed to &quot;useIsMobile&quot;, it now returns a boolean value" />
+    <MESSAGE value="renamed fc" />
+    <MESSAGE value="refactored usage a custom hook" />
+    <MESSAGE value="add listing mobile ver" />
+    <MESSAGE value="fix mobile notification" />
+    <MESSAGE value="goodsPage design edits 1.0" />
+    <MESSAGE value="mobile cart page &amp;&amp; goodspage" />
+    <MESSAGE value="add mobile button" />
+    <MESSAGE value="add cartPage mob ver" />
+    <MESSAGE value="upd dependencies" />
+    <MESSAGE value="add mob ver. of cart &amp;&amp; add mobile nav menu" />
+    <MESSAGE value="add tablet res" />
+    <MESSAGE value="fix function incorrect name" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix function incorrect name" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="707" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1589041782352">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="707" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.0.1366.728@0.0.1920.1040" timestamp="1589041782352" />
-    <state x="707" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1588142954132" />
-    <state x="765" y="235" key="#com.intellij.ide.util.MemberChooser" timestamp="1588066470645">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="765" y="235" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1366.728@0.0.1920.1040" timestamp="1588066470645" />
-    <state x="585" y="113" key="CommitChangelistDialog2" timestamp="1592998158936">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="585" y="113" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1366.728@0.0.1920.1040" timestamp="1590236004587" />
-    <state x="585" y="113" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1592998158936" />
-    <state x="184" y="85" key="DiffContextDialog" timestamp="1592998123436">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="184" y="85" key="DiffContextDialog/0.0.1920.1040/1920.0.1366.728@0.0.1920.1040" timestamp="1589293911828" />
-    <state x="184" y="85" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592998123436" />
-    <state width="1860" height="279" key="GridCell.Tab.0.bottom" timestamp="1587120558818">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1860" height="279" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1366.728@0.0.1920.1040" timestamp="1587120558818" />
-    <state width="1860" height="279" key="GridCell.Tab.0.center" timestamp="1587120558818">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1860" height="279" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1366.728@0.0.1920.1040" timestamp="1587120558818" />
-    <state width="1860" height="279" key="GridCell.Tab.0.left" timestamp="1587120558818">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1860" height="279" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1366.728@0.0.1920.1040" timestamp="1587120558818" />
-    <state width="1860" height="279" key="GridCell.Tab.0.right" timestamp="1587120558818">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1860" height="279" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1366.728@0.0.1920.1040" timestamp="1587120558818" />
-    <state x="777" y="230" key="RollbackChangesDialog" timestamp="1589637062654">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="777" y="230" key="RollbackChangesDialog/0.0.1920.1040/1920.0.1366.728@0.0.1920.1040" timestamp="1589637062654" />
-    <state x="461" y="161" key="SettingsEditor" timestamp="1587129390208">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="461" y="161" key="SettingsEditor/0.0.1920.1040/1920.0.1366.728@0.0.1920.1040" timestamp="1587129390208" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1587492570417">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="498" height="446" key="SwitcherDM/0.0.1920.1040/1920.0.1366.728@0.0.1920.1040" timestamp="1587492570417" />
-    <state x="552" y="252" width="1126" height="536" key="Vcs.Push.Dialog.v2" timestamp="1592907047037">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1366.728@0.0.1920.1040" timestamp="1590235989180" />
-    <state x="552" y="252" width="1126" height="536" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1592907047037" />
-    <state x="100" y="100" width="1720" height="840" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1592120527693">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="100" y="100" width="1720" height="840" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040/1920.0.1366.728@0.0.1920.1040" timestamp="1590577247685" />
-    <state x="100" y="100" width="1720" height="840" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592120527693" />
-    <state x="656" y="342" key="com.intellij.ide.util.TipDialog" timestamp="1592989557960">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="656" y="342" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1366.728@0.0.1920.1040" timestamp="1592563358576" />
-    <state x="656" y="342" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592989557960" />
-    <state x="720" y="351" key="git4idea.ui.GitUnstashDialog" timestamp="1592907192599">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="720" y="351" key="git4idea.ui.GitUnstashDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592907192599" />
-    <state x="648" y="365" width="707" height="309" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1592143694932">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="648" y="365" width="707" height="309" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592143694932" />
-    <state x="701" y="150" key="refactoring.ChangeSignatureDialog" timestamp="1592402355011">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="701" y="150" key="refactoring.ChangeSignatureDialog/0.0.1920.1040/1920.0.1366.728@0.0.1920.1040" timestamp="1592402355011" />
-    <state x="616" y="242" key="run.anything.popup" timestamp="1592223152942">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="616" y="242" key="run.anything.popup/0.0.1920.1040/1920.0.1366.728@0.0.1920.1040" timestamp="1592223152942" />
-    <state x="616" y="242" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1592119732947" />
-    <state x="623" y="229" width="672" height="678" key="search.everywhere.popup" timestamp="1592043236677">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="623" y="229" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1366.728@0.0.1920.1040" timestamp="1589280862374" />
-    <state x="623" y="229" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1592043236677" />
   </component>
 </project>

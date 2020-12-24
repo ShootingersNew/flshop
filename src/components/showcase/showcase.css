@@ -104,6 +104,9 @@
     flex-wrap: wrap;
 }
 
+.showcase__items_opened {
+    flex-wrap: wrap;
+}
 @media all and (max-width: 1100px) and (min-width: 601px) {
     .showcase__container {
         /*padding: 0;*/

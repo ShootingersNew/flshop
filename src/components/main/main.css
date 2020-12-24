@@ -22,6 +22,7 @@
 
 .main_listing .main__content {
     width: 918px;
+    overflow: hidden;
 }
 
 .main_white {
