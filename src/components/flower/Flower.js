@@ -17,7 +17,7 @@ import {regExpPrice, useIsMobile} from "../../config/utils"
 
 Flower.propTypes = {
     item: PropTypes.object.isRequired,
-    addInCart: PropTypes.func.isRequired,
+    addItemToCart: PropTypes.func.isRequired,
     path: PropTypes.string.isRequired,
     type: PropTypes.string.isRequired
 };
@@ -25,7 +25,7 @@ Flower.propTypes = {
 function Flower(props) {
     const isMobile = useIsMobile();
     const addInCart = (item) => {
-        props.addInCart(item)
+        props.addItemToCart(item)
     };
     const {item, type, path} = props;
     return (

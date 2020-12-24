@@ -151,6 +151,7 @@
     border: none;
     outline: none;
     font-size: inherit;
+    display: none;
 }
 
 .flower__inCart {
@@ -170,6 +171,7 @@
     width: 13px;
 }
 @media all and (max-width: 1100px) and (min-width: 601px) {
+
     .flower {
         flex-direction: column;
     }
