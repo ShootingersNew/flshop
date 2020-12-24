@@ -26,9 +26,9 @@ const Gallery = ({item,}) => {
             <div className="flower__sideImagesWrapper">
                 <SideImage src={item.src}/>
                 {
-                    imgArr.map((src, i) => {
-                        return <SideImage key={i} src={src}/>
-                    })
+                  item.gallery && imgArr.map((src, i) => {
+                      return <SideImage key={i} src={src}/>
+                  })
                 }
             </div>
             <div className="flower__mainImageWrapper">
