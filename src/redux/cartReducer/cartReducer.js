@@ -74,7 +74,7 @@ const initialState = {
     ],
 };
 export default function cartReducer(state = initialState, action) {
-    const newArr = state.itemsIn;
+    const newArr = state.itemsIn.slice();
     switch (action.type) {
         case ADD_ITEM:
             return {...state, itemsIn: [...state.itemsIn, {...action.item, amount: 1, sumPrice: action.item.price}]};
